@@ -1,0 +1,113 @@
+import Coach1 from "../../images/coach-images/Dummy 1.jpg";
+import Coach2 from "../../images/coach-images/Dummy 2.jpg";
+import Coach3 from "../../images/coach-images/Dummy 3.jpg";
+import Coach4 from "../../images/coach-images/Dummy 4.jpg";
+
+export default [
+  {
+    id:1,
+    Image:Coach2 ,
+    Values:
+      // 'In this course, learners are introduced to problem identification and the world’s largest coding community for...',
+      'Lorem ipsum dolor sit amet. Aut ducimus culpa ad delectus fugit in enim internos quo ipsum quibusdam non dolor laudantium. Et numquam galisum ex optio dolorem ad voluptates pariatur cum consequatur unde ut explicabo blanditiis.In voluptatem quia vel eius veniam qui similique pariatur At veritatis ducimus. Sit ipsa eaque ad internos quam ab magnam soluta aut commodi recusandae!',
+    name: 'jonny',
+    surname:'doey',
+    status: ' head coach',
+    educationH:'',
+    educationT:'',
+    passion:'',
+    experience:'',
+    quote:'',
+    quoteby:'',
+  },
+  {
+    id:2,
+    Image:Coach2 ,
+    Values:
+      // 'In this course, learners are introduced to problem identification and the world’s largest coding community for...',
+      'Lorem ipsum dolor sit amet. Aut ducimus culpa ad delectus fugit in enim internos quo ipsum quibusdam non dolor laudantium. Et numquam galisum ex optio dolorem ad voluptates pariatur cum consequatur unde ut explicabo blanditiis.In voluptatem quia vel eius veniam qui similique pariatur At veritatis ducimus. Sit ipsa eaque ad internos quam ab magnam soluta aut commodi recusandae!',
+    name: 'jonny',
+    surname:'doey',
+    status: ' head coach',
+    educationH:'',
+    educationT:'',
+    passion:'',
+    experience:'',
+    quote:'',
+  },
+  {
+    id:3,
+    Image:Coach2,
+    Values:
+      // 'In this course, learners are introduced to problem identification and the world’s largest coding community for...',
+      'Lorem ipsum dolor sit amet. Aut ducimus culpa ad delectus fugit in enim internos quo ipsum quibusdam non dolor laudantium. Et numquam galisum ex optio dolorem ad voluptates pariatur cum consequatur unde ut explicabo blanditiis.In voluptatem quia vel eius veniam qui similique pariatur At veritatis ducimus. Sit ipsa eaque ad internos quam ab magnam soluta aut commodi recusandae!',
+    name: 'jonny',
+    surname:'doey',
+    status: ' head coach',
+    educationH:'',
+    educationT:'',
+    passion:'',
+    experience:'',
+    quote:'',
+  },
+  {
+    id:4,
+    Image:Coach2 ,
+    Values:
+      // 'In this course, learners are introduced to problem identification and the world’s largest coding community for...',
+      'Lorem ipsum dolor sit amet. Aut ducimus culpa ad delectus fugit in enim internos quo ipsum quibusdam non dolor laudantium. Et numquam galisum ex optio dolorem ad voluptates pariatur cum consequatur unde ut explicabo blanditiis.In voluptatem quia vel eius veniam qui similique pariatur At veritatis ducimus. Sit ipsa eaque ad internos quam ab magnam soluta aut commodi recusandae!',
+    name: 'jonny',
+    surname:'doey',
+    status: ' head coach',
+    educationH:'',
+    educationT:'',
+    passion:'',
+    experience:'',
+    quote:'',
+  },
+  {
+    id:5,
+    Image:Coach2 ,
+    Values:
+      // 'In this course, learners are introduced to problem identification and the world’s largest coding community for...',
+      'Lorem ipsum dolor sit amet. Aut ducimus culpa ad delectus fugit in enim internos quo ipsum quibusdam non dolor laudantium. Et numquam galisum ex optio dolorem ad voluptates pariatur cum consequatur unde ut explicabo blanditiis.In voluptatem quia vel eius veniam qui similique pariatur At veritatis ducimus. Sit ipsa eaque ad internos quam ab magnam soluta aut commodi recusandae!',
+    name: 'jonny',
+    surname:'doey',
+    status: ' head coach',
+    educationH:'',
+    educationT:'',
+    passion:'',
+    experience:'',
+    quote:'',
+  },
+  {
+    id:6,
+    Image:Coach2,
+    Values:
+      // 'In this course, learners are introduced to problem identification and the world’s largest coding community for...',
+      'Lorem ipsum dolor sit amet. Aut ducimus culpa ad delectus fugit in enim internos quo ipsum quibusdam non dolor laudantium. Et numquam galisum ex optio dolorem ad voluptates pariatur cum consequatur unde ut explicabo blanditiis.In voluptatem quia vel eius veniam qui similique pariatur At veritatis ducimus. Sit ipsa eaque ad internos quam ab magnam soluta aut commodi recusandae!',
+    name: 'jonny',
+    surname:'doey',
+    status: ' head coach',
+    educationH:'',
+    educationT:'',
+    passion:'',
+    experience:'',
+    quote:'',
+  },
+  {
+    id:7,
+    Image:Coach2 ,
+    Values:
+      // 'In this course, learners are introduced to problem identification and the world’s largest coding community for...',
+      'Lorem ipsum dolor sit amet. Aut ducimus culpa ad delectus fugit in enim internos quo ipsum quibusdam non dolor laudantium. Et numquam galisum ex optio dolorem ad voluptates pariatur cum consequatur unde ut explicabo blanditiis.In voluptatem quia vel eius veniam qui similique pariatur At veritatis ducimus. Sit ipsa eaque ad internos quam ab magnam soluta aut commodi recusandae!',
+    name: 'jonny',
+    surname:'doey',
+    status: ' head coach',
+    educationH:'',
+    educationT:'',
+    passion:'',
+    experience:'',
+    quote:'',
+  },
+];

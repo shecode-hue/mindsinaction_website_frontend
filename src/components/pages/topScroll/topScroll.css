@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.top-scroll button {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: #6fb73f;
+  padding: 5px;
+  color: white;
+  font-size: 22px;
+  border: none;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.top-scroll button:hover {
+  background-color: #049434;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) {
+  button {
+    bottom: 30px;
+  }
+}

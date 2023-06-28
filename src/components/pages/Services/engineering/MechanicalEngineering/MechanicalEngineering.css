@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.mechanical_engineering-main {
+  padding-top: 150px;
+  background: linear-gradient(135deg,
+      rgba(55, 95, 128, 0.85) 1%,
+      rgba(81, 112, 170, 0.75) 30%),
+    url('../../../../images/services-images/mechanical_eng/mechanical_eng_backgroung compressed.webp') center no-repeat fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mechanical_engineering-main h1,
+.department-main h1 {
+  /* line-height: 380px; */
+  text-align: center;
+  color: #ffffff;
+  /* font-family: "Abel", sans-serif; */
+}
+
+.mechanical-title-header h1 {
+  text-align: center;
+  /* margin-bottom: 3%; */
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  margin: 15px 0;
+  border-radius: 30px;
+  font-size: 35px;
+  margin-bottom: 70px;
+}
+
+.mechanical-title-header h1::after {
+  content: '';
+  background: #fff;
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 10px auto 30px;
+}
+
+.mechanical_engineering-main p{
+  font-size: 20px;
+}
+
+.mechanical-engineering-main-heading {
+  /* margin-top: 70px; */
+  margin-bottom: 70px;
+  /* width: 40%; */
+}
+
+.mechanical-engineering-main-heading h1 {
+  color: #fff;
+  text-shadow: 2px 2px 10px black;
+  font-weight: bold;
+  /* text-align: center; */
+  /* text-align: left; */
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .mechanical-engineering-main-heading h1 {
+    font-size: 40px;
+}
+}
+
+.department-main h3 {
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+  margin-bottom: 40px;
+  margin-top: 80px;
+}
+
+.department-main img,
+.department-director img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.department-main h6 {
+  font-size: 15px;
+  font-weight: lighter;
+  color: #57606f;
+}
+
+.department-main p,
+.mechanical_engineering-service-container .service-card p {
+  color: gray;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+}
+
+.mechanical_engineering-service-container .service-card h4 {
+  color: #2f3542;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+
+.department-main h5 {
+  font-size: 18px;
+  font-family: "Abel", sans-serif;
+  color: #2f3542;
+}
+
+.department-main {
+  margin: 60px 0;
+}
+
+.department-director {
+  margin-top: 50px 0;
+  display: none;
+}
+
+.department-main {
+  overflow-x: auto;
+}
+
+.department-main .dep-card,
+.department-main .pos,
+.department-director {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  width: 200px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border-bottom: 3px solid #90d91e;
+}
+
+.mechanical_engineering-services {
+  width: 93%;
+  margin: auto;
+}
+
+.mechanical_engineering-container {
+  width: 100%;
+  padding: 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.mechanical_engineering-service-container {
+  width: 100%;
+  padding: 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.mechanical_engineering-container .service-card {
+  box-shadow: rgba(117, 117, 126, 0.2) 0px 7px 29px 0px;
+  width: 280px;
+  border-bottom: 3px solid #90d91e;
+  border-radius: 0 0 10px 10px;
+}
+
+.mechanical_engineering-service-container .service-card img {
+  width: 100%;
+  height: 200px;
+}
+
+.mechanical_engineering-service-container .service-card .content {
+  margin: 10px;
+}
+
+.mechanical_engineering-services .heading,
+.department-main .heading {
+  width: 220px;
+  margin: auto;
+}
+
+.mechanical_engineering-services h3,
+.department-main h3 {
+  text-align: center;
+  background-color: #0c50a3;
+  color: white;
+  padding: 7px;
+  font-weight: lighter;
+  border-radius: 15px 0 15px 0;
+  transition: 0.5s;
+  border-bottom: 3px solid #90d91e;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  margin-top: 80px;
+}
+
+.mechanical_engineering-services h3:hover,
+.department-main h3:hover {
+  transform: rotate(360deg);
+}
+
+.center-hrz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.position-description {
+  position: absolute;
+  top: 220px;
+  text-align: center;
+  color: white;
+}
+
+.mechanical-service-card {
+  width: 250px;
+  height: 250px;
+  border-bottom: 2px solid #90d91e;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: rgba(117, 117, 126, 0.2) 0px 7px 29px 0px;
+  margin: 40px 20px;
+  display: inline-block;
+  /* flex-wrap: wrap; */
+}
+
+.mechanical-service-card img {
+  width: 100%;
+  height: 50%;
+}
+
+.mechanical-service-card .mechanical-padding {
+  padding: 20px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* .mechanical_engineering-main h1 {
+    font-size: 25px;
+  } */
+
+  .mechanical_engineering-service-container .service-card {
+    margin: 30px auto;
+    width: 90%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .department-main {
+    width: 95%;
+    margin: auto;
+  }
+}

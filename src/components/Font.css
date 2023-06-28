@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'AlongSansBold';
+  src: url('../assets/fonts/Along\ Sans\ Extra\ Bold.otf') format('otf');
+}
+@font-face {
+  font-family: 'AlongSansLight';
+  src: url('../assets/fonts/Along\ Sans\ Light.otf') format('otf');
+}
+@font-face {
+  font-family: 'AlongSansMedium';
+  src: url('../assets/fonts/Along\ Sans\ Medium.otf') format('otf');
+}
+@font-face {
+  font-family: 'AlongSansThin';
+  src: url('../assets/fonts/Along\ Sans\ Thin.otf') format('otf');
+}
+@font-face {
+  font-family: 'AlongSansSemiBold';
+  src: url('../assets/fonts/Along\ Sans\ Semi\ Bold.otf') format('otf');
+}

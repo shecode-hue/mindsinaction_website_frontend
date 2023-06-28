@@ -1,0 +1,1572 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+  /* overflow-x: none !important; */
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+.profile-flex-container {
+  /* padding-top: 200px; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.text-profile-container h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 10px black;
+}
+
+.profile-main-container {
+  /* overflow-x: hidden; */
+  padding-top: 150px;
+  background: linear-gradient(135deg,
+      rgba(55, 95, 128, 0.85) 1%,
+      rgba(81, 112, 170, 0.75) 30%),
+    url('../../images/about-images/Profile_boy compressed.webp') center no-repeat fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.profile-secondary-container {
+  width: 85%;
+  margin: auto;
+}
+
+.profile-welcome-text {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row: 1;
+  grid-template-rows: 526px;
+  grid-template-areas: "topText topImg";
+}
+
+.heading-profile-page h2 {
+  /* font-size: 5vw; */
+  font-size: 5vw;
+  text-align: center;
+}
+.Company-History
+{
+  text-align:center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  border-radius:15px ;
+  margin-bottom: 100px;
+
+}
+/* .Company-History :hover{
+color: white;
+background-color: #90D91E;
+box-shadow:0 15px 20px 0 rgba(0,0,0,0.6)
+} */
+.Company-History h2{
+  color:rgb(34, 48, 175);
+  text-align:center;
+  font-size: large;
+  /* text-shadow: 1px 1px #06205a; */
+  text-transform: uppercase;
+  padding:1rem;
+}
+/* .Company-History P{
+  color: #b3e465;
+} */
+
+.Co-founders{
+  
+}
+@media screen and (min-width: 768px) {
+
+  .heading-profile-page {
+    margin-top: 100px;
+    /* width: 100%; */
+  }
+
+  .display-1 {
+    display: block;
+  }
+
+  .display-2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-text h1 {
+    font-size: 40px !important;
+  }
+  .heading-profile-page h2 {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-profile-page h2 {
+    /* font-size: 10vw; */
+    font-size: 50px;
+  }
+
+  .display-1 {
+    display: none;
+  }
+
+  .display-2 {
+    display: block;
+  }
+}
+
+.center-hrz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-profile-page>h2 {
+  position: relative;
+  /* font-size: 2vw; */
+  font-weight: 900;
+  text-align: left;
+  color: #0F56AE;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.1vw #0F56AE;
+  text-transform: uppercase;
+}
+
+.heading-profile-page>h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #90d91e;
+  -webkit-text-stroke: 0vw #0F56AE;
+  border-right: 2px solid #90d91e;
+  overflow: hidden;
+  animation: welcAnimation 6s linear infinite;
+}
+
+
+.profile-welcome-text-msg {
+  grid-area: topText;
+}
+
+.profile-welcome-text-msg p {
+  text-align: justify;
+}
+
+.profile-welcome-text-img {
+  grid-area: topImg;
+}
+
+.profile-welcome-text .profile-welcome-text-msg {
+  width: 90%;
+  height: auto;
+  justify-content: center;
+}
+
+.profile-welcome-text .profile-welcome-text-msg h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 10px black;
+}
+
+.profile-welcome-text-msg h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 10px black;
+}
+
+.profile-welcome-text .profile-welcome-text-msg p {
+  color: whitesmoke;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.profile-welcome-text-msg p {
+  color: whitesmoke;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.profile-welcome-text .profile-welcome-text-msg {
+  width: 90%;
+  height: auto;
+  justify-content: center;
+}
+
+.profile-welcome-text .profile-welcome-text-img {
+  position: relative;
+  bottom: 580px;
+  left: 590px;
+  width: 100%;
+  /* height: auto; */
+}
+
+.profile-welcome-text .profile-welcome-text-img img {
+  margin-top: 4em;
+  margin-left: 12em;
+  width: 100%;
+  border-radius: 25px;
+  border: 4px solid white;
+}
+
+.profile-text-msg {
+  text-align: center;
+  margin: 55px 0;
+}
+
+.profile-text-msg p {
+  color: whitesmoke;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.mission-vision-values p {
+  color: whitesmoke;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.mission-vision-values-container {
+  width: 100%;
+  padding: 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.mission-vision-values-card {
+  width: 270px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.mission-vision-values-card .mission-vision-value-content {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.mission-vision-values-card p {
+  padding: 20px;
+  font-size: 18px;
+  color: gray;
+  text-align: left;
+}
+
+.mission-vision-value-content img {
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.mission-vision-value-mini-content {
+  width: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.mission-vision-value-content h1 {
+  color: white;
+  font-size: 30px;
+}
+
+/* updating the profiel steam content */
+/* applied new styling to the profile steam content */
+
+.profile-steam-content {
+  /* border: 5px red dotted; */
+  width: 100%;
+  margin: 2em 0;
+}
+
+.profile-steam-content h1 {
+  margin: 60px 0;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* profile steam content styling ends here bruhhhhh */
+
+
+
+.tabs-container {
+  /* border: 5px red dotted; */
+  max-width: 900px;
+  margin: 0 auto;
+  /* padding-top: 10em; */
+}
+
+@media screen and (max-width: 950px) {
+  .tabs-container {
+    max-width: 100%;
+  }
+}
+
+.tabs-container .tabs {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 2em;
+}
+
+.tab {
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabs-container input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1em;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* .tab-label::after {
+  content: "➜";
+  transform: rotate(90deg);
+  transition: all .3s;
+  /* background: #6fb73f; *
+  padding: 5px;
+  border-radius: 50%;
+  opacity: 90%;
+  /* color: #fff; *
+  color: #6fb73f;
+} */
+
+.arrow-up {
+  color: #6fb73f;
+  font-size: 30px;
+  transform: rotate(180deg);
+}
+
+.arrow-down {
+  color: #6fb73f;
+  font-size: 30px;
+}
+
+.tab-content {
+  padding: 0 1em;
+  font-size: 14px;
+  font-weight: 400;
+  max-height: 0;
+  transition: all .3s;
+
+}
+
+.tab-content p {
+  /* font-size: 20px; */
+  font-size: 18px;
+  /* font-weight: 600; */
+  /* color: #333; */
+  color: gray;
+}
+
+.tab-content ul {
+  /* font-size: 20px; */
+  font-size: 18px;
+  /* font-weight: 600; */
+  /* color: #333; */
+  color: gray;
+  padding: 0 1em;
+}
+
+.tab-content ul li {
+  
+}
+
+.tabs-container input:checked~.tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.tabs-container input:checked+.tab-label::after {
+  transform: rotate(-90deg);
+}
+
+.tabs-container input:checked+.tab-label {
+  color: #6fb73f;
+  opacity: 0.6;
+}
+
+
+
+
+
+.header-text2 {
+  /* border: 5px red dotted; */
+  margin-top: 65px;
+}
+
+.header-text2 h1 {
+  color: #fff;
+  text-shadow: 2px 2px 10px black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+}
+
+.text p {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.gallery {
+  width: 70%;
+  margin: 0 auto;
+  /* object-fit: cover; */
+}
+
+.gallery .gallery-image-cards img {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery h1 {
+  text-align: center;
+  /* font-size: 50px; */
+  margin-top: 35px;
+  color: #fff;
+  /* text-shadow: 2px 2px 10px black; */
+}
+
+.projects-image-cards {
+  background-color: tomato;
+  text-align: center;
+}
+
+.slick-slide>div {
+  margin: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide *:focus {
+  outline: none;
+}
+
+.slick-prev:before {
+  color: #0c50a3 !important;
+  background-color: white;
+}
+
+.slick-next:before {
+  color: #0c50a3 !important;
+  background-color: white;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #0c50a3 !important;
+}
+
+.slick-slide>div {
+  margin: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide *:focus {
+  outline: none;
+}
+
+.slick-prev:before {
+  color: #0c50a3 !important;
+  background-color: white;
+  display: none;
+}
+
+.slick-next:before {
+  color: #0c50a3 !important;
+  background-color: white;
+  display: none;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  background-color: #fff;
+  margin: 30px 70px 50px 70px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.steam-about {
+  /* border: red 3px dotted; */
+  /* width: 100%; */
+  height: 100%;
+
+}
+
+.steam-about h1 {
+  text-align: center;
+  font-size: 30px;
+  /* color: #333; */
+  color: white;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.steam-box-container {
+  /* border: red 3px dotted; */
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.steam-box-container .steam-about-box {
+  position: relative;
+  /* width: 250px;
+  height: 250px; */
+  background: linear-gradient(360deg, rgba(2, 0, 36, 1) 0%, rgba(8, 180, 118, 1) 0%, rgba(0, 120, 190, 1) 100%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.steam-about-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background:var(--i); */
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.steam-about-box:hover .steam-about-icon {
+  top: 0;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.steam-about-box .steam-about-icon img {
+  /* border: red dotted 4px; */
+  width: 100px;
+  height: 100px;
+  color: #fff;
+}
+
+.steam-about-content p {
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  /* margin-top: 130px; */
+  margin-top: 100px;
+  z-index: 1;
+
+}
+
+.videos {
+  height: auto;
+  padding: 50px 20px 50px 20px;
+}
+
+.videos-header {
+  text-align: center;
+}
+
+.videos-header h1 {
+  color: #0c50a3;
+  color: white;
+  font-weight: lighter;
+  margin-bottom: 100px;
+}
+
+.video-card {
+  width: 300px;
+  /* height: 350px; */
+  min-height: 100%;
+  background-color: #fff;
+  margin: 100px;
+  border-bottom: 3px solid #90d91e;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.video-card h3 {
+  color: darkblue;
+  text-align: center;
+  padding: 10px;
+}
+
+.video-card-image-1 {
+  height: 40%;
+  border-radius: 5px;
+  background-image: url('../../images/engaging.jpeg');
+  background-size: contain;
+}
+
+.video-card-player {
+  border-radius: 0px;
+  border: none;
+  width: 100%;
+}
+
+.video-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-slider-container {
+  width: 80%;
+  padding: 0px 50px 50px 50px;
+}
+
+.course-image-cards-about {
+  margin: auto;
+  display: block;
+  width: 90%;
+  margin-bottom: 3%;
+  box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
+    0 6px 10px 0 rgba(133, 131, 131, 0.2);
+  border-bottom: 4px solid #90d91e;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  /* height: 400px; */
+}
+
+.img-modules {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.img-services {
+  display: block;
+  width: 250px;
+  object-fit: cover;
+  margin: auto;
+}
+
+.homepage__track-container {
+  height: 600px;
+  position: relative;
+  margin-bottom: 85px;
+}
+
+.homepage__track-container h4 {
+  font-weight: lighter;
+}
+
+.display2 {
+  display: none;
+}
+
+.course-image-cards-about p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+.course-image-cards-about h3 {
+  margin: 0 10px;
+}
+
+.course-image-cards img {
+  width: 100%;
+  height: 230px;
+  cursor: pointer;
+  /* object-fit: cover; */
+}
+
+.course-about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 5%;
+  position: relative;
+}
+
+.slider-arrow-about {
+  background-color: darkgrey;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+.position-arrow-button-right-about {
+  position: absolute;
+  right: -30px;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: -10;
+}
+
+.position-arrow-button-left-about {
+  position: absolute;
+  left: -30px;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: -10;
+}
+
+.position-arrow-icon-about {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 55%;
+}
+
+.about-title-header h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  /* color: #0c50a3; */
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.about-title-header h1::after {
+  content: '';
+  /* background: #0c50a3; */
+  background: #fff;
+  display: block;
+  height: 2px;
+  width: 150px;
+  margin: 10px auto 30px;
+}
+
+.animation {
+  position: relative;
+  color: #252839;
+  -webkit-text-sroke: 50px #383d52;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+}
+
+.animation::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #6fb73f;
+  -webkit-text-sroke: 0vw #383d52;
+  border-right: 2px solid #6fb73f;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+/* Welcome Animation animation*/
+@keyframes welcAnimation {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .steam-box-container .steam-about-box {
+    position: relative;
+    width: 400px;
+    height:300px;
+  }
+
+  .steam-box-container {
+    position: relative;
+    width: 50%;
+  }
+
+  .profile-welcome-text {
+    display: block;
+  }
+
+  .heading-profile-page>h2 {
+    /* font-size: 5.5vw; */
+    /* margin-top: 15px; */
+  }
+
+  .heading-profile-page>h2::before {
+    animation: welcAnimation600 6s linear infinite;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .profile-welcome-text .profile-welcome-text-img {
+    width: 100%;
+  }
+
+  .profile-welcome-text .profile-welcome-text-img img{
+    margin: 0;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg p {
+    color: whitesmoke;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 15px;
+  }
+
+  .steam-about .about-title-header h1 {
+    font-size: 35px;
+  }
+
+  .steam-about img {
+    width: 100%;
+  }
+
+  .steam-about {
+    /* background-color: #fff; */
+    height: auto;
+    padding: 20px 0px;
+  }
+
+  .profile-main-container {
+    padding-top: 50px;
+  }
+
+  .mission-vision-values-card {
+    margin-bottom: 25px;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  .gallery h1 {
+    font-size: 35px;
+    /* font-weight: lighter; */
+  }
+
+  .videos h1 {
+    font-size: 35px;
+  }
+
+  .header-text2 h1 {
+    font-weight: lighter;
+    font-size: 35px;
+  }
+
+  .mission-vision-values-card h1 {
+    font-weight: lighter;
+    font-size: 35px;
+  }
+
+
+}
+
+/* Extra small devices (phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .profile-welcome-text {
+    display: block;
+  }
+
+  .heading-profile-page>h2 {
+    /* font-size: 5.5vw; */
+    margin-top: 15px;
+  }
+
+  .heading-profile-page>h2::before {
+    animation: welcAnimation600 6s linear infinite;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .profile-welcome-text .profile-welcome-text-img {
+    width: 100%;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg p {
+    color: whitesmoke;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 15px;
+  }
+
+  .steam-box-container .steam-about-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+  }
+
+  .steam-box-container {
+    position: relative;
+    width: 75%;
+  }
+
+  .steam-about .about-title-header h1 {
+    font-size: 35px;
+  }
+
+  .steam-about img {
+    width: 100%;
+  }
+
+  .steam-about {
+    /* background-color: #fff; */
+    height: auto;
+    padding: 20px;
+  }
+
+  .profile-main-container {
+    padding-top: 50px;
+  }
+
+  .mission-vision-values-card {
+    margin-bottom: 25px;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  .gallery h1 {
+    font-size: 35px;
+    /* font-weight: lighter; */
+  }
+
+  .videos h1 {
+    font-size: 35px;
+  }
+
+  .header-text2 h1 {
+    font-weight: lighter;
+    font-size: 35px;
+  }
+
+  .mission-vision-values-card h1 {
+    font-weight: lighter;
+    font-size: 35px;
+  }
+
+}
+
+
+/* Small devices (phones, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .steam-box-container {
+    position: relative;
+    width: 95%;
+  }
+
+  .profile-main-container {
+    padding-top: 60px;
+  }
+
+  .heading-profile-page>h2 {
+    /* font-size: 5.5vw; */
+    margin-top: 15px;
+  }
+
+  .heading-profile-page>h2::before {
+    animation: welcAnimation768 6s linear infinite;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg {
+    margin-top: 15px;
+  }
+
+  .profile-welcome-text {
+    display: block;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .profile-welcome-text .profile-welcome-text-img {
+    width: 100%;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .steam-about img {
+    width: 100%;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  .gallery h1 {
+    font-size: 40px;
+    /* font-weight: lighter; */
+  }
+
+  .videos h1 {
+    font-size: 40px;
+  }
+
+  .header-text2 h1 {
+    font-weight: lighter;
+    font-size: 40px;
+  }
+
+  .mission-vision-values-card {
+    margin-bottom: 25px;
+  }
+
+  .mission-vision-values-card h1 {
+    font-weight: lighter;
+    font-size: 35px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 820px and up) */
+@media only screen and (min-width: 800px) {
+  .mission-vision-values-card {
+    margin-bottom: 35px;
+  }
+
+  .mission-vision-values-card h1 {
+    font-weight: lighter;
+    font-size: 40px;
+  }
+
+}
+
+
+/* Extra large devices (large laptops and desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+  .steam-box-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .profile-secondary-container {
+    /* margin-top: 100px; */
+  }
+
+  .profile-welcome-text {
+    /*display: flex;
+    justify-content: space-between;*/
+    width: 100%;
+    /*text-align: left;
+    margin: auto;*/
+    margin-bottom: 130px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: 1;
+    grid-template-rows: 526px;
+    grid-template-areas: "topText topImg";
+  }
+
+  .heading-profile-page>h2 {
+    /* font-size: 5.3vw; */
+  }
+
+  .heading-profile-page>h2::before {
+    animation: welcAnimation1024 6s linear infinite;
+  }
+
+  .profile-welcome-text-msg {
+    grid-area: topText;
+  }
+
+  .profile-welcome-text-img {
+    grid-area: topImg;
+    align-self: center;
+    margin-top: 200px;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 10px black;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg p {
+    color: whitesmoke;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg {
+    width: 90%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .profile-welcome-text .profile-welcome-text-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile-welcome-text .profile-welcome-text-img img {
+    width: 100%;
+    border-radius: 25px;
+    border: 4px solid white;
+  }
+
+  .profile-text-msg {
+    text-align: center;
+    margin: 55px 0;
+  }
+
+  .profile-text-msg p {
+    color: whitesmoke;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .gallery h1 {
+    font-size: 40px;
+    /* font-weight: lighter; */
+  }
+
+  .videos h1 {
+    font-size: 50px;
+  }
+
+  .header-text2 h1 {
+    font-weight: lighter;
+    font-size: 50px;
+  }
+
+  .mission-vision-values-card {
+    margin-bottom: 25px;
+  }
+
+  .mission-vision-values-card h1 {
+    font-weight: lighter;
+    font-size: 30px;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg h1 {
+    font-size: 40px;
+  }
+
+  .profile-welcome-text .profile-welcome-text-msg {
+    margin-top: 20px;
+  }
+}
+
+
+/* keyframes for media query situations */
+
+
+/* Welcome Animation animation 600px and lower*/
+@keyframes welcAnimation600 {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 102%;
+  }
+}
+
+/* Welcome Animation animation 768px and...*/
+@keyframes welcAnimation768 {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 102%;
+  }
+}
+
+/* Welcome Animation animation 768px and...*/
+@keyframes welcAnimation1024 {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 99.5%;
+  }
+}
+
+/*
+
+  h2 {
+    font-size: 12vw;
+  }
+
+  h2::before {
+    animation: welcAnimation600 6s linear infinite;
+  }
+*/
+
+
+/* Jesse */
+
+.flex-container-main-about {
+  /* padding-top: 200px; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  margin-bottom: 100px;
+  /* width: 90%; */
+}
+
+
+@media screen and (max-width: 1200px) {
+  .flex-container-main-about {
+    /* margin-top: 120px; */
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .flex-container-main-about {
+    flex-direction: column;
+  }
+}
+
+
+/* @media screen and (min-width: 1000px) { */
+/* .header-text h1 {
+    font-size: 3vw; /*was 3.5
+  }
+} */
+
+@media screen and (max-width: 1200px) {
+  .header-text h1 {
+    font-size: 50px;
+  }
+}
+
+.header-text h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 10px black;
+}
+
+.header-text p {
+  color: whitesmoke;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.header-text h1 span {
+  /* color: #fff; */
+  text-shadow: 2px 2px 10px black;
+  font-weight: bold;
+}
+
+.header-text2 p {
+  /* color: #fff; */
+  color: whitesmoke;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  /* font-weight: lighter; */
+  /* font-size: 22px; */
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-text {
+    width: 50%;
+    margin: 30px 50px 100px 0px;
+  }
+
+  .header-text h1 {
+    text-align: left;
+  }
+
+  .header-text p {
+    text-align: left;
+  }
+
+  .img-size {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header-text p {
+    width: 75%;
+  }
+
+  .header-text h1 {
+    text-align: center;
+  }
+
+  .header-text p {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .header-text h1 span {
+    /* font-size: 3.9rem; */
+  }
+
+  .header-text p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-text h1 span {
+    /* font-size: 3.5rem; */
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .animation {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .animation {
+    font-size: 70px;
+  }
+}
+
+.animation {
+  position: relative;
+  /* font-size: 7vw; */
+  /* font-size: 6vw; */
+  color: #252839;
+  -webkit-text-sroke: 0.5vw #383d52;
+  text-transform: uppercase;
+}
+
+.animation::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  /* color: #01fe87; */
+  color: #90D91E;
+  -webkit-text-sroke: 0vw #383d52;
+  /* border-right: 2px solid #01fe87; */
+  border-right: 2px solid #90D91E;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.img-size {
+  /* width: 50rem; */
+  width: 80%;
+  border-radius: 25px;
+  border: 4px solid white;
+  margin-top: 40px;
+  /* margin-left: 50px; */
+}
+
+
+@media screen and (max-width: 1700px) {
+  .img-size {
+    /* width: 40rem; */
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .img-size {
+    /* width: 40rem; */
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .card {
+    margin: 100px 20px;
+  }
+
+  /* .img-size {
+    width: 20rem;
+  } */
+}
+
+/* @media screen and (max-width: 1600px) {
+  .img-size {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .img-size {
+    width: 40rem;
+  }
+} */
+
+@media screen and (max-width: 850px) {
+  .img-size {
+    width: 90%;
+  }
+
+  .text {
+    padding: 0px 10%;
+  }
+
+}
+.History-button button{
+  margin-top:1rem;
+  color:#0c50a3;
+  background-color:white;
+  border: none;
+  border-radius: 5px;
+  padding:1rem;
+  cursor: pointer;
+}
+.History-button button:hover{
+  background-color: #90D91E;
+  color: #fff;
+}
+
+.Company-History {
+  margin-top: 40px;
+}
+
+.Company-History h2 {
+  font-weight: 600;
+    font-size: 22px;
+    color: #000;
+}
+
+.history p {
+  padding: 20px;
+  font-size: 18px;
+  color: gray;
+  /* text-align: left; */
+}

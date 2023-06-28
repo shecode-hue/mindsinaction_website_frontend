@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+p,button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  padding: 1% 0;
+}
+
+.main-course-page {
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.95) 3%,rgba(17, 16, 16, 0.3) 30%);
+  background-image: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(8,180,118,1) 0%, rgba(0,120,190,1) 100%);
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  position: relative; */
+  background: linear-gradient(
+      135deg,
+      rgba(76, 143, 93, 0.85) 1%,
+      rgb(76, 143, 93, 0.75) 30%
+    ),
+    url('../../../images/course-images/ourCourses.jpg') center no-repeat fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+}
+
+.main-course-page h1 {
+  padding: 200px 100px 50px 100px;
+  text-align: center;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+}
+
+.main-course-page h1::after {
+  content: '';
+  background: #fff;
+  display: block;
+  height: 2px;
+  width: 150px;
+  margin: 10px auto 30px;
+}
+
+.cluster-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin: 0 25px;
+}
+
+.cluster-cards > * {
+  /* display: flex;
+  justify-content: space-evenly; */
+  width: 100%;
+  padding: 0;
+  /* display: flex; */
+  /* flex-wrap: wrap;
+  flex-basis: 100%;
+  flex-direction: row; */
+  justify-content: space-between;
+}
+
+.cluster-card {
+  width: 330px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 2% auto;
+  animation: ease-in;
+  border-radius: 8px;
+  /* cursor: pointer; */
+}
+
+.cluster-card:hover {
+  transform: scale(1.05);
+}
+
+.cluster-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.cluster-card .hr{
+  background-color: rgba(12, 80, 163, 0.70);
+  border: none;
+  width: 135px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  border-radius: 0 0 10px 0px;
+}
+
+.cluster-card:hover .hr{
+  display: inline;
+}
+
+.cluster-card .hr button{
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.cluster-card .cluster-content p span{
+  color: #90d91e;
+  font-size: 18px;
+  padding: 0 3%;
+}
+
+.cluster-card .hr:hover{
+  background-color: rgba(12, 80, 163, 0.90);
+  transition: 0.5s ease-in-out;
+}
+
+.cluster-card .hr button:hover{
+  color: whitesmoke;
+}
+
+.cluster-border {
+  width: 100%;
+  height: 5px;
+  background-color: #90d91e;
+
+}
+
+.cluster-card .cluster-content {
+  padding: 2%;
+  color: #0c50a3;
+  background-color: #ffffff;
+  /* min-height: 17%; */
+}
+
+/* .cluster-card .cluster-content p{
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+} */
+
+.card__container {
+  display: inline-block;
+  vertical-align: top;
+  margin: 3% 2%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+/* @media only screen and (max-width: 800px) {
+  .cluster-cards {
+    flex-direction: column;
+  }
+
+} */
+
+  /* Small devices (portrait tablets and large phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .cluster-card {
+      width: 280px;
+      display: inline-block;
+      justify-content: center;
+      margin: 4% auto;
+    }
+
+  .card__container {
+    margin-bottom: 30px;
+    width: 100%;
+    margin: 3% 0;
+  }
+
+  .cluster-card .hr{
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .cluster-card {
+    width: 280px;
+    display: inline-block;
+    justify-content: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cluster-card {
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cluster-card {
+    width: 330px;
+    display: inline-block;
+    justify-content: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .cluster-card {
+    width: 340px;
+    display: inline-block;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* *,*::before,*::after {
+    box-sizing: border-box;
+} */
+
+/* acts as the body tag*/
+.body- {
+    box-sizing: border-box;
+    font-weight: 500;
+    margin: 0;
+    background-color: #07410d;
+    background-image: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgb(55, 221, 66) 0%, rgb(3, 0, 190) 100%);
+    padding-top: 10em;
+    padding-bottom: 5em;
+}
+
+/* styling for the top part of the page*/
+
+.header- {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(212, 223, 255);
+    text-shadow: 2px 2px 4px rgb(5, 25, 80);
+}
+
+.header- > h2 {
+    font-size: 4em;
+    text-align: center;
+}
+
+.header- > p {
+    font-size: 2em;
+    text-align: center;
+    color: inherit;
+}
+
+/* general styling for the main section*/ 
+.container- {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.row- {
+    display: flex;
+}
+
+.column- {
+    display: grid;
+}
+
+a {
+    text-decoration: none;
+}
+
+:is(h2, h3) {
+    margin: 0;
+}
+
+.cards- {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.card- {
+    position: relative;
+    max-width: 210px;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.card- i {
+    font-size: 2.5rem;
+}
+
+.icon-title- {
+    gap: 2em;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 3.5em 3em;
+    color: #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+.icon-title- h3 {
+    font-size: 16px;
+}
+
+.card-content- {
+    position: absolute;
+    top: 0;
+    background-image: url(../images/Home_images/home_1.jpg), linear-gradient(rgb(182, 216, 227), rgb(182, 216, 227), rgb(188, 225, 186));
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 300px;
+    background-color: rgb(158, 173, 221);
+    box-shadow: 0px 6px 20px rgba(0, 255, 244, 0.2);
+    padding: 0 1em;
+    align-items: center;
+    opacity: 0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transform: translateY(-310px);
+    -webkit-transform: translateY(-310px);
+    -moz-transform: translateY(-310px);
+    -ms-transform: translateY(-310px);
+    -o-transform: translateY(-310px);
+    transition: 0.3s ease-in-out, opacity 0.4s ease-in;
+    -webkit-transition: 0.3s ease-in-out, opacity 0.4s ease-in;
+    -moz-transition: 0.3s ease-in-out, opacity 0.4s ease-in;
+    -ms-transition: 0.3s ease-in-out, opacity 0.4s ease-in;
+    -o-transition: 0.3s ease-in-out, opacity 0.4s ease-in;
+}
+
+.title- {
+    align-items: center;
+    gap: 0.5em;
+    color: #fff;
+    text-shadow: 1px 1px 7px rgb(0, 44, 242);
+}
+
+.title- h2 {
+    font-size: 16px;
+}
+
+.title-btn- {
+    justify-content: center;
+    gap: 2em;
+}
+
+.title-btn- h3 {
+    font: 14px;
+    color: #fff;
+    text-shadow: 1px 1px 7px #000;
+    text-align: center;
+}
+
+.btn- {
+    font-size: 14px;
+    color: #fff;
+    background: #6fb73f;
+    padding: 0.7em 1em;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+.btn-:hover {
+    color: rgb(7, 135, 0);
+}
+
+.card-:hover .card-content- {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}

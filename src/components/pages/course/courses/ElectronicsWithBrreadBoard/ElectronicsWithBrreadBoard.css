@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+p,
+li {
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.board-title h1 {
+  color: #0c50a3;
+  text-align: center;
+  font-weight: lighter;
+  padding-top: 5%;
+  margin-bottom: 2%;
+}
+
+.board-title img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-bottom: 3%;
+}
+
+.breadboard-module-info {
+  padding: 1% 5%;
+}
+
+.breadboard-module-info h3 {
+  color: #0c50a3;
+  font-weight: lighter;
+  margin-bottom: 1.5%;
+}
+
+.breadboard-module-info .module-1-description .breadboard-module-1 {
+  display: flex;
+  padding: 1% 0.5%;
+  margin: 0.5% 0;
+  border-radius: 7px;
+}
+
+.breadboard-module-info .breadboard-icon {
+  padding-right: 0.5%;
+  color: #ffc500;
+  font-size: 20px;
+  padding-top: 0.3%;
+}
+
+.breadboard-module-info p {
+  color: #78869b;
+  font-size: 15px;
+  padding: 0.5%;
+}
+
+p strong{
+    font-weight: 580;
+    color: #596981;
+    font-size: 16px;
+}
+
+.module-1-info {
+  padding: 1% 0;
+}
+
+.module-1-info li {
+  margin-left: 1.5%;
+}
+
+.module-1-content {
+  /* display: flex; */
+}
+
+.course-sliding-intro {
+  margin: auto;
+  display: block;
+  width: 90%;
+  padding: 1%;
+  margin-bottom: 3%;
+
+}
+
+.course-sliding-intro img {
+  width: 100%;
+  height: 270px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* object-fit: cover; */
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide *:focus {
+  outline: none;
+}
+
+.slick-prev:before {
+  color: #0c50a3 !important;
+  background-color: white;
+}
+.slick-next:before {
+  color: #0c50a3 !important;
+  background-color: white;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #0c50a3 !important;
+}
+
+.module-1-info li{
+  padding-left: 1.5%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .board-title h1 {
+    padding-top: 5%;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  .course-sliding-intro img {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .course-sliding-intro img {
+    height: 150px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .course-sliding-intro img {
+    height: 230px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .course-sliding-intro img {
+    height: 230px;
+  }
+}
