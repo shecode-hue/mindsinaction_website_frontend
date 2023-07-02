@@ -4,6 +4,9 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import rightArrow from "../../icons/home_small arrow button - Right.svg";
 import leftArrow from "../../icons/home_small arrow button - Left.svg";
+
+import rightArrow1 from "../../icons/Img1.png";
+import leftArrow1 from "../../icons/Img2.png";
 // import SliderArrowR from "../../icons/Home-Sider-right.png";
 // import SliderArrowL from "../../icons/Home-Sider-left.png";
 // import SliderArrowL2 from "../../icons/Home-Sider-left (1).png";
@@ -71,6 +74,12 @@ const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
 
 const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
   < img className="button-it" src={rightArrow} alt="nextArrow"  {...props} />);
+
+const SlickArrowLeft1 = ({ currentSlide, slideCount, ...props }) => (
+  < img className="button-it" src={leftArrow1} alt="prevArrow" {...props} />);
+
+const SlickArrowRight1 = ({ currentSlide, slideCount, ...props }) => (
+  < img className="button-it" src={rightArrow1} alt="nextArrow"  {...props} />);
 
 //home page top slider config
 const content = [
@@ -185,6 +194,7 @@ const ParentsFeedback = [
       "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
   },
 ];
+
 const partnersConfig = {
   arrows: true,
   dots: true,
@@ -315,6 +325,7 @@ const partners = [
     image: unesco,
   },
 ];
+
 // images for the legoslider
 const legoimages = [
   {
@@ -554,6 +565,52 @@ const cards = [
 //   ],
 // };
 
+const courseConfig = {
+  arrows: true,
+  dots: true,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  // autoplay: true,
+  autoplaySpeed: 6000,
+  prevArrow: <SlickArrowLeft1 />,
+  nextArrow: <SlickArrowRight1 />,
+  responsive: [
+    {
+      breakpoint: 1124,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    // {
+    //   breakpoint: 992,
+    //   settings: {
+    //     slidesToShow: 3,
+    //     slidesToScroll: 3,
+    //     infinite: true,
+    //     dots: true,
+    //   },
+    // },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 580,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
 
 export default function Home() {
 
@@ -659,50 +716,94 @@ export default function Home() {
       <div className="Background-div-top">
         <div className="Modules-home">
           <h1>Modules</h1>
-          <div className="Modules-home-cards">
-            {cards.map((x, i) => {
-              return (
-                <div key={i} className="Modules-item"
-                  style={{
-                    backgroundColor: `#${x.color}`,
-                  }}>
-                  <a href="#0" aria-labelledby={x.title}> </a>
-                  <img src={x.image} alt={x.title} />
-                  {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                  <div className="Modules-item__overlay" style={{
-                    backgroundColor: `#${x.color}`,
-                  }}>
-                    <h3 id={x.title}
-                      style={{
-                        backgroundColor: `#${x.color}`,
-                      }} aria-hidden="true">{x.title}</h3>
-                    <div className="Modules-item__body">
-                      <p>{x.description}</p>
+          {/* <Slider {...courseConfig}> */}
+            <div className="Modules-home-cards">
+
+              {cards.map((x, i) => {
+                return (
+                  <div key={i} className="Modules-item"
+                    style={{
+                      backgroundColor: `#${x.color}`,
+                    }}>
+                    <a href="#0" aria-labelledby={x.title}> </a>
+                    <img src={x.image} alt={x.title} />
+                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                    <div className="Modules-item__overlay" style={{
+                      backgroundColor: `#${x.color}`,
+                    }}>
+                      <h3 id={x.title}
+                        style={{
+                          backgroundColor: `#${x.color}`,
+                        }} aria-hidden="true">{x.title}</h3>
+                      <div className="Modules-item__body">
+                        <p>{x.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+
+            </div>
+          {/* </Slider> */}
+        </div>
+        
+        <div className="display-home1" style={{paddingLeft: "50px", paddingRight: "50px"}}>
+          <div className="What-is-STEAM-Education-home">
+            <div class="box-for-image-moving-UpandDown"></div>
+
+
+            <div className="What-is-STEAM-Education-home-text" >
+              <h1>What is
+                <font color="#f1603b"> S</font>
+                <font color="#48aee3">T</font>
+                <font color="#ffc60a">E</font>
+                <font color="#f37021">A</font>
+                <font color="#63be45">M </font>
+                Education?</h1>
+              <p>STEAM stands for Science, Technology, Engineering, Arts and Mathematics. Students uncover the dynamic power and potential of STEAM modules through projects featuring robotics, electronics, exploring mechatronics, engineering, programming and more.</p>
+              <hr />
+              <div>
+                <h2 style={{ color: '#E8F2F5', paddingLeft: '20px' }}>Benefits of STEAM</h2>
+              </div>
+            </div>
+
+
+            <div id="rotating-setting-icon" className={isRotated ? 'rotate' : ''} >
+
+            </div>
+            <button id="trigger" onClick={handleTriggerClick}>Trigger</button>
+
           </div>
         </div>
 
-        <div className="What-is-STEAM-Education-home">
-          <div class="box-for-image-moving-UpandDown"></div>
 
-          <div className="What-is-STEAM-Education-home-text" >
-            <h1>What is
+        {/* small screen */}
+        <div className="What-is-STEAM-Education-home-mobile display-home2">
+          <center>
+            <div class="box-for-image-moving-UpandDown-mobile"></div>
+          </center>
+
+              
+          <div className="What-is-STEAM-Education-home-text-mobile" >
+            <h1 style={{ color: "white", textAlign: "center" }}>What is
               <font color="#f1603b"> S</font>
               <font color="#48aee3">T</font>
               <font color="#ffc60a">E</font>
               <font color="#f37021">A</font>
               <font color="#63be45">M </font>
-              Education ?</h1>
+              Education?</h1>
             <p>STEAM stands for Science, Technology, Engineering, Arts and Mathematics. Students uncover the dynamic power and potential of STEAM modules through projects featuring robotics, electronics, exploring mechatronics, engineering, programming and more.</p>
+            <hr />
+            <div>
+              <h2 style={{ color: '#E8F2F5', paddingLeft: '20px' }}>Benefits of STEAM</h2>
+            </div>
           </div>
-          <div id="rotating-setting-icon" className={isRotated ? 'rotate' : ''} >
+
+
+          <div id="rotating-setting-icon-mobile" className={isRotated ? 'rotate' : ''} >
 
           </div>
-          <button id="trigger" onClick={handleTriggerClick}>Trigger</button>
+          <button id="trigger-mobile" onClick={handleTriggerClick}>Trigger</button>
 
         </div>
         <div className="Why-steam">
@@ -761,7 +862,7 @@ export default function Home() {
                 return (
                   <div key={i} className="chat-boxes">
                     <div className="box sb">
-                    {x.message}
+                      {x.message}
                       <hr className="new1" />
                       -{x.parent}-
                     </div>
@@ -778,9 +879,10 @@ export default function Home() {
       </div>
       <div className='Background-div-bottom'>
         <div className="services-home-div" data-aos="fade-up">
-          <div style={{ marginTop: '120px' }} className="home-title-electronic">
+          <div className="home-title-electronic">
             <h1>Our Services</h1>
           </div>
+          <div className="center-hrz">
           <div className="home-services-cards">
             {ServicesInfo.map((x, i) => {
               return (
@@ -804,6 +906,8 @@ export default function Home() {
               );
             })}
           </div>
+          </div>
+          
         </div>
         <div className="electronic-home" data-aos="fade-up">
           <div style={{ marginTop: '120px' }} className="home-title-electronic">
@@ -845,7 +949,7 @@ export default function Home() {
           {/*  */}
         </div>
 
-        <div className="partners-home">
+        <div className="partners-home" style={{ marginTop: '60px' }}>
           <div style={{ marginTop: '120px' }} className="home-title-partners">
             <h1>Our Partners</h1>
           </div>
@@ -866,7 +970,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
       </div>
+
+
     </div>
   );
 }

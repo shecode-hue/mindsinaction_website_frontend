@@ -1010,7 +1010,7 @@ a {
 
 .home-main-container .electronic-home {
   height: auto;
-  /* padding: 50px 0px 50px 0px; */
+  padding: 0px 50px 0px 50px;
   background-color: transparent;
 }
 
@@ -1030,7 +1030,16 @@ a {
 .home-main-container .partners-home {
   padding-bottom: 65px;
   background-color: rgb(255, 255, 255);
+  padding-left: 50px;
+  padding-right: 50px;
 }
+
+/* @media only screen and (max-width: 768px) {
+  .home-main-container .partners-home {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+} */
 
 .home-main-container .partners-home .home-title-partners h1 {
   text-align: center;
@@ -1090,7 +1099,11 @@ a {
 }
 
 .product-image-card {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
+    0 6px 10px 0 rgba(133, 131, 131, 0.2);
 }
 
 .home-main-container .product-image-card .shop-button-home-inner {
@@ -1160,6 +1173,7 @@ styling for modelues cards */
 .Modules-home-cards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .Modules-item {
@@ -1296,6 +1310,7 @@ styling for modelues cards */
   width: 250px;
   height: 150PX;
   filter: grayscale(60%);
+  padding-left: 10px;
 }
 
 .Why-steam-card:hover .Why-steam-card-image {
@@ -1455,6 +1470,10 @@ hr {
   /* border: 3px dotted red;  */
 }
 
+.parralex-div {
+  padding: 0px 50px;
+}
+
 .parralex-div h2 {
   color: #6de517;
   width: 800px;
@@ -1465,6 +1484,12 @@ hr {
   color: #ffffff;
   font-weight: 700;
   font-size: 1.5em;
+}
+
+@media only screen and (max-width: 768px) {
+  .parralex-div h2 span {
+    font-size: 90%;
+  }
 }
 
 /* /styling for the bottom part begins */
@@ -1488,6 +1513,8 @@ hr {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
+    0 6px 10px 0 rgba(133, 131, 131, 0.2);
   /* opacity: 30%; */
 }
 
@@ -1572,14 +1599,16 @@ hr {
 
 .What-is-STEAM-Education-home {
   display: flex;
-  width: 800px;
+  width: 80%;
   height: 300px;
-  background-color: rgb(71, 134, 241);
+  /* background-color: rgb(71, 134, 241); */
+  background-color: #4F85C5;
   /* border: 3px dotted red; */
   margin-left: auto;
   margin-right: auto;
   border-radius: 30px;
   position: relative;
+  padding-top: 40px;
   /* border: 3px dotted rgb(0, 17, 255); */
 }
 
@@ -1652,6 +1681,137 @@ hr {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* @media only screen and (max-width: 1000px) {
+  .What-is-STEAM-Education-home {
+    width: 800px;
+    padding-bottom: 40px;
+  }
+} */
+
+
+@media only screen and (min-width: 900px) {
+  .display-home2 {
+    display: none;
+  }
+  .display-home1 {
+    display: block;
+  }
+  .What-is-STEAM-Education-home {
+    width: 800px;
+    padding-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .display-home2 {
+    display: block;
+  }
+  .display-home1 {
+    display: none;
+  }
+
+  .What-is-STEAM-Education-home-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  height: auto;
+  /* background-color: rgb(71, 134, 241); */
+  background-color: #4F85C5;
+  /* border: 3px dotted red; */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  position: relative;
+  /* padding-top: 40px; */
+  padding: 20px 20px 20px 20px;
+  /* border: 3px dotted rgb(0, 17, 255); */
+  }
+
+  .What-is-STEAM-Education-home-text-mobile p{
+    width: 100%;
+    text-align: center;
+    /* left: -60px; */
+    /* position: relative; */
+    /* border: 3px dotted rgb(255, 0, 123); */
+  }
+
+  .box-for-image-moving-UpandDown-mobile {
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    background: url("../../images/Home_images/home_Floating image.svg") no-repeat center center / 200px;
+    /* position: relative; */
+    animation: moveLeftRight 4s infinite;
+    /* left: -60px; */
+    border: none;
+  }
+
+  .What-is-STEAM-Education-home-mobile h1 {
+    color: white;
+    text-align: left;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
+  
+  .What-is-STEAM-Education-home-mobile h1 font {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  
+  .What-is-STEAM-Education-home-mobile p {
+    color: white;
+    /* padding: 10px 10px; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
+  
+  #rotating-setting-icon-mobile {
+    width: 65px;
+    height: 65px;
+    background: url("../../icons/home_Rotating Gear.svg") no-repeat center center / 65px;
+    /* border: 3px dotted red; */
+    /* left: 956px; */
+    position: absolute;
+    margin-top: 20px;
+    right: -24px;
+  }
+  
+  #rotating-setting-icon-mobile.rotate {
+    animation: 4s linear infinite rotate-con;
+  }
+  
+  #trigger-mobile {
+    visibility: hidden;
+  
+    color: #061fae;
+    color: #0f04a7;
+    color: #f1cf0b;
+    color: #f40707;
+    color: #237f05;
+  
+    color: rgb(98, 147, 232);
+    color: rgb(172, 99, 232);
+    color: rgb(242, 201, 37);
+    color: rgb(233, 142, 31);
+    color: rgb(121, 185, 91);
+  }
+  
+  
+  @keyframes rotate-con {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
   }
 }
 
@@ -1812,20 +1972,23 @@ hr {
 
 .services-home-div {
   /* border:3px dotted rgb(0, 217, 255) ; */
+  height: 100%;
+  margin: 100px 0px;
 }
 
 .home-services-cards {
   /*   
   border:3px dotted rgb(0, 217, 255) ; */
-  height: 400px;
+  height: auto;
   width: 80%;
   margin-top: 4rem;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
+  gap: 50px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .home-services-card {
@@ -1833,7 +1996,8 @@ hr {
   /* border:3px dotted red ; */
   height: 350px;
   width: 240px;
-  padding-top: 30px;
+  padding: 30px 10px 0px 10px;
+  margin: 30px 0px;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 5px 10px 15px 5px,
     rgba(0, 0, 0, 0.05) 5px 10px 15px 5px;
