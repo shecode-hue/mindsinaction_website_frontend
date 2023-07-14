@@ -37,6 +37,7 @@ import Slider3 from "../../images/Homepage Slider Images/IMG-20230424-WA0023.jpg
 import Slider4 from "../../images/Homepage Slider Images/IMG-20230424-WA0026.jpg";
 import Slider5 from "../../images/Homepage Slider Images/IMG-20230424-WA0029.jpg";
 import Slider6 from "../../images/Homepage Slider Images/IMG-20230424-WA0033.jpg";
+import sliderArrow from "../../icons/Home-Sider-right.png";
 
 import imageSlide from "./data";
 
@@ -70,10 +71,10 @@ import services4 from "../../images/Home_images/Home-services/icon_3D Printing.s
 // import { IoChevronForward, HiChevronDoubleRight } from 'react-icons/all';
 
 const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-  < img className="button-it" src={leftArrow} alt="prevArrow" {...props} />);
+  < img id="slider-arrow-left" src={sliderArrow} alt="prevArrow" {...props} />);
 
 const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-  < img className="button-it" src={rightArrow} alt="nextArrow"  {...props} />);
+  < img id="slider-arrow-right" src={sliderArrow} alt="nextArrow"  {...props} />);
 
 // const SlickArrowLeft1 = ({ currentSlide, slideCount, ...props }) => (
 //   < img className="button-it" src={leftArrow1} alt="prevArrow" {...props} />);
@@ -680,23 +681,35 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if(currentState === 2) {
+      if (currentState === imageSlide.length - 1) {
         setCurrentState(0);
-      }else {
-        setCurrentState(currentState+1);
-      }  
-    }, 5000)
-    return () => clearTimeout(timer)
-  }, [currentState])
+      } else {
+        setCurrentState(currentState + 1);
+      }
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [currentState, imageSlide.length]);
 
-  const goToNext = (currentState) => {
-    setCurrentState(currentState)
-  }
+  const goToNext = () => {
+    if (currentState === imageSlide.length - 1) {
+      setCurrentState(0);
+    } else {
+      setCurrentState(currentState + 1);
+    }
+  };
+
+  const goToPrev = () => {
+    if (currentState === 0) {
+      setCurrentState(imageSlide.length - 1);
+    } else {
+      setCurrentState(currentState - 1);
+    }
+  };
 
 
   return (
     <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
-      <div style={{paddingTop: "0px" }}>
+      {/* <div style={{ paddingTop: "0px" }}>
         <div className="home-page-top-slider" style={{ height: "100vh" }}>
           <Slider className="slider-wrapper"
             autoplay={1000}
@@ -719,7 +732,7 @@ export default function Home() {
                 <span>
                   Date Posted <strong>{item.user}</strong>
                 </span>
-              </section> */}
+              </section> *
               </div>
             ))}
           </Slider>
@@ -733,9 +746,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div style={{height: "100vh", backgroundColor: "white", textAlign: "center"}}>
+      {/* <div style={{height: "100vh", backgroundColor: "white", textAlign: "center"}}>
              <div className='container-style'>
                 <div style={{
                   backgroundImage: `url(${imageSlide[currentState].image})`, 
@@ -746,56 +759,105 @@ export default function Home() {
                 </div>
                 <div className='transparent-background'></div>
                 <div className='description'>
-                  <div>
+                  <div className='text'>
                     <h1>{imageSlide[currentState].title}</h1>
+                    <hr/>
                     <p>{imageSlide[currentState].description}</p>
                   </div>
-                  <div className='carousel-boullt'>
+                  <button className='hero-button'>{imageSlide[currentState].button}</button>
+                  
+                </div>
+                <div className='carousel-boullt'>
                     {
                       imageSlide.map((imageSlide, currentState) => (
                         <span key={currentState} onClick={() => goToNext(currentState)}></span>
                       ))
                     }
                   </div>
-                </div>
              </div>
+      </div> */}
+
+      <div style={{ height: "100vh", backgroundColor: "white", textAlign: "center" }}>
+        <div className="container-style">
+          {/* zimage slides */}
+          {imageSlide.map((slide, index) => (
+            <div
+              key={index}
+              className={`image-slide ${index === currentState ? "active" : ""}`}
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                height: "100%",
+              }}
+            >
+              <div className="transparent-background"></div>
+              <div className="description">
+                <div className="text">
+                  <h1>{slide.title}</h1>
+                  <div className='center-hr'>
+                    <hr />
+                  </div>
+                  <p>{slide.description}</p>
+                  <div className='center-hr' style={{borderRadius: "20px"}}>
+                    <button className="hero-button">{slide.button}</button>
+                  </div>
+                </div>
+                
+              </div>
+              {/* Navigation arrows */}
+              <SlickArrowLeft onClick={goToPrev} />
+              <SlickArrowRight onClick={goToNext} />
+            </div>
+          ))}
+          {/* Slider buttons */}
+          <div className="carousel-bullets">
+            {imageSlide.map((slide, index) => (
+              <span
+                key={index}
+                className={index === currentState ? "active" : ""}
+                onClick={() => setCurrentState(index)}
+              ></span>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="Background-div-top">
         <div className="Modules-home">
           <h1>Modules</h1>
           {/* <Slider {...courseConfig}> */}
-            <div className="Modules-home-cards">
+          <div className="Modules-home-cards">
 
-              {cards.map((x, i) => {
-                return (
-                  <div key={i} className="Modules-item"
-                    style={{
-                      backgroundColor: `#${x.color}`,
-                    }}>
-                    <a href="#0" aria-labelledby={x.title}> </a>
-                    <img src={x.image} alt={x.title} />
-                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                    <div className="Modules-item__overlay" style={{
-                      backgroundColor: `#${x.color}`,
-                    }}>
-                      <h3 id={x.title}
-                        style={{
-                          backgroundColor: `#${x.color}`,
-                        }} aria-hidden="true">{x.title}</h3>
-                      <div className="Modules-item__body">
-                        <p>{x.description}</p>
-                      </div>
+            {cards.map((x, i) => {
+              return (
+                <div key={i} className="Modules-item"
+                  style={{
+                    backgroundColor: `#${x.color}`,
+                  }}>
+                  <a href="#0" aria-labelledby={x.title}> </a>
+                  <img src={x.image} alt={x.title} />
+                  {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                  <div className="Modules-item__overlay" style={{
+                    backgroundColor: `#${x.color}`,
+                  }}>
+                    <h3 id={x.title}
+                      style={{
+                        backgroundColor: `#${x.color}`,
+                      }} aria-hidden="true">{x.title}</h3>
+                    <div className="Modules-item__body">
+                      <p>{x.description}</p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              );
+            })}
 
-            </div>
+          </div>
           {/* </Slider> */}
         </div>
-        
-        <div className="display-home1" style={{paddingLeft: "50px", paddingRight: "50px"}}>
+
+        <div className="display-home1" style={{ paddingLeft: "50px", paddingRight: "50px" }}>
           <div className="What-is-STEAM-Education-home">
             <div class="box-for-image-moving-UpandDown"></div>
 
@@ -831,7 +893,7 @@ export default function Home() {
             <div class="box-for-image-moving-UpandDown-mobile"></div>
           </center>
 
-              
+
           <div className="What-is-STEAM-Education-home-text-mobile" >
             <h1 style={{ color: "white", textAlign: "center" }}>What is
               <font color="#f1603b"> S</font>
@@ -931,12 +993,12 @@ export default function Home() {
             <h1>Our Services</h1>
           </div>
           <div className="center-hrz">
-          <div className="home-services-cards">
-            {ServicesInfo.map((x, i) => {
-              return (
-                <div key={i} className="home-services-card">
-                  {/* <NavLink to={x.productLink}> */}
-                  <NavLink exact to="/services">
+            <div className="home-services-cards">
+              {ServicesInfo.map((x, i) => {
+                return (
+                  <div key={i} className="home-services-card">
+                    {/* <NavLink to={x.productLink}> */}
+                    <NavLink exact to="/services">
 
                       <div className="home-services-card-image-top"
                         style={{ background: `url('${x.image}') no-repeat center center` }}>
@@ -955,72 +1017,72 @@ export default function Home() {
               })}
             </div>
           </div>
-          </div>
-          
-        </div>
-        <div className="electronic-home" data-aos="fade-up">
-          <div style={{ marginTop: '120px' }} className="home-title-electronic">
-            <h1>Electronic Shop</h1>
-          </div>
-          {/*  */}
-          <div className="products" style={{ marginTop: '60px' }}>
-            {/**Products section */}
-            < Sliderx {...productConfig}>
-              {products.map((x, i) => {
-                return (
-                  <div key={i} className="product-image-card">
-                    {/* <NavLink to={x.productLink}> */}
-                    <NavLink exact to="/Shop">
-                      <img
-                        src={
-                          'https://mindsinaction.com.na/api/product/' + x.image_url
-                        }
-                        alt=""
-                      />
-                    </NavLink>
-                    <div className="products-content-home">
-                      <h4>{x.product_name}</h4>
-                      <p>
-                        {' '}
-                        <span>N$</span> {x.product_price}
-                      </p>
-                    </div>
-                    <NavLink exact to="/Shop">
-                      <div className="btn-buy-outer">
-                        <button className='shop-button-home-inner'>buy</button>
-                      </div>
-                    </NavLink>
-                  </div>
-                );
-              })}
-            </ Sliderx>
-          </div>
-          {/*  */}
         </div>
 
-        <div className="partners-home" style={{ marginTop: '60px' }}>
-          <div style={{ marginTop: '120px' }} className="home-title-partners">
-            <h1>Our Partners</h1>
-          </div>
-          <div className="our-partners">
-            <div className="course" style={{ marginTop: '60px' }}>
-              {/**Courses section */}
-              < Sliderx {...partnersConfig}>
-                {partners.map((partner, index) => (
-                  <div key={index} className="partners-swiper-slide-home">
-                    <div className="image">
-                      <a href={partner.link} target="_blank" rel="noopener noreferrer">
-                        <img src={partner.image} alt="partner" />
-                      </a>
-                    </div>
+      </div>
+      <div className="electronic-home" data-aos="fade-up">
+        <div style={{ marginTop: '120px' }} className="home-title-electronic">
+          <h1>Electronic Shop</h1>
+        </div>
+        {/*  */}
+        <div className="products" style={{ marginTop: '60px' }}>
+          {/**Products section */}
+          < Sliderx {...productConfig}>
+            {products.map((x, i) => {
+              return (
+                <div key={i} className="product-image-card">
+                  {/* <NavLink to={x.productLink}> */}
+                  <NavLink exact to="/Shop">
+                    <img
+                      src={
+                        'https://mindsinaction.com.na/api/product/' + x.image_url
+                      }
+                      alt=""
+                    />
+                  </NavLink>
+                  <div className="products-content-home">
+                    <h4>{x.product_name}</h4>
+                    <p>
+                      {' '}
+                      <span>N$</span> {x.product_price}
+                    </p>
                   </div>
-                ))}
-              </ Sliderx>
-            </div>
+                  <NavLink exact to="/Shop">
+                    <div className="btn-buy-outer">
+                      <button className='shop-button-home-inner'>buy</button>
+                    </div>
+                  </NavLink>
+                </div>
+              );
+            })}
+          </ Sliderx>
+        </div>
+        {/*  */}
+      </div>
+
+      <div className="partners-home" style={{ marginTop: '60px' }}>
+        <div style={{ marginTop: '120px' }} className="home-title-partners">
+          <h1>Our Partners</h1>
+        </div>
+        <div className="our-partners">
+          <div className="course" style={{ marginTop: '60px' }}>
+            {/**Courses section */}
+            < Sliderx {...partnersConfig}>
+              {partners.map((partner, index) => (
+                <div key={index} className="partners-swiper-slide-home">
+                  <div className="image">
+                    <a href={partner.link} target="_blank" rel="noopener noreferrer">
+                      <img src={partner.image} alt="partner" />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </ Sliderx>
           </div>
         </div>
-        
       </div>
+
+    </div>
 
 
     // </div>
