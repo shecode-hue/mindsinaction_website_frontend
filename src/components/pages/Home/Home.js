@@ -679,7 +679,22 @@ export default function Home() {
     });
   }, []);
 
-  // const [currentState, ]
+  const [currentState, setCurrentState] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if(currentState === 2) {
+        setCurrentState(0);
+      }else {
+        setCurrentState(currentState+1);
+      }  
+    }, 5000)
+    return () => clearTimeout(timer)
+  }, [currentState])
+
+  const goToNext = (currentState) => {
+    setCurrentState(currentState)
+  }
 
 
   return (
@@ -723,8 +738,30 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{height: "100vh", backgroundColor: "white"}}>
-             Background
+      <div style={{height: "100vh", backgroundColor: "white", textAlign: "center"}}>
+             <div className='container-style'>
+                <div style={{
+                  backgroundImage: `url(${imageSlide[currentState].image})`, 
+                  backgroundPosition: 'center',
+                  backgroundSize: 'cover',
+                  height: '100%',
+              }}>
+                </div>
+                <div className='transparent-background'></div>
+                <div className='description'>
+                  <div>
+                    <h1>{imageSlide[currentState].title}</h1>
+                    <p>{imageSlide[currentState].description}</p>
+                  </div>
+                  <div className='carousel-boullt'>
+                    {
+                      imageSlide.map((imageSlide, currentState) => (
+                        <span key={currentState} onClick={() => goToNext(currentState)}></span>
+                      ))
+                    }
+                  </div>
+                </div>
+             </div>
       </div>
 
       <div className="Background-div-top">

@@ -1,6 +1,7 @@
 import dummy1 from "../../images/Homepage Slider Images/dummy-slider-image1.jpg";
 import dummy2 from "../../images/Homepage Slider Images/dummy-slider-image2.jpg";
 import dummy3 from "../../images/Homepage Slider Images/dummy-slider-image3.jpg";
+import Slider1 from "../../images/Homepage Slider Images/IMG-20230424-WA0021.jpg";
 
 const imageSlide = [
     {
@@ -8,7 +9,7 @@ const imageSlide = [
       description:
         "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
       button: "Discover",
-      image: dummy1,
+      image: Slider1,
     },
     {
       title: "Mindsinaction STEAM Centre",
