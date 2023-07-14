@@ -4,9 +4,6 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import rightArrow from "../../icons/home_small arrow button - Right.svg";
 import leftArrow from "../../icons/home_small arrow button - Left.svg";
-
-import rightArrow1 from "../../icons/Img1.png";
-import leftArrow1 from "../../icons/Img2.png";
 // import SliderArrowR from "../../icons/Home-Sider-right.png";
 // import SliderArrowL from "../../icons/Home-Sider-left.png";
 // import SliderArrowL2 from "../../icons/Home-Sider-left (1).png";
@@ -78,11 +75,11 @@ const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
 const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
   < img className="button-it" src={rightArrow} alt="nextArrow"  {...props} />);
 
-const SlickArrowLeft1 = ({ currentSlide, slideCount, ...props }) => (
-  < img className="button-it" src={leftArrow1} alt="prevArrow" {...props} />);
+// const SlickArrowLeft1 = ({ currentSlide, slideCount, ...props }) => (
+//   < img className="button-it" src={leftArrow1} alt="prevArrow" {...props} />);
 
-const SlickArrowRight1 = ({ currentSlide, slideCount, ...props }) => (
-  < img className="button-it" src={rightArrow1} alt="nextArrow"  {...props} />);
+// const SlickArrowRight1 = ({ currentSlide, slideCount, ...props }) => (
+//   < img className="button-it" src={rightArrow1} alt="nextArrow"  {...props} />);
 
 //home page top slider config
 const content = [
@@ -578,8 +575,8 @@ const courseConfig = {
   slidesToScroll: 4,
   // autoplay: true,
   autoplaySpeed: 6000,
-  prevArrow: <SlickArrowLeft1 />,
-  nextArrow: <SlickArrowRight1 />,
+  prevArrow: <SlickArrowLeft />,
+  nextArrow: <SlickArrowRight />,
   responsive: [
     {
       breakpoint: 1124,
@@ -768,37 +765,37 @@ export default function Home() {
         <div className="Modules-home">
           <h1>Modules</h1>
           {/* <Slider {...courseConfig}> */}
-          <div className="Modules-home-cards">
+            <div className="Modules-home-cards">
 
-            {cards.map((x, i) => {
-              return (
-                <div key={i} className="Modules-item"
-                  style={{
-                    backgroundColor: `#${x.color}`,
-                  }}>
-                  <a href="#0" aria-labelledby={x.title}> </a>
-                  <img src={x.image} alt={x.title} />
-                  {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                  <div className="Modules-item__overlay" style={{
-                    backgroundColor: `#${x.color}`,
-                  }}>
-                    <h3 id={x.title}
-                      style={{
-                        backgroundColor: `#${x.color}`,
-                      }} aria-hidden="true">{x.title}</h3>
-                    <div className="Modules-item__body">
-                      <p>{x.description}</p>
+              {cards.map((x, i) => {
+                return (
+                  <div key={i} className="Modules-item"
+                    style={{
+                      backgroundColor: `#${x.color}`,
+                    }}>
+                    <a href="#0" aria-labelledby={x.title}> </a>
+                    <img src={x.image} alt={x.title} />
+                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                    <div className="Modules-item__overlay" style={{
+                      backgroundColor: `#${x.color}`,
+                    }}>
+                      <h3 id={x.title}
+                        style={{
+                          backgroundColor: `#${x.color}`,
+                        }} aria-hidden="true">{x.title}</h3>
+                      <div className="Modules-item__body">
+                        <p>{x.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
 
-          </div>
+            </div>
           {/* </Slider> */}
         </div>
-
-        <div className="display-home1" style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+        
+        <div className="display-home1" style={{paddingLeft: "50px", paddingRight: "50px"}}>
           <div className="What-is-STEAM-Education-home">
             <div class="box-for-image-moving-UpandDown"></div>
 
@@ -834,7 +831,7 @@ export default function Home() {
             <div class="box-for-image-moving-UpandDown-mobile"></div>
           </center>
 
-
+              
           <div className="What-is-STEAM-Education-home-text-mobile" >
             <h1 style={{ color: "white", textAlign: "center" }}>What is
               <font color="#f1603b"> S</font>
@@ -934,12 +931,12 @@ export default function Home() {
             <h1>Our Services</h1>
           </div>
           <div className="center-hrz">
-            <div className="home-services-cards">
-              {ServicesInfo.map((x, i) => {
-                return (
-                  <div key={i} className="home-services-card">
-                    {/* <NavLink to={x.productLink}> */}
-                    <NavLink exact to="/services">
+          <div className="home-services-cards">
+            {ServicesInfo.map((x, i) => {
+              return (
+                <div key={i} className="home-services-card">
+                  {/* <NavLink to={x.productLink}> */}
+                  <NavLink exact to="/services">
 
                       <div className="home-services-card-image-top"
                         style={{ background: `url('${x.image}') no-repeat center center` }}>
@@ -958,7 +955,8 @@ export default function Home() {
               })}
             </div>
           </div>
-
+          </div>
+          
         </div>
         <div className="electronic-home" data-aos="fade-up">
           <div style={{ marginTop: '120px' }} className="home-title-electronic">
@@ -1021,10 +1019,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+        
       </div>
 
 
-    </div>
+    // </div>
   );
 }
