@@ -29,10 +29,16 @@ export default function Header() {
 
   window.addEventListener("scroll", changeBackground);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <nav className={navbar ? "navbar active" : "navbar"}>
-        {/* <div className="border"></div> */}
+      {/* <nav className={navbar ? "navbar active" : "navbar"}>
+        {/* <div className="border"></div> *
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
             <img src={logo} alt=""></img>
@@ -250,7 +256,7 @@ export default function Header() {
                     >
                       Engineering
                     </NavLink>
-                  </li> */}
+                  </li> *
                   <li>
                     <NavLink
                       exact
@@ -300,7 +306,7 @@ export default function Header() {
                 </div>
                 Register
               </NavLink>
-            </li> */}
+            </li> *
             <li className="nav-item">
               <NavLink
                 exact
@@ -340,7 +346,7 @@ export default function Header() {
                 <BsSearch />
                 <div className="header-search">Search</div>
               </NavLink>
-            </li> */}
+            </li> *
           </ul>
           <div className="header-right-buttons">
             <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
@@ -349,6 +355,111 @@ export default function Header() {
           <div className="nav-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <VscThreeBars />}
           </div>
+        </div>
+      </nav> */}
+      <nav>
+        <div className="navbar">
+          {/* <div className="logo"><a href="#">Web Dev Creative</a></div> */}
+          <NavLink exact to="/" className="nav-logo">
+            <img src={logo} alt=""></img>
+          </NavLink>
+          <ul className={`links ${isOpen ? 'open' : ''}`}>
+            <li>
+              <NavLink exact to="/hero" activeClassName="active">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/about" activeClassName="active">
+                Who We Are
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/modules" activeClassName="active">
+                Modules
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/services" activeClassName="active">
+                Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/shop" activeClassName="active">
+                Shop
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/contact" activeClassName="active">
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+
+          {/* <div> */}
+          {/* <a href="#" className="action_btn1">Free Demo</a>
+            <span style={{ marginRight: "20px" }}></span>
+            <a href="#" className="action_btn2">Register</a> */}
+          <div className="header-right-buttons">
+            <NavLink exact to="/free-demo">
+              <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
+            </NavLink>
+            <NavLink exact to="/register">
+              <button className="header-register">Register</button>
+            </NavLink>
+
+          </div>
+          {/* </div> */}
+
+          <div className="toggle_btn" onClick={toggleMenu}>
+            {isOpen ? <FaTimes id="icon" /> : <VscThreeBars id="icon" />}
+          </div>
+        </div>
+        <div
+          className={`${isOpen ? 'dropdown_menu' : 'none'}`}
+        // className="dropdown_menu open"
+        >
+          <ul>
+          <li>
+              <NavLink exact to="/hero" activeClassName="active">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/about" activeClassName="active">
+                Who We Are
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/modules" activeClassName="active">
+                Modules
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/services" activeClassName="active">
+                Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/shop" activeClassName="active">
+                Shop
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/contact" activeClassName="active">
+                Contact Us
+              </NavLink>
+            </li>
+            {/* <li><a href="#" className="action_btn">Free Demo</a></li> */}
+            {/* <span style={{marginRight: "20px"}}></span> */}
+            {/* <li><a href="#" className="action_btn">Register</a></li> */}
+            <li style={{display: "block"}}><NavLink exact to="/free-demo">
+              <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
+            </NavLink></li>
+            <li style={{display: "block"}}><NavLink exact to="/register">
+              <button className="header-register">Register</button>
+            </NavLink></li>
+          </ul>
         </div>
       </nav>
     </>
