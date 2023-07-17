@@ -258,9 +258,9 @@ function App() {
             <Route path="*">
               <deadPage />
             </Route> */}
-            {/* <ScrollTop />
+            <ScrollTop />
 
-            <Footer /> */}
+            <Footer />
           </switch>
         </BrowserRouter>
       )}

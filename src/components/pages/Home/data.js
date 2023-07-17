@@ -10,14 +10,14 @@ import Slider6 from "../../images/Homepage Slider Images/IMG-20230424-WA0033.jpg
 
 const imageSlide = [
     {
-      title: "MINDSINACTION STEAM CENTRE",
+      title: "1",
       description:
         "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
       button: "Discover",
       image: Slider1,
     },
     {
-      title: "MINDSINACTION STEAM CENTRE",
+      title: "2",
       description:
         "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
       button: "Discover",
