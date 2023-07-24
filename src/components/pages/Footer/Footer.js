@@ -8,6 +8,11 @@ import {
   FaInstagram,
   FaLinkedin,
   SiTiktok,
+  ImFacebook,
+  RiFacebookBoxFill,
+  RiLinkedinBoxFill,
+  IoLogoTiktok,
+  RiInstagramLine,
 } from 'react-icons/all';
 import './Footer.css';
 // import Facebook from "../../icons/Social_Facebook.svg";
@@ -33,18 +38,18 @@ export default function Footer() {
     //           <button className="subscribe-button" >Subscribe</button>
     //       </div>
     //       <diV className="footer-social-mediaIcons">
-    //         <a href="https://example.com">
+    //         <NavLink to="https://example.com">
     //           <img src={Facebook} alt="Facebook" />
-    //         </a>
-    //         <a href="https://example.com">
+    //         </NavLink>
+    //         <NavLink to="https://example.com">
     //           <img src={LinkedIn} alt="LinkedIn" />
-    //         </a>
-    //         <a href="https://example.com">
+    //         </NavLink>
+    //         <NavLink to="https://example.com">
     //           <img src={TikTok} alt="TikTok" />
-    //         </a>
-    //         <a href="https://example.com">
+    //         </NavLink>
+    //         <NavLink to="https://example.com">
     //           <img src={Insagram} alt="Insagram" />
-    //         </a></diV>
+    //         </NavLink></diV>
     //     </div>
     //     <div className="fotter-right-side">
     //       <div className="footer-details">
@@ -129,7 +134,7 @@ export default function Footer() {
     //             <span><MdEmail size='1.5rem' color={'#94c93d'} /><p>admin@mindsinaction.com.na</p></span>
     //           </div>
     //           <div className="cont-info">
-    //             <span> <AiTwotonePhone size='1.5rem' color={'#94c93d'} /><p>Tel: +264 81 363 0529</p></span>
+    //             <span> <NavLinkiTwotonePhone size='1.5rem' color={'#94c93d'} /><p>Tel: +264 81 363 0529</p></span>
     //           </div>
     //           <div className="cont-info">
     //             <span> <ImLocation2 size='70px' color={'#94c93d'} /><p>6 Andimba Toivo-ya-Toivo No.6, Suiderhof,Windhoek, Huster Machinetool building, First Floor</p></span>
@@ -151,48 +156,55 @@ export default function Footer() {
     <div id='body'>
       <footer>
         <div className='row'>
-          <div className='col'>
+          {/* <div className='col'>
             <img src={logo} className="logo" alt="logo" />
             <p style={{ color: "#fff" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div> */}
+          <div className='col'>
+            <h2 id='newsletter-header' className='desktop'>Stay updated on STEAM education updates <br />& ICT / Engineering services!</h2>
+            <h2 id='newsletter-header' className='mobile'>Stay updated on STEAM education updates & ICT / Engineering services!</h2>
+            <form id='newsletter-form'>
+              <input type='email' placeholder='Your email' required />
+              <button type='submit'>Subscribe!</button>
+            </form>
+            <div className='social-icons'>
+              <RiFacebookBoxFill className="fab" />
+              <RiLinkedinBoxFill className="fab" />
+              <SiTiktok className="fab" />
+              <RiInstagramLine className="fab" />
+            </div>
           </div>
           <div className='col'>
-            <h3>Office <div className='underline'><span></span></div></h3>
-            <p style={{ color: "#fff" }}>ITPL Road</p>
-            <p style={{ color: "#fff" }}>Whitefield, Bangalore</p>
-            <p style={{ color: "#fff" }}>Karnataka, PIN 560066, India</p>
-            <p className='email-id'>avinashdm@outlook.com</p>
-            <h4 style={{ color: "#fff" }}>+264 - 812648975</h4>
-          </div>
-          <div className='col'>
-            <h3>Links <div className='underline'><span></span></div></h3>
+            <h3>About</h3>
             <ul>
-              <li><a href='#'>Home</a></li>
-              <li><a href='#'>Services</a></li>
-              <li><a href='#'>About Us</a></li>
-              <li><a href='#'>Features</a></li>
-              <li><a href='#'>Contacts</a></li>
+              <li><NavLink to='#'>Our Story</NavLink></li>
+              <li><NavLink to='#'>Modules</NavLink></li>
+              <li><NavLink to='#'>Blog</NavLink></li>
+              <li><NavLink to='#'>F.A.Qs</NavLink></li>
             </ul>
           </div>
           <div className='col'>
-            <h3>Newsletter <div className='underline'><span></span></div></h3>
-            <form>
-              <MdEmail />
-              <input type='email' placeholder='Enter your email id' required />
-              <button type='submit'><BiArrowToRight /></button>
-            </form>
-            <div className='social-icons'>
-              <FaFacebook className="fab"/>
-              <FaInstagram className="fab"/>
-              <FaLinkedin className="fab"/>
-              <SiTiktok className="fab"/>
+            <h3>Services</h3>
+            <ul>
+              <li><NavLink to='#'>ICT Services</NavLink></li>
+              <li><NavLink to='#'>Engineering Services</NavLink></li>
+              <li><NavLink to='#'>Electronic Shop</NavLink></li>
+            </ul>
+          </div>
+          <div className='col'>
+            <h3>Office</h3>
+            <div>
+              <MdEmail style={{ fontSize: "16px", color: "#6fb73f", marginRight: "10px" }} /><p style={{ color: "#fff", display: "inline-block" }}>admin@mindsinaction.com.na</p>
             </div>
+            <div>
+              <AiTwotonePhone style={{ fontSize: "16px", color: "#6fb73f", marginRight: "10px" }} /><p style={{ color: "#fff", display: "inline-block" }}>+264 81 363 0529</p>
+            </div>
+            <ImLocation2 style={{ fontSize: "16px", color: "#6fb73f", marginRight: "10px", marginBottom: "35px" }} /><p style={{ color: "#fff", display: "inline-block" }}>Toivo ya Toivo No.6. Suiderhof,<br />Windhoek, Huster Machinetool<br />building First Floor</p>
           </div>
         </div>
         <hr />
-        <p className='copyright'>&copy;{year} Mindsinaction - All rights reserved.{' '}
-          {/* <span>Developed by Mindsinaction</span> */}
-        </p>
+        <p className='copyright'>&copy;{year} Mindsinaction - All rights reserved. Developed by Mindsinaction</p>
       </footer>
     </div>
 

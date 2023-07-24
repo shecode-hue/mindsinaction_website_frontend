@@ -8,8 +8,8 @@ import leftArrow from "../../icons/home_small arrow button - Left.svg";
 // import SliderArrowL from "../../icons/Home-Sider-left.png";
 // import SliderArrowL2 from "../../icons/Home-Sider-left (1).png";
 import { NavLink } from 'react-router-dom';
-import goethe from '../../images/goethe.png';
-import dundee from '../../images/dundee.jpg';
+// import goethe from '../../images/goethe.png';
+// import dundee from '../../images/dundee.jpg';
 import 'react-slideshow-image/dist/styles.css';
 // import { Fade } from "react-slideshow-image";
 import Sliderx from 'react-slick';
@@ -22,11 +22,11 @@ import { AiOutlineRobot } from "react-icons/ai";
 import { VscCircuitBoard } from "react-icons/vsc";
 import { BsCode } from "react-icons/bs";
 import { RiMicroscopeLine } from "react-icons/ri";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft, FaQuoteRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "react-animated-slider/build/horizontal.css";
 import "./SliderStyling/slider-animations.css";
 import exxonmobil from '../../images/exxonmobil.png';
-import konrad from '../../images/konrad.png';
+// import konrad from '../../images/konrad.png';
 import NAMIBIA_coa from '../../images/NAMIBIA_coa.png';
 import ncrst from '../../images/ncrst.png';
 import nss from '../../images/nss.png';
@@ -66,6 +66,19 @@ import services1 from "../../images/Home_images/Home-services/icon_Mobile App De
 import services2 from "../../images/Home_images/Home-services/icon_Web Dev.svg"
 import services3 from "../../images/Home_images/Home-services/icon_Data Center Solutions.svg"
 import services4 from "../../images/Home_images/Home-services/icon_3D Printing.svg"
+
+import dundee from "../../images/Home_images/partners/logo_Dundee.png";
+import exxon from "../../images/Home_images/partners/logo_Exxon.png";
+import goethe from "../../images/Home_images/partners/logo_Goethe.png";
+import konrad from "../../images/Home_images/partners/logo_Kronrad.png";
+import namSience from "../../images/Home_images/partners/logo_Nam Science.png";
+import NCRST from "../../images/Home_images/partners/logo_NCRST.png";
+import UNESCO from "../../images/Home_images/partners/logo_UNESCO.png";
+
+import Carousel from "react-elastic-carousel";
+import Item from "./Item";
+// import "./Styles.css";
+
 
 
 // import { IoChevronForward, HiChevronDoubleRight } from 'react-icons/all';
@@ -298,7 +311,7 @@ const partners = [
   },
   {
     link: "https://corporate.exxonmobil.com/",
-    image: exxonmobil,
+    image: exxon,
   },
   {
     link: "https://www.goethe.de/ins/na/en/ver.cfm?event_id=24619907",
@@ -309,21 +322,21 @@ const partners = [
     image: konrad,
   },
 
-  {
-    link: "/",
-    image: NAMIBIA_coa,
-  },
+  // {
+  //   link: "/",
+  //   image: NAMIBIA_coa,
+  // },
   {
     link: "https://ncrst.na/",
-    image: ncrst,
+    image: NCRST,
   },
   {
     link: "https://www.namscience.com/",
-    image: nss,
+    image: namSience,
   },
   {
     link: "https://www.unesco.org/en",
-    image: unesco,
+    image: UNESCO,
   },
 ];
 
@@ -707,6 +720,83 @@ export default function Home() {
   };
 
 
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 4 },
+  ];
+
+  const productBreakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1124, itemsToShow: 4 },
+    { width: 1500, itemsToShow: 5 },
+  ];
+
+  const productConfig = {
+    dots: false,
+    arrows: true,
+    indicators: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
+    responsive: [
+      {
+        breakpoint: 1124,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+          arrows: true,
+        },
+      },
+
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+    ],
+  };
+
+  const [isDivVisible, setDivVisible] = useState(true);
+
+  const handleWindowResize = () => {
+    const screenWidth = window.innerWidth;
+    // Change the threshold width according to your requirement
+    const thresholdWidth = 768;
+    setDivVisible(screenWidth >= thresholdWidth);
+  };
+
+  useEffect(() => {
+    handleWindowResize(); // Set initial visibility based on screen width
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      // Remove the event listener when the component unmounts
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+
   return (
     <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
       {/* <div style={{ paddingTop: "0px" }}>
@@ -799,11 +889,11 @@ export default function Home() {
                     <hr />
                   </div>
                   <p>{slide.description}</p>
-                  <div className='center-hr' style={{borderRadius: "20px"}}>
+                  <div className='center-hr' style={{ borderRadius: "20px" }}>
                     <button className="hero-button">{slide.button}</button>
                   </div>
                 </div>
-                
+
               </div>
               {/* Navigation arrows */}
               <SlickArrowLeft onClick={goToPrev} />
@@ -826,9 +916,8 @@ export default function Home() {
       <div className="Background-div-top">
         <div className="Modules-home">
           <h1>Modules</h1>
-          {/* <Slider {...courseConfig}> */}
-          <div className="Modules-home-cards">
 
+          {isDivVisible && <div className="Modules-home-cards">
             {cards.map((x, i) => {
               return (
                 <div key={i} className="Modules-item"
@@ -852,8 +941,43 @@ export default function Home() {
                 </div>
               );
             })}
+          </div>}
 
-          </div>
+          {/* <Slider {...courseConfig}> */}
+          {!isDivVisible && <div className="Modules-home-cards">
+            <Carousel
+              breakPoints={breakPoints}
+              enableAutoPlay={true}
+              autoPlaySpeed={6000}
+            >
+              {cards.map((x, i) => {
+                return (
+                  <Item>
+                    <div key={i} className="Modules-item"
+                      style={{
+                        backgroundColor: `#${x.color}`,
+                      }}>
+                      <a href="#0" aria-labelledby={x.title}> </a>
+                      <img src={x.image} alt={x.title} />
+                      {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                      <div className="Modules-item__overlay" style={{
+                        backgroundColor: `#${x.color}`,
+                      }}>
+                        <h3 id={x.title}
+                          style={{
+                            backgroundColor: `#${x.color}`,
+                            fontSize: "20px"
+                          }} aria-hidden="true">{x.title}</h3>
+                        <div className="Modules-item__body">
+                          <p>{x.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </Item>
+                );
+              })}
+            </Carousel>
+          </div>}
           {/* </Slider> */}
         </div>
 
@@ -920,7 +1044,7 @@ export default function Home() {
 
           <h1>Why Mindsinaction STEAM Center</h1>
           <div className="Why-steam-cards-outer" >
-            <div className="Why-steam-cards" >
+            {isDivVisible && <div className="Why-steam-cards" >
               {WhySteam.map((x, i) => {
                 return (
 
@@ -939,7 +1063,36 @@ export default function Home() {
 
                 );
               })}
-            </div>
+            </div>}
+
+            {!isDivVisible && <div className="Why-steam-cards" >
+              <Carousel
+                breakPoints={breakPoints}
+                enableAutoPlay={true}
+                autoPlaySpeed={6000}
+              >
+                {WhySteam.map((x, i) => {
+                  return (
+                    <Item>
+                      <div key={i} className="Why-steam-card" >
+                        <div className="Why-steam-card-image"
+                          style={{ background: `url('${x.image}') no-repeat center center` }}
+                        >
+                        </div>
+                        <div className="Why-steam-card-text" >
+                          <h3 id={x.id}
+                          style={{fontSize: "20px"}}
+                          >
+                            {x.title}
+                          </h3>
+                        </div>
+                      </div>
+                    </Item>
+                  );
+                })}
+              </Carousel>
+            </div>}
+
           </div>
         </div>
       </div>
@@ -949,25 +1102,31 @@ export default function Home() {
             We use LEGO® Education SPIKE™ Prime robotics kits, which are the most easy-to-understand yet versatile and engaging robotics kits currently in the market.
           </h3>
           <div className='LegoGallery-images-box'>
-            < Sliderx {...LegoGalleryConfig}>
+            <Carousel breakPoints={breakPoints}
+              enableAutoPlay={true}
+              autoPlaySpeed={1000}
+            >
               {legoimages.map((x, y) => {
                 return (
-                  <div key={y} className="LegoGallery-images-box-slider">
-                    <div className="image-for-lego">
-                      <img src={x.image} alt="lego" srcset="" />
+                  <Item>
+                    <div key={y} className="LegoGallery-images-box-slider">
+                      <div className="image-for-lego">
+                        <img src={x.image} alt="lego" srcset="" />
+                      </div>
                     </div>
-                  </div>
+                  </Item>
                 );
               })}
-            </ Sliderx>
+            </Carousel>
           </div>
         </div>
+
         <div className="social-media-feed">
           <h1>What our parents are saying</h1>
           {/*  */}
           <div className="products" style={{ marginTop: '60px' }}>
             {/**Products section */}
-            < Sliderx {...parentsConfig}>
+            <Sliderx {...parentsConfig}>
               {ParentsFeedback.map((x, i) => {
                 return (
                   <div key={i} className="chat-boxes">
@@ -983,6 +1142,7 @@ export default function Home() {
           </div>
           {/*  */}
         </div>
+
       </div>
       <div className='parralex-div'>
         <h2><FaQuoteLeft />< span>  Namibian Learners Deserve Exciting, Hands-on Experiences </span> <FaQuoteRight /></h2>
@@ -993,7 +1153,7 @@ export default function Home() {
             <h1>Our Services</h1>
           </div>
           <div className="center-hrz">
-            <div className="home-services-cards">
+            {isDivVisible && <div className="home-services-cards">
               {ServicesInfo.map((x, i) => {
                 return (
                   <div key={i} className="home-services-card">
@@ -1015,76 +1175,121 @@ export default function Home() {
                   </div>
                 );
               })}
+            </div>}
+
+            {!isDivVisible && <div className="home-services-cards">
+              <Carousel>
+                {ServicesInfo.map((x, i) => {
+                  return (
+                    <Item>
+                      <div key={i} className="home-services-card">
+                        {/* <NavLink to={x.productLink}> */}
+                        <NavLink exact to="/services">
+
+                          <div className="home-services-card-image-top"
+                            style={{ background: `url('${x.image}') no-repeat center center` }}>
+                            {/* <img
+                        src={x.image} alt="lego"
+                      /> */}
+                          </div>
+                          <div className="home-services-card-text-bottom">
+                            <h3>{x.service_name}</h3>
+                            <p>{x.description}</p>
+                          </div>
+
+                        </NavLink>
+                      </div>
+                    </Item>
+
+                  );
+                })}
+              </Carousel>
             </div>
+
+            }
+
           </div>
+
+
+
         </div>
 
-      </div>
-      <div className="electronic-home" data-aos="fade-up">
-        <div style={{ marginTop: '120px' }} className="home-title-electronic">
-          <h1>Electronic Shop</h1>
-        </div>
-        {/*  */}
-        <div className="products" style={{ marginTop: '60px' }}>
-          {/**Products section */}
-          < Sliderx {...productConfig}>
-            {products.map((x, i) => {
-              return (
-                <div key={i} className="product-image-card">
-                  {/* <NavLink to={x.productLink}> */}
-                  <NavLink exact to="/Shop">
-                    <img
-                      src={
-                        'https://mindsinaction.com.na/api/product/' + x.image_url
-                      }
-                      alt=""
-                    />
-                  </NavLink>
-                  <div className="products-content-home">
-                    <h4>{x.product_name}</h4>
-                    <p>
-                      {' '}
-                      <span>N$</span> {x.product_price}
-                    </p>
-                  </div>
-                  <NavLink exact to="/Shop">
-                    <div className="btn-buy-outer">
-                      <button className='shop-button-home-inner'>buy</button>
+        <div className="electronic-home" data-aos="fade-up">
+          <div style={{ marginTop: '' }} className="home-title-electronic">
+            <h1>Electronic Shop</h1>
+          </div>
+          {/*  */}
+          <div className="products" style={{ marginTop: '60px' }}>
+            {/**Products section */}
+            <Carousel breakPoints={breakPoints}
+              enableAutoPlay={true}
+              autoPlaySpeed={6000}
+            >
+              {products.map((x, i) => {
+                return (
+                  <Item>
+                    <div key={i} className="product-image-card">
+                      {/* <NavLink to={x.productLink}> */}
+                      <NavLink exact to="/Shop">
+                        <img
+                          src={
+                            'https://mindsinaction.com.na/api/product/' + x.image_url
+                          }
+                          alt=""
+                        />
+                      </NavLink>
+                      <div className="products-content-home">
+                        <h4>{x.product_name}</h4>
+                        <p>
+                          {' '}
+                          <span>N$</span> {x.product_price}
+                        </p>
+                      </div>
+                      <NavLink exact to="/Shop">
+                        <div className="btn-buy-outer">
+                          <button className='shop-button-home-inner'>buy</button>
+                        </div>
+                      </NavLink>
                     </div>
-                  </NavLink>
-                </div>
-              );
-            })}
-          </ Sliderx>
+                  </Item>
+                );
+              })}
+
+            </Carousel>
+
+            {/*  */}
+          </div>
+
         </div>
-        {/*  */}
+
       </div>
 
-      <div className="partners-home" style={{ marginTop: '60px' }}>
-        <div style={{ marginTop: '120px' }} className="home-title-partners">
+      <div className="partners-home" style={{ marginTop: '' }}>
+        <div style={{ marginTop: '' }} className="home-title-partners">
           <h1>Our Partners</h1>
         </div>
         <div className="our-partners">
           <div className="course" style={{ marginTop: '60px' }}>
             {/**Courses section */}
-            < Sliderx {...partnersConfig}>
+            <Carousel breakPoints={breakPoints}
+              enableAutoPlay={true}
+              autoPlaySpeed={6000}
+            >
               {partners.map((partner, index) => (
-                <div key={index} className="partners-swiper-slide-home">
-                  <div className="image">
-                    <a href={partner.link} target="_blank" rel="noopener noreferrer">
-                      <img src={partner.image} alt="partner" />
-                    </a>
+                <Item>
+                  <div key={index} className="partners-swiper-slide-home">
+                    <div className="image">
+                      <a href={partner.link} target="_blank" rel="noopener noreferrer">
+                        <img src={partner.image} alt="partner" />
+                      </a>
+                    </div>
                   </div>
-                </div>
+                </Item>
               ))}
-            </ Sliderx>
+            </Carousel>
           </div>
         </div>
       </div>
-
     </div>
-
-
-    // </div>
   );
 }
