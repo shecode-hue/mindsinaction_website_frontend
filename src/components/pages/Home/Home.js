@@ -89,7 +89,6 @@ const content = [
       "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
     button: "Read More",
     image: Slider1,
-    user: "16 May 2023 ",
 
   },
   {
@@ -98,7 +97,6 @@ const content = [
       "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
     button: "Discover",
     image: Slider2,
-    user: "16 May 2023",
 
   },
   {
@@ -107,7 +105,6 @@ const content = [
       "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
     button: "Register now",
     image: Slider3,
-    user: "16 May 2023",
 
   },
   {
@@ -116,7 +113,6 @@ const content = [
       "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
     button: "Read More",
     image: Slider4,
-    user: "16 May 2023",
 
   },
   {
@@ -125,7 +121,6 @@ const content = [
       "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
     button: "Discover",
     image: Slider5,
-    user: "16 May 2023",
 
   },
   {
@@ -134,7 +129,6 @@ const content = [
       "We are a space where students explore Science, Technology, Engineering, Arts and Mathematics through exciting hands-on activities. Additionally, we take pride in offering quality ICT and Engineering Services.",
     button: "Register now",
     image: Slider6,
-    user: "16 May 2023",
 
   }
 ];
@@ -306,11 +300,6 @@ const partners = [
   {
     link: "https://www.kas.de/en/",
     image: konrad,
-  },
-
-  {
-    link: "/",
-    image: NAMIBIA_coa,
   },
   {
     link: "https://ncrst.na/",
