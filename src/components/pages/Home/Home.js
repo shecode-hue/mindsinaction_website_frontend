@@ -79,6 +79,10 @@ import Carousel from "react-elastic-carousel";
 import Item from "./Item";
 // import "./Styles.css";
 
+import { CustomCarousel } from './CustomCarousel';
+
+
+
 
 
 // import { IoChevronForward, HiChevronDoubleRight } from 'react-icons/all';
@@ -796,6 +800,9 @@ export default function Home() {
     };
   }, []);
 
+  const carouselItems1 = [1, 2, 3, 4, 5];
+  const carouselItems2 = ['A', 'B', 'C', 'D', 'E', 'F'];
+
 
   return (
     <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
@@ -948,7 +955,7 @@ export default function Home() {
             <Carousel
               breakPoints={breakPoints}
               enableAutoPlay={true}
-              autoPlaySpeed={6000}
+              autoPlaySpeed={1000}
             >
               {cards.map((x, i) => {
                 return (
@@ -980,6 +987,7 @@ export default function Home() {
           </div>}
           {/* </Slider> */}
         </div>
+
 
         <div className="display-home1" style={{ paddingLeft: "50px", paddingRight: "50px" }}>
           <div className="What-is-STEAM-Education-home">

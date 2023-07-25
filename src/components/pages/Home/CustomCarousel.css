@@ -1,0 +1,72 @@
+/* Custom Carousel Container */
+.custom-carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Custom Carousel Item */
+  .carousel-items-container {
+    display: flex;
+    transition: all 0.3s;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Set the height of the square container */
+  }
+  
+  .square-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make the square container fill the carousel item width */
+    padding-top: 100%; /* Set the height relative to the width to create a square */
+    background-color: #f0f0f0; /* Add any background color or styles for the square container */
+    font-size: 24px; /* Customize the font size or styles for the content */
+  }
+  
+  /* Custom Navigation Arrows */
+  .custom-navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+  }
+  
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    font-size: 30px;
+    color: #007bff; /* Customize the arrow color */
+    pointer-events: all;
+    cursor: pointer;
+  }
+  
+  /* Custom Pagination Dots */
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    pointer-events: none;
+  }
+  
+  .pagination-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc; /* Customize the pagination dot color */
+    cursor: pointer;
+  }
+  
+  .pagination-dot.active {
+    background-color: #007bff; /* Customize the active pagination dot color */
+  }
+  
