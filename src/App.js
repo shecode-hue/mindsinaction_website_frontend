@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/pages/Header/Header';
+import Header2 from './components/pages/Header/Header2';
 import Home from './components/pages/Home/Home';
 import About from './components/pages/about/about';
 import Course from './components/pages/course/courses/Course';
@@ -82,6 +83,8 @@ function App() {
           <switch>
             <ScrollTop />
             <Header />
+            {/* <ScrollTop />
+            <Header2 /> */}
             <ScrollTop />
             <Route exact path="/" component={Home} />
             <ScrollTop />

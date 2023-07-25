@@ -531,7 +531,7 @@ header {
 }
 
 /* DROPDOWN MENU */
-.dropdown_menu {
+.mobile-navbar {
   display: none;
   position: fixed;
   right: 2rem;
@@ -560,23 +560,23 @@ header {
   display: none;
 }
 
-/* .dropdown_menu .open {
+/* .mobile-navbar .open {
   height: 240px!important;
   display: block;
 } */
 
-.dropdown_menu li {
+.mobile-navbar li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.dropdown_menu li a {
+.mobile-navbar li a {
   color: black;
 }
 
-.dropdown_menu .action_btn {
+.mobile-navbar .action_btn {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -647,7 +647,7 @@ header {
     color: black;
   }
 
-  .dropdown_menu {
+  .mobile-navbar {
     display: block;
   }
   .header-right-buttons{
@@ -665,7 +665,7 @@ header {
 }
 
 @media (max-width: 576px) {
-  .dropdown_menu {
+  .mobile-navbar {
     left: 2rem;
     width: unset;
   }
@@ -675,3 +675,57 @@ header {
   width: 200px;
 }
 
+.list li ul.dropdown li {
+  display: block;
+}
+
+/* ... Your previous CSS ... */
+
+/* DROPDOWN MENU */
+.dropdown {
+  background: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* width: 100px; */
+  /* padding: 10px; */
+  /* color: black; */
+  position: absolute;
+  z-index: 999;
+  display: none;
+  /* transition: 0.3s ease; */
+}
+
+/* Make the dropdown visible when the parent li is hovered */
+.navbar .links li:hover .dropdown {
+  display: block;
+}
+
+/* Additional styles for the dropdown items */
+.dropdown li {
+  list-style: none;
+  padding: 5px 10px;
+  /* margin: 5px; */
+  /* text-align: center; */
+}
+
+.dropdown a li {
+  color: grey;
+  text-decoration: none;
+}
+
+.dropdown a li:hover {
+  background-color: #94C93D; /* Change the color on hover as desired */
+  /* width: 100%; */
+  color: #fff;
+}
+
+.dropdown a li:last-child:hover {
+  background-color: #94C93D; /* Change the color on hover as desired */
+  /* width: 100%; */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdown li a:hover {
+  color: #fff;
+}

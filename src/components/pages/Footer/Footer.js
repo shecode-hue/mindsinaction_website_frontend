@@ -177,7 +177,7 @@ export default function Footer() {
           </div>
           <div className='col'>
             <h3>About</h3>
-            <ul>
+            <ul className='footer-list'>
               <li><NavLink to='#'>Our Story</NavLink></li>
               <li><NavLink to='#'>Modules</NavLink></li>
               <li><NavLink to='#'>Blog</NavLink></li>
@@ -186,7 +186,7 @@ export default function Footer() {
           </div>
           <div className='col'>
             <h3>Services</h3>
-            <ul>
+            <ul className='footer-list'>
               <li><NavLink to='#'>ICT Services</NavLink></li>
               <li><NavLink to='#'>Engineering Services</NavLink></li>
               <li><NavLink to='#'>Electronic Shop</NavLink></li>

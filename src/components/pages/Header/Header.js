@@ -11,6 +11,8 @@ import {
   MdContactPhone,
   VscThreeBars,
   FaTimes,
+  FaArrowDown,
+  GoArrowDown,
 } from "react-icons/all";
 import "./Header.css";
 
@@ -364,33 +366,60 @@ export default function Header() {
             <img src={logo} alt=""></img>
           </NavLink>
           <ul className={`links ${isOpen ? 'open' : ''}`}>
+            
+              <li>
+              <NavLink exact to="/" activeClassName="active">Home</NavLink>
+              </li>
+            
             <li>
-              <NavLink exact to="/hero" activeClassName="active">
-                Home
-              </NavLink>
+            <NavLink exact to="/about" activeClassName="active">Who we are</NavLink> <GoArrowDown />
+              <ul className='dropdown'>
+                <NavLink to="/profile"><li>
+                  About Us
+                </li></NavLink>
+                <NavLink to="/founders"><li>
+                  Founders
+                </li></NavLink>
+                <NavLink to="/Coaches"><li>
+                  Coaches
+                </li></NavLink>
+                <NavLink to="/projects"><li>
+                  Projects
+                </li></NavLink>
+                <NavLink to="/blog"><li>
+                  Blog
+                </li></NavLink>
+              </ul>
+            </li>
+            
+            <li>
+            <NavLink exact to="/modules" activeClassName="active">Modules</NavLink>
             </li>
             <li>
-              <NavLink exact to="/about" activeClassName="active">
-                Who We Are
-              </NavLink>
+            <NavLink exact to="/services" activeClassName="active">Services </NavLink><GoArrowDown />
+              <ul className='dropdown'>
+                <NavLink to="/profile"><li>
+                  ICT
+                </li></NavLink>
+                <NavLink to="/founders"><li>
+                  Mechanical Engineering
+                </li></NavLink>
+                <NavLink to="/Coaches"><li>
+                  Electrical Engineering
+                </li></NavLink>
+                <NavLink to="/projects"><li>
+                  Electronics Engineering
+                </li></NavLink>
+              </ul>
             </li>
+            
             <li>
-              <NavLink exact to="/modules" activeClassName="active">
-                Modules
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to="/services" activeClassName="active">
-                Services
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to="/shop" activeClassName="active">
+              <NavLink exact to="/Shop" activeClassName="active">
                 Shop
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/contact" activeClassName="active">
+              <NavLink exact to="/Contact-us" activeClassName="active">
                 Contact Us
               </NavLink>
             </li>
@@ -416,19 +445,36 @@ export default function Header() {
           </div>
         </div>
         <div
-          className={`${isOpen ? 'dropdown_menu' : 'none'}`}
-        // className="dropdown_menu open"
+          className={`${isOpen ? 'mobile-navbar' : 'none'}`}
+        // className="mobile-navbar open"
         >
           <ul>
-          <li>
-              <NavLink exact to="/hero" activeClassName="active">
+            <li>
+              <NavLink exact to="/" activeClassName="active">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/about" activeClassName="active">
-                Who We Are
+              <NavLink exact to="/profile" activeClassName="active">
+                Who We Are <GoArrowDown />
               </NavLink>
+              <ul className='dropdown'>
+                <NavLink to="/profile"> <li>
+                  About Us
+                </li></NavLink>
+                <NavLink to="/founders"><li>
+                  Founders
+                </li></NavLink>
+                <NavLink to="/Coaches"><li>
+                  Coaches
+                </li></NavLink>
+                <NavLink to="/projects"><li>
+                  Projects
+                </li></NavLink>
+                <NavLink to="/blog"><li>
+                  Blog
+                </li></NavLink>
+              </ul>
             </li>
             <li>
               <NavLink exact to="/modules" activeClassName="active">
@@ -437,7 +483,7 @@ export default function Header() {
             </li>
             <li>
               <NavLink exact to="/services" activeClassName="active">
-                Services
+                Services <GoArrowDown />
               </NavLink>
             </li>
             <li>
@@ -453,10 +499,10 @@ export default function Header() {
             {/* <li><a href="#" className="action_btn">Free Demo</a></li> */}
             {/* <span style={{marginRight: "20px"}}></span> */}
             {/* <li><a href="#" className="action_btn">Register</a></li> */}
-            <li style={{display: "block"}}><NavLink exact to="/free-demo">
+            <li style={{ display: "block" }}><NavLink exact to="/free-demo">
               <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
             </NavLink></li>
-            <li style={{display: "block"}}><NavLink exact to="/register">
+            <li style={{ display: "block" }}><NavLink exact to="/register">
               <button className="header-register">Register</button>
             </NavLink></li>
           </ul>
