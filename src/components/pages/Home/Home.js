@@ -104,30 +104,21 @@ const ServicesInfo = [
 ];
 // config information for the services
 const ParentsFeedback = [
+  
   {
-    parent: "Jennefier Metirapi",
+    parent: "Executive Director, MHETI Dr. Alfred van Kent",
     message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
+      "The Ministry of Higher Education, Training and Innovation(MHETI) hereby declares its full support for Mindsinaction",
   },
   {
-    parent: "2Jennefier Metirapi",
+    parent: "Dr Natascha Cheikhyoussef",
     message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
+      "My son Malik Cheikhyoussef is attending the classes and participating with the greatest enthusiasm. The learners learn many skills related to STEM.",
   },
   {
-    parent: "3Jennefier Metirapi",
+    parent: "Dr. Tanja Karp",
     message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
-  },
-  {
-    parent: "4Jennefier Metirapi",
-    message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
-  },
-  {
-    parent: "5Jennefier Metirapi",
-    message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
+      "Mindsinaction staff and instructors needs to be congratulated for their professionalism and excellence in guiding the teams throughout the Virtual GEAR competition.",
   },
 ];
 
@@ -171,15 +162,15 @@ const partners = [
 
 // images for the legoslider
 const legoimages = [
-  {
-    image: lego1,
-  },
-  {
-    image: lego2,
-  },
-  {
-    image: lego4,
-  },
+  // {
+  //   image: lego1,
+  // },
+  // {
+  //   image: lego2,
+  // },
+  // {
+  //   image: lego4,
+  // },
   {
     image: legoImage1,
   },
@@ -673,23 +664,23 @@ export default function Home() {
             <div className="info-content">
               {/* Place your extended information here */}
               <p>
-                STEAM education offers a host of benefits that empower students
-                to thrive in the modern world. Through hands-on projects and
+                STEAM offers a host of benefits that empower students to thrive
+                in the modern world. Through hands-on projects and
                 interdisciplinary learning, students cultivate collaboration,
                 adaptability, and resilience.
               </p>
               <p>
-                STEAM education prepares them for future job markets, fosters a
-                love of lifelong learning, and inspires innovation to drive
-                positive social change. Ultimately, STEAM equips students with
-                the tools they need to become innovative thinkers and leaders,
-                making a lasting impact in an ever-evolving society.
+                The education system prepares them for future job markets,
+                fosters a love of lifelong learning, and inspires innovation to
+                drive positive social change. Ultimately, STEAM equips students
+                with the tools they need to become innovative thinkers and
+                leaders, making a lasting impact in an ever-evolving society.
               </p>
             </div>
           )}
         </div>
         <div className="Why-steam">
-          <h1>Why Mindsinaction STEAM Center</h1>
+          <h1>Why Mindsinaction STEAM Center?</h1>
           <div className="Why-steam-cards-outer">
             {isDivVisible && (
               <div className="Why-steam-cards">
@@ -771,12 +762,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="social-media-feed" style={{ marginTop: "100px" }}>
+         <div className="social-media-feed" style={{ marginTop: "60px" }}>
           <h1>TESTIMONIALS</h1>
-          {/*  */}
-          <div className="products" style={{ marginTop: "0px" }}>
-            {/**Products section */}
-            <Sliderx {...parentsConfig}>
+          <div className="center-hrz" style={{ marginTop: "60px" }}>
+            {/* Products section */}
+            <div className="sliderx-container">
               {ParentsFeedback.map((x, i) => {
                 return (
                   <div key={i} className="chat-boxes">
@@ -787,9 +777,8 @@ export default function Home() {
                   </div>
                 );
               })}
-            </Sliderx>
+            </div>
           </div>
-          {/*  */}
         </div>
       </div>
       <div className="parralex-div">
@@ -797,7 +786,7 @@ export default function Home() {
           <FaQuoteLeft />
           <span>
             {" "}
-            Namibian Learners Deserve Exciting, Hands-on Experiences{" "}
+            Empowering students to be makers and agile problem solvers, able to imagine and create the future.{" "}
           </span>{" "}
           <FaQuoteRight />
         </h2>
@@ -805,7 +794,7 @@ export default function Home() {
       <div className='Background-div-bottom'>
         <div className="services-home-div" data-aos="fade-up">
           <div className="home-title-electronic">
-            <h1>Our Services</h1>
+            <h1>Other Services</h1>
           </div>
           <div className="center-hrz">
             {isDivVisible && <div className="home-services-cards">
