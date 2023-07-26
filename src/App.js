@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/pages/Header/Header';
 import Home from './components/pages/Home/Home';
@@ -48,7 +48,10 @@ import Research from './components/pages/Research/Research';
 // import Electronics from "./components/pages/course/electronics/Electronics";
 import Electrical_Engineering from './components/pages/Services/engineering/electrical-engineering/Electrical_Engineering';
 import deadPage from './components/pages/deadPage';
-import Founders from './components/pages/about/Co-founders/Co-founders';
+// import Founders from './components/pages/about/Co-founders/Co-founders';
+const Founders = lazy(()=>import('./components/pages/about/Co-founders/Co-founders'));
+
+
 
 // import ClipLoader from "react-spinners/ClipLoader";
 function App() {
@@ -73,6 +76,9 @@ function App() {
         </div>
       ) : (
         <BrowserRouter>
+        <Suspense fallback={<p>loading...</p>}>
+
+        
           <switch>
             <ScrollTop />
             <Header />
@@ -262,6 +268,7 @@ function App() {
 
             <Footer />
           </switch>
+          </Suspense>
         </BrowserRouter>
       )}
       <Scroll />

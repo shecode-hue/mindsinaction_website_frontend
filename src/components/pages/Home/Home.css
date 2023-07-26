@@ -24,13 +24,14 @@ a {
 .home-main-container {
   /* box-sizing: border-box; */
   /* padding: 0px 100px 0px 100px; */
+  overflow-x: hidden;
 }
 
 .home-page-top-slider {
-  padding-top: 80px;
+  padding-top: 100px;
   width: 100%;
-  /* height:400px;
-  position:relative; */
+   /* height:100%; */
+  /*position:relative; */
   /* border:3px dotted red; */
 
   /* margin-top: 200px; */
@@ -162,7 +163,7 @@ a {
   align-items: center;
   text-align: center;
   color: #fff;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .slider-content .inner {
@@ -318,10 +319,10 @@ a {
 .home-main-container {
   display: block;
   border-bottom: 4px solid #6fb73f;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  background-color: rgb(16, 18, 159);
+  /* background-color: rgb(16, 18, 159); */
   min-height: 400px;
   /* overflow:hidden; */
 }
@@ -1011,7 +1012,8 @@ a {
 .home-main-container .electronic-home {
   height: auto;
   padding: 0px 50px 0px 50px;
-  background-color: transparent;
+  /* background-color: transparent; */
+  border: white;
 }
 
 .home-main-container .electronic-header-home {
@@ -1100,6 +1102,7 @@ a {
 
 .product-image-card {
   background-color: white;
+  width: 250px;
   padding-bottom: 10px;
   border-radius: 30px;
   box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
@@ -1195,8 +1198,6 @@ styling for modelues cards */
   /* border: 3px dotted red; */
   padding-top: 20px;
 }
-
-.Modules-item .modules-icon {}
 
 .Modules-item h3 {
   margin: 0;
@@ -1499,11 +1500,12 @@ hr {
   background: url("../../images/Home_images/BG_Our Services 2.svg") no-repeat center center;
   background-size: cover;
   border-top: 0.0001px dotted transparent;
+  padding-bottom: 60px;
 }
 
 .home-main-container .partners-swiper-slide-home {
   /* margin-inline: 30px; */
-  /* width: 200px; */
+  width: 200px;
   /* width: 100px; */
   height: 180px;
   /* border: 3px dotted red; */
@@ -1513,8 +1515,8 @@ hr {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
-    0 6px 10px 0 rgba(133, 131, 131, 0.2);
+  /* box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
+    0 6px 10px 0 rgba(133, 131, 131, 0.2); */
   /* opacity: 30%; */
 }
 
@@ -1637,6 +1639,7 @@ hr {
 }
 
 .What-is-STEAM-Education-home p {
+  font-size: 18px;
   color: white;
   padding: 10px 10px;
   /* border: 3px dotted rgb(0, 17, 255); */
@@ -1700,7 +1703,7 @@ hr {
     display: block;
   }
   .What-is-STEAM-Education-home {
-    width: 800px;
+    width: 80%;
     padding-bottom: 0px;
   }
 }
@@ -1952,15 +1955,6 @@ hr {
     font-size: 40px;
   }
 
-  .home-main-container .image-container-home button {
-    /* position: absolute;
-    margin-bottom: 20px; */
-  }
-
-  /* allows the 'our services' title to be seen on smaller devices */
-  /* .home-main-container .services-home {
-    margin-top: 200px;
-  } */
 
 }
 
@@ -2060,3 +2054,371 @@ hr {
   transform: scale(1.1);
   box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.6);
 }
+
+/* new slider */
+
+/* .container-style {
+  height: 100%;
+  position: relative;
+}
+
+.description {
+  width: 600px;
+  position: absolute;
+  z-index: 999;
+  color: aliceblue;
+  /* top: 20%;
+  left: 10%; *
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.description h1 {
+  font-size: 46px;
+}
+
+.description p {
+  font-size: 22px;
+}
+
+.carousel-boullt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.carousel-boullt span {
+  width: 10px;
+  height: 10px;
+  /* background-color: rgb(179, 178, 176); *
+  margin-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  /* box-shadow: 3px 2px 2px rgba(73, 72, 72, 0.338); *
+  bottom: 0px;
+}
+
+.transparent-background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(0, 0, 0));
+}
+
+.description .text h1{
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.description .text hr{
+  color: #94C93D;
+  background-color: #94C93D;
+  height: 3px;
+  width: 50px;
+  outline: none;
+  border: none;
+  margin-left: -0.5px;
+}
+
+.description .text p{
+  color: #fff;
+  text-align: left;
+}
+
+.hero-button {
+  color: white;
+  background-color: transparent;
+  border: 2px solid;
+  /* background: linear-gradient(to right, #ff6b6b, #ffa726); */
+  /* border: none; *
+  border-image: linear-gradient(to right, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%) 1;
+  /* border-image-slice: 1; *
+  border-radius: 300px;
+  outline: none;
+  padding: 10px;
+  display: flex;
+  margin-top: 100px;
+
+} */
+
+.container-style {
+  position: relative;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+}
+
+.image-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.image-slide.active {
+  opacity: 1;
+}
+
+.transparent-background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  /* z-index: 998; */
+  top: 0;
+  left: 0;
+  /* background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(0, 0, 0)); */
+  background-color: #00000090;
+}
+
+.description {
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  text-align: center; */
+
+  width: 600px;
+  position: absolute;
+  z-index: 999;
+  color: aliceblue;
+  /* top: 20%;
+  left: 10%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  .description {
+    width: 100%;
+  }
+  .description .text h1 {
+    text-align: center;
+  }
+
+  .center-hr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .description .text hr {
+    /* text-align: center; */
+    
+    width: 50px;
+    border: none;
+    height: 3px;
+    background-color: #90d91e;
+  }
+  
+  .description .text p {
+    text-align: center;
+  }
+
+  .hero-button {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border-image: linear-gradient(to right, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%) 1;;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 80px 0px 0px 0px;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .description .text h1 {
+    font-size: 40px;
+    text-align: left;
+    color: #fff;
+    text-transform: capitalize;
+    /* width: 70%; */
+    font-weight: bold;
+  }
+  
+  .description .text hr {
+    width: 50px;
+    border: none;
+    height: 3px;
+    background-color: #90d91e;
+    margin: 10px -0.5px;
+  }
+  
+  .description .text p {
+    font-size: 18px;
+    text-align: left;
+  }
+  .hero-button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border-image: linear-gradient(to right, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%) 1;;
+    border-image-slice: 1;
+    cursor: pointer;
+    display: flex;
+    /* position: absolute;
+    left: 10px; */
+    margin: 80px 0px 0px 0px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #slider-arrow-left {
+    width: 50px;
+    position: absolute;
+    left: 100px;
+    top: 50%; 
+    transform: scaleX(-1) translateY(-50%);
+    cursor: pointer;
+  }
+  
+  #slider-arrow-right {
+    width: 50px;
+    position: absolute;
+    right: 100px;
+    top: 50%; 
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
+/* @media only screen and (max-width: 800px) {
+  #slider-arrow-left {
+    width: 50px;
+    position: absolute;
+    left: 5px;
+    top: 50%; 
+    transform: scaleX(-1) translateY(-50%);
+    cursor: pointer;
+  }
+  
+  #slider-arrow-right {
+    width: 50px;
+    position: absolute;
+    right: 5px;
+    top: 50%; 
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+} */
+
+.carousel-bullets {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.carousel-bullets span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.carousel-bullets span.active {
+  background-color: #fff;
+}
+
+/* Button styles */
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 3px dotted red; */
+}
+
+.info-button {
+  width: 75%;
+  background-color: #4F85C5;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 25px;
+  font-weight: 800;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add space between text and icon */
+  transition: background-color 0.3s, transform 0.3s;
+  /* border: 3px dotted rgb(79, 211, 18); */
+}
+
+.info-button.active {
+  width: 75%;
+  background-color: #4F85C5;
+  /* border: 3px dotted rgb(255, 0, 255); */
+}
+
+.icon {
+  font-size: 50px;
+  margin-left: 8px;
+  transition: transform 0.3s; /* Add transition to icon rotation */
+  /* border: 3px dotted red; */
+}
+
+.rotate-icon {
+  transform: rotateX(180deg);
+  /* border: 3px dotted rgb(0, 81, 255); */
+}
+
+/* Extended information styles */
+.info-content {
+  width: 72%;
+  background-color: #4F85C5;
+  border-radius: 20px;
+  padding: 24px;
+  margin-top: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s, max-height 0.3s;
+  /* border: 3px dotted rgb(255, 0, 212); */
+}
+.info-content p{
+  font-size: 18px;
+  color: #ffffff;
+}
+.info-button.active + .info-content {
+  opacity: 1;
+  color: #ffffff;
+  max-height: 600px;
+  /* border: 3px dotted rgb(255, 217, 0); */
+}
+
