@@ -104,7 +104,7 @@ const ServicesInfo = [
 ];
 // config information for the services
 const ParentsFeedback = [
-  
+
   {
     parent: "Executive Director, MHETI Dr. Alfred van Kent",
     message:
@@ -629,17 +629,19 @@ export default function Home() {
               Education?
             </h1>
             <p>
-              STEAM stands for Science, Technology, Engineering, Arts and
-              Mathematics. Students uncover the dynamic power and potential of
-              STEAM modules through projects featuring robotics, electronics,
-              exploring mechatronics, engineering, programming and more.
+              STEAM Education is a dynamic blend of Science, Technology,
+              Engineering, Arts, and Mathematics, designed to inspire and
+              cultivate the leaders of tomorrow. It offers a comprehensive and
+              interdisciplinary approach that fosters risk-taking,
+              experiential learning, and collaboration among students. By
+              integrating these diverse disciplines, it cultivates innovators
+              and leaders who can thrive in the 21st-century landscape,
+              equipping them with essential skills for addressing real-world
+              challenges effectively. Through hands-on learning, critical
+              thinking, and teamwork, STEAM education prepares well-rounded
+              individuals capable of driving innovation and making a positive
+              impact on society in various professional settings.
             </p>
-            <hr />
-            <div>
-              <h2 style={{ color: "#E8F2F5", paddingLeft: "20px" }}>
-                Benefits of STEAM
-              </h2>
-            </div>
           </div>
 
           <div
@@ -735,7 +737,7 @@ export default function Home() {
         </div>
       </div>
       <div className="Background-div-Middle">
-        <div className="LegoGallery">
+        <div className="LegoGallery" style={{paddingBottom: "50px"}}>
           <h3 className="LegoGallery-text">
             With the hands-on approach to STEAM, we cultivate a generation of
             innovators by providing the 4th industrial revolution skills to
@@ -745,7 +747,7 @@ export default function Home() {
             <Carousel
               breakPoints={breakPoints}
               enableAutoPlay={true}
-              autoPlaySpeed={1000}
+              autoPlaySpeed={6000}
             >
               {legoimages.map((x, y) => {
                 return (
@@ -762,7 +764,7 @@ export default function Home() {
           </div>
         </div>
 
-         <div className="social-media-feed" style={{ marginTop: "60px" }}>
+        <div className="social-media-feed" style={{ marginTop: "60px" }}>
           <h1>TESTIMONIALS</h1>
           <div className="center-hrz" style={{ marginTop: "60px" }}>
             {/* Products section */}
@@ -822,11 +824,11 @@ export default function Home() {
             </div>}
 
             {!isDivVisible && <div className="home-services-cards">
-              <Carousel 
-              breakPoints={breakPoints}
-              enableAutoPlay={true}
-              autoPlaySpeed={6000}
-              style={{ color: "black" }}>
+              <Carousel
+                breakPoints={breakPoints}
+                enableAutoPlay={true}
+                autoPlaySpeed={6000}
+                style={{ color: "black" }}>
                 {ServicesInfo.map((x, i) => {
                   return (
                     <Item>
@@ -869,8 +871,8 @@ export default function Home() {
           {/*  */}
           <div className="products" style={{ marginTop: '60px' }}>
             {/**Products section */}
-            <Carousel 
-            breakPoints={breakPoints}
+            <Carousel
+              breakPoints={breakPoints}
               enableAutoPlay={true}
               autoPlaySpeed={6000}
             >

@@ -53,7 +53,6 @@ import Founders from './components/pages/about/Co-founders/Co-founders';
 const Home = lazy(()=>import('./components/pages/Home/Home'));
 
 
-
 // import ClipLoader from "react-spinners/ClipLoader";
 function App() {
   const [loading, setLoading] = useState(false);

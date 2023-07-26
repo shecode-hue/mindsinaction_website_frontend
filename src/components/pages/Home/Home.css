@@ -1011,7 +1011,7 @@ a {
 
 .home-main-container .electronic-home {
   height: auto;
-  padding: 0px 50px 0px 50px;
+  padding: 0px 10px 0px 10px;
   /* background-color: transparent; */
   border: white;
 }
@@ -1032,8 +1032,8 @@ a {
 .home-main-container .partners-home {
   padding-bottom: 65px;
   background-color: rgb(255, 255, 255);
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* @media only screen and (max-width: 768px) {
@@ -1348,7 +1348,6 @@ lego gallery styling */
   width: 100vw;
   background-color: #EDF5F7;
   height: auto;
-  padding-bottom: 100px;
   /* background: url("../../images/Home_images/BG_Our Services Abstract lines.svg") no-repeat center center ;
   background-size: cover; */
   /* border: 3px dotted red; */
@@ -1396,8 +1395,6 @@ lego gallery styling */
 
 /* styling for chat-boxes */
 .social-media-feed {
-  margin-top: 1;
-  height: 450px;
   padding: 0px 50px;
   text-align: center;
   justify-content: center;
@@ -1438,8 +1435,10 @@ align-items: center;
 .box {
   width: 300px;
   /* margin: 50px auto; */
+  margin-bottom: 100px;
   background: #8f63db;
-  padding: 10px;
+  /* padding: 10px; */
+  padding: 20px 20px 20px 20px;
   text-align: center;
   font-weight: 900;
   color: #fff;
@@ -1625,7 +1624,7 @@ align-items: center;
 .What-is-STEAM-Education-home {
   display: flex;
   width: 80%;
-  height: 300px;
+  /* height: 300px; */
   /* background-color: rgb(71, 134, 241); */
   background-color: #4F85C5;
   /* border: 3px dotted red; */
@@ -1634,6 +1633,7 @@ align-items: center;
   border-radius: 30px;
   position: relative;
   padding-top: 40px;
+  /* padding-bottom: 10px !important; */
   /* border: 3px dotted rgb(0, 17, 255); */
 }
 
@@ -1641,6 +1641,7 @@ align-items: center;
   width: 90%;
   left: -60px;
   position: relative;
+  padding-bottom: 50px;
   /* border: 3px dotted rgb(255, 0, 123); */
 }
 
@@ -1997,7 +1998,7 @@ align-items: center;
   /*   
   border:3px dotted rgb(0, 217, 255) ; */
   height: auto;
-  width: 80%;
+  width: 90%;
   margin-top: 4rem;
   /* margin-left: 2rem;
   margin-right: 2rem; */
@@ -2333,25 +2334,15 @@ align-items: center;
   }
 }
 
-/* @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   #slider-arrow-left {
-    width: 50px;
-    position: absolute;
-    left: 5px;
-    top: 50%; 
-    transform: scaleX(-1) translateY(-50%);
-    cursor: pointer;
+    display: none;
   }
   
   #slider-arrow-right {
-    width: 50px;
-    position: absolute;
-    right: 5px;
-    top: 50%; 
-    transform: translateY(-50%);
-    cursor: pointer;
+    display: none;
   }
-} */
+}
 
 .carousel-bullets {
   position: absolute;
