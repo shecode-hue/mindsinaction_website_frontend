@@ -509,24 +509,24 @@ header {
 }
 
 /* Add a bar on top of the links when hovered or active */
-.navbar .links > li > a::before {
+/* .navbar .links > li > a::before {
   content: "";
   position: absolute;
   top: 0;
-  /* left: 0; */
+  /* left: 0; *
   width: 50px;
-  height: 4px; /* Change the height of the bar as desired */
-  background-color: #94C93D; /* Change the color of the bar as desired */
-  transform: scaleX(0); /* Initially, the bar has zero width */
+  height: 4px; /* Change the height of the bar as desired *
+  background-color: #94C93D; /* Change the color of the bar as desired *
+  transform: scaleX(0); /* Initially, the bar has zero width *
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-/* Show the bar on hover or when the link is active */
+/* Show the bar on hover or when the link is active *
 .navbar .links > li > a:hover::before,
 .navbar .links > li > a.active::before {
-  transform: scaleX(1); /* Scale the bar to full width on hover or when active */
-}
+  transform: scaleX(1); /* Scale the bar to full width on hover or when active *
+} */
 
 .navbar .toggle_btn {
   color: #fff;

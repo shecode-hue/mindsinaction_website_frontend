@@ -447,10 +447,13 @@ export default function Home() {
                   <div className="center-hr">
                     <hr />
                   </div>
-                  <p>{slide.description}</p>
+                  <p style={{color: "white"}}>{slide.description}</p>
+                  <NavLink exact to="/modules">
                   <div className="center-hr" style={{ borderRadius: "20px" }}>
                     <button className="hero-button">{slide.button}</button>
                   </div>
+                  </NavLink>
+                 
                 </div>
               </div>
               {/* Navigation arrows */}
@@ -522,7 +525,7 @@ export default function Home() {
               <Carousel
                 breakPoints={breakPoints}
                 enableAutoPlay={true}
-                autoPlaySpeed={1000}
+                autoPlaySpeed={6000}
               >
                 {cards.map((x, i) => {
                   return (
