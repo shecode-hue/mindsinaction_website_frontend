@@ -22,6 +22,10 @@ import "./SliderStyling/slider-animations.css";
 import sliderArrow from "../../icons/Home-Sider-right.png";
 import imageSlide from "./data";
 
+import legoImage1 from "../../images/Home_images/LegoGallery/lego1.jpg";
+import legoImage2 from "../../images/Home_images/LegoGallery/lego2.jpg";
+import legoImage3 from "../../images/Home_images/LegoGallery/lego3.jpg";
+
 import WhySteam1 from "../../images/Home_images/why-steam-images/why-steam (1).png";
 import WhySteam2 from "../../images/Home_images/why-steam-images/why-steam (2).png";
 import WhySteam3 from "../../images/Home_images/why-steam-images/why-steam (3).png";
@@ -177,10 +181,13 @@ const legoimages = [
     image: lego4,
   },
   {
-    image: lego6,
+    image: legoImage1,
   },
   {
-    image: lego7,
+    image: legoImage2,
+  },
+  {
+    image: legoImage3,
   },
 ];
 // information for why-steam cards
@@ -198,12 +205,12 @@ const WhySteam = [
   {
     id: 3,
     image: WhySteam3,
-    title: "Hands on learning",
+    title: "Hands on Learning",
   },
   {
     id: 4,
     image: WhySteam4,
-    title: "Cutting-edge resources",
+    title: "Cutting-Edge Resources",
   },
   {
     id: 5,
@@ -218,12 +225,12 @@ const WhySteam = [
   {
     id: 7,
     image: WhySteam7,
-    title: "Expert educators",
+    title: "Expert Educators",
   },
   {
     id: 8,
     image: WhySteam8,
-    title: "Real-world relevance",
+    title: "Real-World Relevance",
   },
 ];
 //parents feedback slide configuration
@@ -271,12 +278,13 @@ const parentsConfig = {
     },
   ],
 };
+
 const cards = [
   {
     icon: AiOutlineRobot,
     title: "Robotics",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students are introduced to the basics of robotics, programming, engineering, problem identification and collaboration.",
     image: Robotics,
     color: "33A85B",
   },
@@ -284,7 +292,7 @@ const cards = [
     icon: VscCircuitBoard,
     title: "Electronics",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students learn how to solder, program electronics parts and circuits, and prototype using microcontrollers.",
     image: Electronics,
     color: "F37021",
   },
@@ -292,7 +300,7 @@ const cards = [
     icon: RiMicroscopeLine,
     title: "Mechatronics",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students will learn a design process that includes a combination of mechanical, electrical and computer engineering.",
     image: Mechatronics,
     color: "FFCD05",
   },
@@ -300,7 +308,7 @@ const cards = [
     icon: GiMaterialsScience,
     title: "Science",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students perform experiments in biology, chemistry and physical science based on the school curriculum.",
     image: Science,
     color: "F05023",
   },
@@ -308,7 +316,7 @@ const cards = [
     icon: BsCode,
     title: "Software",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students are introduced to graphics design through UX/UI, mobile app development and web design.",
     image: Software,
     color: "7965AC",
   },
@@ -420,74 +428,6 @@ export default function Home() {
 
   return (
     <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
-      {/* <div style={{ paddingTop: "0px" }}>
-        <div className="home-page-top-slider" style={{ height: "100vh" }}>
-          <Slider className="slider-wrapper"
-            autoplay={1000}
-            activeIndex={currentSlide}
-            onSlideChange={(slideIndex) => setCurrentSlide(slideIndex)}
-            handleDotClick={handleDotClick}
-          >
-            {content.map((item, index) => (
-              <div
-                key={index}
-                className="slider-content"
-                style={{ background: `url('${item.image}') center center`, height: "100%" }}
-              >
-                <div className="inner">
-                  <h1>{item.title}</h1>
-                  <p>{item.description}</p>
-                  <button className='Home-page-Slider-button-outer'><div className="Home-page-Slider-button-inner">{item.button}</div></button>
-                </div>
-                {/* <section>
-                <span>
-                  Date Posted <strong>{item.user}</strong>
-                </span>
-              </section> *
-              </div>
-            ))}
-          </Slider>
-          <div className="slider-dots">
-            {content.map((content, index) => (
-              <span
-                key={index}
-                className={activeSlide === index ? 'active' : ''}
-                onClick={() => handleDotClick(index)}
-              />
-            ))}
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div style={{height: "100vh", backgroundColor: "white", textAlign: "center"}}>
-             <div className='container-style'>
-                <div style={{
-                  backgroundImage: `url(${imageSlide[currentState].image})`, 
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover',
-                  height: '100%',
-              }}>
-                </div>
-                <div className='transparent-background'></div>
-                <div className='description'>
-                  <div className='text'>
-                    <h1>{imageSlide[currentState].title}</h1>
-                    <hr/>
-                    <p>{imageSlide[currentState].description}</p>
-                  </div>
-                  <button className='hero-button'>{imageSlide[currentState].button}</button>
-                  
-                </div>
-                <div className='carousel-boullt'>
-                    {
-                      imageSlide.map((imageSlide, currentState) => (
-                        <span key={currentState} onClick={() => goToNext(currentState)}></span>
-                      ))
-                    }
-                  </div>
-             </div>
-      </div> */}
-
       <div
         style={{
           height: "100vh",
@@ -500,9 +440,8 @@ export default function Home() {
           {imageSlide.map((slide, index) => (
             <div
               key={index}
-              className={`image-slide ${
-                index === currentState ? "active" : ""
-              }`}
+              className={`image-slide ${index === currentState ? "active" : ""
+                }`}
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundPosition: "top",
@@ -556,9 +495,9 @@ export default function Home() {
                       backgroundColor: `#${x.color}`,
                     }}
                   >
-                    <a href="#0" aria-labelledby={x.title}>
+                    <NavLink exact to="/modules" aria-labelledby={x.title}>
                       {" "}
-                    </a>
+                    </NavLink>
                     <img src={x.image} alt={x.title} />
                     {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
                     <div
@@ -604,9 +543,9 @@ export default function Home() {
                           backgroundColor: `#${x.color}`,
                         }}
                       >
-                        <a href="#0" aria-labelledby={x.title}>
+                        <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
-                        </a>
+                        </NavLink>
                         <img src={x.image} alt={x.title} />
                         {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
                         <div
@@ -832,7 +771,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="social-media-feed" style={{marginTop: "100px"}}>
+        <div className="social-media-feed" style={{ marginTop: "100px" }}>
           <h1>TESTIMONIALS</h1>
           {/*  */}
           <div className="products" style={{ marginTop: "0px" }}>
@@ -894,7 +833,11 @@ export default function Home() {
             </div>}
 
             {!isDivVisible && <div className="home-services-cards">
-              <Carousel style={{color: "black"}}>
+              <Carousel 
+              breakPoints={breakPoints}
+              enableAutoPlay={true}
+              autoPlaySpeed={6000}
+              style={{ color: "black" }}>
                 {ServicesInfo.map((x, i) => {
                   return (
                     <Item>
@@ -937,7 +880,8 @@ export default function Home() {
           {/*  */}
           <div className="products" style={{ marginTop: '60px' }}>
             {/**Products section */}
-            <Carousel breakPoints={breakPoints}
+            <Carousel 
+            breakPoints={breakPoints}
               enableAutoPlay={true}
               autoPlaySpeed={6000}
             >

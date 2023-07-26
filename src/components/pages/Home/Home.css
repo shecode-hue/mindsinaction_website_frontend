@@ -2007,8 +2007,10 @@ lego gallery styling */
   animation: ease-in;
 }
 
-.home-services-card:hover {
-  transform: scale(1.1);
+@media only screen and (min-width: 700px) {
+  .home-services-card:hover {
+    transform: scale(1.1);
+  }
 }
 
 .home-services-card-image-top {
