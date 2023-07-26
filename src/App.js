@@ -1,10 +1,9 @@
 import './App.css';
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Header from './components/pages/Header/Header';
-import Header2 from './components/pages/Header/Header2';
+const Header = lazy(() => import('./components/pages/Header/Header'));
 // import Home from './components/pages/Home/Home';
-import About from './components/pages/about/about';
+const About = lazy(() => import('./components/pages/about/about'));
 import Course from './components/pages/course/courses/Course';
 import Module from './components/pages/course/module/module';
 import Fundamentals from './components/pages/course/fundamentals/Fundamentals';
@@ -14,7 +13,7 @@ import Energy from './components/pages/course/energy/Energy';
 import Environment from './components/pages/course/environment/Environment';
 import Science from './components/pages/course/science/Science';
 import Registration from './components/pages/Registration/Registration';
-import Footer from './components/pages/Footer/Footer';
+const Footer = lazy(() => import('./components/pages/Footer/Footer'));
 import Couches from './components/pages/Coaches/Coaches';
 import Shop from './components/pages/shop/Shop';
 import ContactUs from './components/pages/ContactUs/ContactUs';
@@ -49,7 +48,7 @@ import Research from './components/pages/Research/Research';
 // import Electronics from "./components/pages/course/electronics/Electronics";
 import Electrical_Engineering from './components/pages/Services/engineering/electrical-engineering/Electrical_Engineering';
 import deadPage from './components/pages/deadPage';
-import Founders from './components/pages/about/Co-founders/Co-founders';
+const Founders = lazy(() => import('./components/pages/about/Co-founders/Co-founders'));
 const Home = lazy(()=>import('./components/pages/Home/Home'));
 
 
