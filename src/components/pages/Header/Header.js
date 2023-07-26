@@ -486,9 +486,9 @@ export default function Header() {
             <span style={{ marginRight: "20px" }}></span>
             <a href="#" className="action_btn2">Register</a> */}
           <div className="header-right-buttons">
-            <NavLink exact to="/free-demo">
+            {/* <NavLink exact to="/free-demo">
               <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
-            </NavLink>
+            </NavLink> */}
             <NavLink exact to="/register">
               <button className="header-register">Register</button>
             </NavLink>
@@ -569,9 +569,10 @@ export default function Header() {
             {/* <li><a href="#" className="action_btn">Free Demo</a></li> */}
             {/* <span style={{marginRight: "20px"}}></span> */}
             {/* <li><a href="#" className="action_btn">Register</a></li> */}
-            <li style={{ display: "block" }}><NavLink exact to="/free-demo">
+            {/* <li style={{ display: "block" }}>
+              <NavLink exact to="/free-demo">
               <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
-            </NavLink></li>
+            </NavLink></li> */}
             <li style={{ display: "block" }}><NavLink exact to="/register">
               <button className="header-register">Register</button>
             </NavLink></li>

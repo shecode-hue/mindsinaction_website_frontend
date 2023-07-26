@@ -2,16 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import rightArrow from "../../icons/home_small arrow button - Right.svg";
-import leftArrow from "../../icons/home_small arrow button - Left.svg";
-// import SliderArrowR from "../../icons/Home-Sider-right.png";
-// import SliderArrowL from "../../icons/Home-Sider-left.png";
-// import SliderArrowL2 from "../../icons/Home-Sider-left (1).png";
 import { NavLink } from 'react-router-dom';
-// import goethe from '../../images/goethe.png';
-// import dundee from '../../images/dundee.jpg';
 import 'react-slideshow-image/dist/styles.css';
-// import { Fade } from "react-slideshow-image";
 import Sliderx from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -25,12 +17,7 @@ import { RiMicroscopeLine } from "react-icons/ri";
 import { FaQuoteLeft, FaQuoteRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "react-animated-slider/build/horizontal.css";
 import "./SliderStyling/slider-animations.css";
-import exxonmobil from '../../images/exxonmobil.png';
 // import konrad from '../../images/konrad.png';
-import NAMIBIA_coa from '../../images/NAMIBIA_coa.png';
-import ncrst from '../../images/ncrst.png';
-import nss from '../../images/nss.png';
-import unesco from '../../images/unesco.png';
 import Slider1 from "../../images/Homepage Slider Images/IMG-20230424-WA0021.jpg";
 import Slider2 from "../../images/Homepage Slider Images/IMG-20230424-WA0022.jpg";
 import Slider3 from "../../images/Homepage Slider Images/IMG-20230424-WA0023.jpg";
@@ -51,9 +38,7 @@ import WhySteam7 from "../../images/Home_images/why-steam-images/why-steam (7).p
 import WhySteam8 from "../../images/Home_images/why-steam-images/why-steam (8).png";
 import lego1 from "../../images/Home_images/LegoGallery/lego (1).jpg";
 import lego2 from "../../images/Home_images/LegoGallery/lego (2).jpg";
-// import lego3 from "../../images/Home_images/LegoGallery/lego (3).jpg";
 import lego4 from "../../images/Home_images/LegoGallery/lego (4).jpg";
-// import lego5 from "../../images/Home_images/LegoGallery/lego (5).jpg";
 import lego6 from "../../images/Home_images/LegoGallery/lego (6).jpg";
 import lego7 from "../../images/Home_images/LegoGallery/lego (7).jpg";
 import Science from "../../images/Home_images/Home-modules-images/Science.svg"
@@ -61,7 +46,6 @@ import Software from "../../images/Home_images/Home-modules-images/Software.svg"
 import Mechatronics from "../../images/Home_images/Home-modules-images/Mechatronics.svg"
 import Electronics from "../../images/Home_images/Home-modules-images/Electronics.svg"
 import Robotics from "../../images/Home_images/Home-modules-images/Robotics.svg"
-// import BackgroundOne from "../../images/Home_images/home_Floating image.svg"
 import services1 from "../../images/Home_images/Home-services/icon_Mobile App Dev.svg"
 import services2 from "../../images/Home_images/Home-services/icon_Web Dev.svg"
 import services3 from "../../images/Home_images/Home-services/icon_Data Center Solutions.svg"
@@ -77,15 +61,7 @@ import UNESCO from "../../images/Home_images/partners/logo_UNESCO.png";
 
 import Carousel from "react-elastic-carousel";
 import Item from "./Item";
-// import "./Styles.css";
 
-import { CustomCarousel } from './CustomCarousel';
-
-
-
-
-
-// import { IoChevronForward, HiChevronDoubleRight } from 'react-icons/all';
 
 const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
   < img id="slider-arrow-left" src={sliderArrow} alt="prevArrow" {...props} />);
@@ -93,11 +69,6 @@ const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
 const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
   < img id="slider-arrow-right" src={sliderArrow} alt="nextArrow"  {...props} />);
 
-// const SlickArrowLeft1 = ({ currentSlide, slideCount, ...props }) => (
-//   < img className="button-it" src={leftArrow1} alt="prevArrow" {...props} />);
-
-// const SlickArrowRight1 = ({ currentSlide, slideCount, ...props }) => (
-//   < img className="button-it" src={rightArrow1} alt="nextArrow"  {...props} />);
 
 //home page top slider config
 const content = [
@@ -531,60 +502,6 @@ const cards = [
   },
 ];
 
-
-// const homeImageConfig = {
-//   dots: false,
-//   arrows: false,
-//   infinite: true,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 6000,
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         infinite: true,
-//         dots: false,
-//       },
-//     },
-//     {
-//       breakpoint: 820,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         infinite: true,
-//         dots: false,
-//       },
-//     },
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         infinite: true,
-//         dots: false,
-//       },
-//     },
-//     {
-//       breakpoint: 600,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//       },
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//       },
-//     },
-//   ],
-// };
-
 const courseConfig = {
   arrows: true,
   dots: true,
@@ -806,73 +723,6 @@ export default function Home() {
 
   return (
     <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
-      {/* <div style={{ paddingTop: "0px" }}>
-        <div className="home-page-top-slider" style={{ height: "100vh" }}>
-          <Slider className="slider-wrapper"
-            autoplay={1000}
-            activeIndex={currentSlide}
-            onSlideChange={(slideIndex) => setCurrentSlide(slideIndex)}
-            handleDotClick={handleDotClick}
-          >
-            {content.map((item, index) => (
-              <div
-                key={index}
-                className="slider-content"
-                style={{ background: `url('${item.image}') center center`, height: "100%" }}
-              >
-                <div className="inner">
-                  <h1>{item.title}</h1>
-                  <p>{item.description}</p>
-                  <button className='Home-page-Slider-button-outer'><div className="Home-page-Slider-button-inner">{item.button}</div></button>
-                </div>
-                {/* <section>
-                <span>
-                  Date Posted <strong>{item.user}</strong>
-                </span>
-              </section> *
-              </div>
-            ))}
-          </Slider>
-          <div className="slider-dots">
-            {content.map((content, index) => (
-              <span
-                key={index}
-                className={activeSlide === index ? 'active' : ''}
-                onClick={() => handleDotClick(index)}
-              />
-            ))}
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div style={{height: "100vh", backgroundColor: "white", textAlign: "center"}}>
-             <div className='container-style'>
-                <div style={{
-                  backgroundImage: `url(${imageSlide[currentState].image})`, 
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover',
-                  height: '100%',
-              }}>
-                </div>
-                <div className='transparent-background'></div>
-                <div className='description'>
-                  <div className='text'>
-                    <h1>{imageSlide[currentState].title}</h1>
-                    <hr/>
-                    <p>{imageSlide[currentState].description}</p>
-                  </div>
-                  <button className='hero-button'>{imageSlide[currentState].button}</button>
-                  
-                </div>
-                <div className='carousel-boullt'>
-                    {
-                      imageSlide.map((imageSlide, currentState) => (
-                        <span key={currentState} onClick={() => goToNext(currentState)}></span>
-                      ))
-                    }
-                  </div>
-             </div>
-      </div> */}
 
       <div style={{ height: "100vh", backgroundColor: "white", textAlign: "center" }}>
         <div className="container-style">
@@ -893,7 +743,7 @@ export default function Home() {
                 <div className="text">
                   <h1>{slide.title}</h1>
                   <div className='center-hr'>
-                    <hr />
+                    <hr className='home-hr'/>
                   </div>
                   <p>{slide.description}</p>
                   <div className='center-hr' style={{ borderRadius: "20px" }}>
@@ -1003,7 +853,7 @@ export default function Home() {
                 <font color="#63be45">M </font>
                 Education?</h1>
               <p>STEAM stands for Science, Technology, Engineering, Arts and Mathematics. Students uncover the dynamic power and potential of STEAM modules through projects featuring robotics, electronics, exploring mechatronics, engineering, programming and more.</p>
-              <hr />
+              <hr className='home-hr'/>
               <div>
                 <h2 style={{ color: '#E8F2F5', paddingLeft: '20px' }}>Benefits of STEAM</h2>
               </div>
@@ -1035,7 +885,7 @@ export default function Home() {
               <font color="#63be45">M </font>
               Education?</h1>
             <p>STEAM stands for Science, Technology, Engineering, Arts and Mathematics. Students uncover the dynamic power and potential of STEAM modules through projects featuring robotics, electronics, exploring mechatronics, engineering, programming and more.</p>
-            <hr />
+            <hr className='home-hr'/>
             <div>
               <h2 style={{ color: '#E8F2F5', paddingLeft: '20px' }}>Benefits of STEAM</h2>
             </div>
@@ -1130,9 +980,9 @@ export default function Home() {
         </div>
 
         <div className="social-media-feed">
-          <h1>What our parents are saying</h1>
+          <h1 style={{ marginTop: '60px' }}>What our parents are saying</h1>
           {/*  */}
-          <div className="products" style={{ marginTop: '60px' }}>
+          <div className="products" style={{ marginTop: '0px' }}>
             {/**Products section */}
             <Sliderx {...parentsConfig}>
               {ParentsFeedback.map((x, i) => {
@@ -1140,7 +990,7 @@ export default function Home() {
                   <div key={i} className="chat-boxes">
                     <div className="box sb">
                       {x.message}
-                      <hr className="new1" />
+                      <hr className='home-hr'className="new1" />
                       -{x.parent}-
                     </div>
                   </div>
@@ -1255,7 +1105,7 @@ export default function Home() {
                       </div>
                       <NavLink exact to="/Shop">
                         <div className="btn-buy-outer">
-                          <button className='shop-button-home-inner'>buy</button>
+                          <button className='shop-button-home-inner'>View</button>
                         </div>
                       </NavLink>
                     </div>

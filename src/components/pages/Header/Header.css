@@ -509,7 +509,7 @@ header {
 }
 
 /* Add a bar on top of the links when hovered or active */
-.navbar .links li a::before {
+.navbar .links > li > a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -523,8 +523,8 @@ header {
 }
 
 /* Show the bar on hover or when the link is active */
-.navbar .links li a:hover::before,
-.navbar .links li a.active::before {
+.navbar .links > li > a:hover::before,
+.navbar .links > li > a.active::before {
   transform: scaleX(1); /* Scale the bar to full width on hover or when active */
 }
 
@@ -729,6 +729,10 @@ header {
   z-index: 999;
   display: none;
   /* transition: 0.3s ease; */
+  box-shadow: 
+  8px 0px 8px -4px rgba(0, 0, 0, 0.3),
+              -8px 0px 8px -4px rgba(0, 0, 0, 0.3),
+              0px 8px 13px -4px rgba(0, 0, 0, 0.3);
 }
 
 /* Make the dropdown visible when the parent li is hovered */
@@ -749,20 +753,22 @@ header {
   text-decoration: none;
 }
 
-.dropdown a li:hover {
-  background-color: #94C93D; /* Change the color on hover as desired */
-  /* width: 100%; */
-  color: #fff;
-}
-
-.dropdown a li:last-child:hover {
-  background-color: #94C93D; /* Change the color on hover as desired */
-  /* width: 100%; */
+/* Add this style to target the last child of the dropdown */
+.dropdown li:last-of-type {
   /* border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px; */
 }
 
-.dropdown li a:hover {
+/* Add specific hover styles for the last child */
+.dropdown li:last-of-type:hover {
+  /* Add your hover styles here */
+  background-color: #94C93D; /* Change the color on hover as desired */
+  color: #fff;
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+}
+
+.dropdown li:hover {
   color: #fff;
 }
 
@@ -774,7 +780,7 @@ header {
   display: block;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1050px) {
   .dropdown-who-we-are {
     background: #fff;
     /* border-bottom-left-radius: 10px;
