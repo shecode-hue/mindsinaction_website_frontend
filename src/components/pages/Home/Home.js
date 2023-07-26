@@ -705,7 +705,7 @@ export default function Home() {
       }
     }, 5000);
     return () => clearTimeout(timer);
-  }, [currentState, imageSlide.length]);
+  }, [currentState]);
 
   const goToNext = () => {
     if (currentState === imageSlide.length - 1) {
@@ -883,7 +883,7 @@ export default function Home() {
               className={`image-slide ${index === currentState ? "active" : ""}`}
               style={{
                 backgroundImage: `url(${slide.image})`,
-                backgroundPosition: "center",
+                backgroundPosition: "top",
                 backgroundSize: "cover",
                 height: "100%",
               }}
