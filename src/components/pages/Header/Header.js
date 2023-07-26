@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/logo.png";
 import {
-  IoIosArrowDown,
   AiFillHome,
   BsFillInfoSquareFill,
   FaBookReader,
@@ -12,7 +11,9 @@ import {
   VscThreeBars,
   FaTimes,
   FaArrowDown,
-  GoArrowDown,
+  // IoIosArrowDown,
+  MdArrowDownward,
+  IoIosArrowDown,
 } from "react-icons/all";
 import "./Header.css";
 
@@ -35,6 +36,61 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const show = useRef(0);
+  // const dropdown = () => {
+  //   if (classList.contains("none")) {
+
+  //   }
+  // }
+
+  const elementRef = useRef();
+  const elementRef2 = useRef();
+
+  const dropdown = (event) => {
+    event.preventDefault();
+    if (elementRef.current) {
+      const element1 = elementRef.current;
+      const element2 = elementRef2.current;
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element1.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element1.classList.remove("dontShow");
+        element1.classList.add("show");
+      } else {
+        // If the class doesn't exist, add it
+        element1.classList.remove("show");
+        element1.classList.add("dontShow");
+      }
+      element2.classList.remove("show");
+      element2.classList.add("dontShow");
+    }
+  };
+
+  const dropdown2 = (event) => {
+    event.preventDefault();
+    if (elementRef2.current) {
+      const element2 = elementRef2.current;
+      const element1 = elementRef.current;
+
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element2.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element2.classList.remove("dontShow");
+        element2.classList.add("show");
+      } else {
+        // If the class doesn't exist, add it
+        element2.classList.remove("show");
+        element2.classList.add("dontShow");
+      }
+      element1.classList.remove("show");
+      element1.classList.add("dontShow");
+    }
   };
 
   return (
@@ -366,13 +422,13 @@ export default function Header() {
             <img src={logo} alt=""></img>
           </NavLink>
           <ul className={`links ${isOpen ? 'open' : ''}`}>
-            
-              <li>
-              <NavLink exact to="/" activeClassName="active">Home</NavLink>
-              </li>
-            
+
             <li>
-            <NavLink exact to="/about" activeClassName="active">Who we are</NavLink> <GoArrowDown />
+              <NavLink exact to="/" activeClassName="active">Home</NavLink>
+            </li>
+
+            <li>
+              <NavLink exact to="/about" activeClassName="active">Who we are <IoIosArrowDown /></NavLink> 
               <ul className='dropdown'>
                 <NavLink to="/profile"><li>
                   About Us
@@ -391,28 +447,28 @@ export default function Header() {
                 </li></NavLink>
               </ul>
             </li>
-            
+
             <li>
-            <NavLink exact to="/modules" activeClassName="active">Modules</NavLink>
+              <NavLink exact to="/modules" activeClassName="active">Modules</NavLink>
             </li>
             <li>
-            <NavLink exact to="/services" activeClassName="active">Services </NavLink><GoArrowDown />
+              <NavLink exact to="/services" activeClassName="active">Services <IoIosArrowDown /></NavLink>
               <ul className='dropdown'>
-                <NavLink to="/profile"><li>
+                <NavLink to="/ict"><li>
                   ICT
                 </li></NavLink>
-                <NavLink to="/founders"><li>
+                <NavLink to="/mechanical-engineering"><li>
                   Mechanical Engineering
                 </li></NavLink>
-                <NavLink to="/Coaches"><li>
+                <NavLink to="/electrical-engineering"><li>
                   Electrical Engineering
                 </li></NavLink>
-                <NavLink to="/projects"><li>
+                <NavLink to="/electronic-engineering"><li>
                   Electronics Engineering
                 </li></NavLink>
               </ul>
             </li>
-            
+
             <li>
               <NavLink exact to="/Shop" activeClassName="active">
                 Shop
@@ -455,10 +511,10 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/profile" activeClassName="active">
-                Who We Are <GoArrowDown />
+              <NavLink onClick={dropdown} exact to="/profile" activeClassName="active">
+                Who We Are <IoIosArrowDown />
               </NavLink>
-              <ul className='dropdown'>
+              <ul ref={elementRef} className='dropdown-who-we-are dontShow'>
                 <NavLink to="/profile"> <li>
                   About Us
                 </li></NavLink>
@@ -482,9 +538,23 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/services" activeClassName="active">
-                Services <GoArrowDown />
+              <NavLink onClick={dropdown2} exact to="/services" activeClassName="active">
+                Services <IoIosArrowDown />
               </NavLink>
+              <ul ref={elementRef2} className='dropdown-services dontShow'>
+                <NavLink to="/ict"><li>
+                  ICT
+                </li></NavLink>
+                <NavLink to="/mechanical-engineering"><li>
+                  Mechanical Engineering
+                </li></NavLink>
+                <NavLink to="/electrical-engineering"><li>
+                  Electrical Engineering
+                </li></NavLink>
+                <NavLink to="/electronic-engineering"><li>
+                  Electronics Engineering
+                </li></NavLink>
+              </ul>
             </li>
             <li>
               <NavLink exact to="/shop" activeClassName="active">

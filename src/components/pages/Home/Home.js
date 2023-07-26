@@ -1186,7 +1186,7 @@ export default function Home() {
             </div>}
 
             {!isDivVisible && <div className="home-services-cards">
-              <Carousel>
+              <Carousel style={{color: "black"}}>
                 {ServicesInfo.map((x, i) => {
                   return (
                     <Item>
@@ -1272,7 +1272,7 @@ export default function Home() {
 
       </div>
 
-      <div className="partners-home" style={{ marginTop: '' }}>
+      <div className="partners-home" style={{ marginTop: '' }} data-aos="fade-up">
         <div style={{ marginTop: '' }} className="home-title-partners">
           <h1>Our Partners</h1>
         </div>

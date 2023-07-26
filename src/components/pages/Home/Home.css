@@ -318,7 +318,7 @@ a {
 
 .home-main-container {
   display: block;
-  border-bottom: 4px solid #6fb73f;
+  /* border-bottom: 4px solid #6fb73f; */
   /* border-radius: 10px; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -347,7 +347,7 @@ a {
 
 .home-main-container .course-image-cards img,
 .home-main-container .product-image-card img {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   height: 150px;
   margin-top: 15px;
@@ -1045,9 +1045,8 @@ a {
 
 .home-main-container .partners-home .home-title-partners h1 {
   text-align: center;
-  color: #1635e9;
+  color: #4F85C5;
   font-weight: 650;
-
 }
 
 .home-main-container .our-partners {
@@ -1104,6 +1103,7 @@ a {
   background-color: white;
   width: 250px;
   padding-bottom: 10px;
+  margin-bottom: 10px;
   border-radius: 30px;
   box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
     0 6px 10px 0 rgba(133, 131, 131, 0.2);
@@ -1367,7 +1367,7 @@ lego gallery styling */
   padding-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #7348ca;
+  color: #4F85C5;
 }
 
 .LegoGallery-images-box {
@@ -1400,7 +1400,7 @@ lego gallery styling */
 }
 
 .social-media-feed h1 {
-  color: #357bb4;
+  color: #4F85C5;
   width: 800px;
   font-weight: 1200;
   font-size: 1.6em;
@@ -1556,8 +1556,8 @@ hr {
   text-align: center;
   /* margin-bottom: 3%; */
   text-transform: uppercase;
-  font-weight: 900;
-  color: #0c5eec;
+  font-weight: bold;
+  color: #4F85C5;
   padding: 80px 0px 0px 0px;
   border-radius: 30px;
   font-size: 30px;

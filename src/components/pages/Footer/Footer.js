@@ -12,6 +12,7 @@ import {
   RiFacebookBoxFill,
   RiLinkedinBoxFill,
   IoLogoTiktok,
+  RiTwitterFill,
   RiInstagramLine,
 } from 'react-icons/all';
 import './Footer.css';
@@ -169,38 +170,49 @@ export default function Footer() {
               <button type='submit'>Subscribe!</button>
             </form>
             <div className='social-icons'>
-              <RiFacebookBoxFill className="fab" />
-              <RiLinkedinBoxFill className="fab" />
-              <SiTiktok className="fab" />
-              <RiInstagramLine className="fab" />
+              <a href='https://www.facebook.com/search/top?q=mindsinaction' target='_blank'>
+                <RiFacebookBoxFill className="fab" />
+              </a>
+              <a href='https://twitter.com/Minds_In_Action' target='_blank'>
+              <RiTwitterFill className="fab" />
+              </a>
+              {/* <a href='https://www.facebook.com/search/top?q=mindsinaction' target='_blank'>
+                <RiLinkedinBoxFill className="fab" />
+              </a> */}
+              <a href='https://www.tiktok.com/@mindsinaction?_t=8co12SVnpHp&_r=1' target='_blank'>
+                <SiTiktok className="fab" />
+              </a>
+              <a href='https://www.instagram.com/minds_in_action/' target='_blank'>
+                <RiInstagramLine className="fab" />
+              </a>
             </div>
           </div>
           <div className='col'>
             <h3>About</h3>
             <ul className='footer-list'>
-              <li><NavLink to='#'>Our Story</NavLink></li>
-              <li><NavLink to='#'>Modules</NavLink></li>
-              <li><NavLink to='#'>Blog</NavLink></li>
-              <li><NavLink to='#'>F.A.Qs</NavLink></li>
+              <li><NavLink to='/profile'>Our Story</NavLink></li>
+              <li><NavLink to='/modules'>Modules</NavLink></li>
+              <li><NavLink to='/blog'>Blog</NavLink></li>
+              {/* <li><NavLink to='/'>F.A.Qs</NavLink></li> */}
             </ul>
           </div>
           <div className='col'>
             <h3>Services</h3>
             <ul className='footer-list'>
-              <li><NavLink to='#'>ICT Services</NavLink></li>
-              <li><NavLink to='#'>Engineering Services</NavLink></li>
-              <li><NavLink to='#'>Electronic Shop</NavLink></li>
+              <li><NavLink to='/ict'>ICT Services</NavLink></li>
+              <li><NavLink to='/'>Engineering Services</NavLink></li>
+              <li><NavLink to='/Shop'>Electronic Shop</NavLink></li>
             </ul>
           </div>
           <div className='col'>
             <h3>Office</h3>
             <div>
-              <MdEmail style={{ fontSize: "16px", color: "#6fb73f", marginRight: "10px" }} /><p style={{ color: "#fff", display: "inline-block" }}>admin@mindsinaction.com.na</p>
+              <MdEmail style={{ fontSize: "16px", color: "#94C93D", marginRight: "10px" }} /><p style={{ color: "#fff", display: "inline-block" }}>admin@mindsinaction.com.na</p>
             </div>
             <div>
-              <AiTwotonePhone style={{ fontSize: "16px", color: "#6fb73f", marginRight: "10px" }} /><p style={{ color: "#fff", display: "inline-block" }}>+264 81 363 0529</p>
+              <AiTwotonePhone style={{ fontSize: "16px", color: "#94C93D", marginRight: "10px" }} /><p style={{ color: "#fff", display: "inline-block" }}>+264 81 363 0529</p>
             </div>
-            <ImLocation2 style={{ fontSize: "16px", color: "#6fb73f", marginRight: "10px", marginBottom: "35px" }} /><p style={{ color: "#fff", display: "inline-block" }}>Toivo ya Toivo No.6. Suiderhof,<br />Windhoek, Huster Machinetool<br />building First Floor</p>
+            <ImLocation2 style={{ fontSize: "16px", color: "#94C93D", marginRight: "10px", marginBottom: "35px" }} /><p style={{ color: "#fff", display: "inline-block" }}>Toivo ya Toivo No.6. Suiderhof,<br />Windhoek, Huster Machinetool<br />building First Floor</p>
           </div>
         </div>
         <hr />
