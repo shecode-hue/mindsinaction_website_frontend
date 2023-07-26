@@ -1389,34 +1389,48 @@ lego gallery styling */
 .social-media-feed {
   margin-top: 1;
   height: 450px;
-  padding: 0px 20px;
+  padding: 0px 50px;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   /* border: 3px dotted red; */
+  /* border: 3px dotted red; */
+
+}
+.social-media-feed-box{
+display: flex;
+justify-content: center;
+align-items: center;
+/* border: 3px dotted red; */
 }
 
 .social-media-feed h1 {
   color: #357bb4;
-  width: 800px;
+  width: 100%;
   font-weight: 1200;
   font-size: 1.6em;
   /* border: 3px dotted red; */
   text-transform: uppercase;
 }
-
-.chat-boxes {
-  width: 1200px;
+.sliderx-container{
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
   /* border: 3px dotted red; */
   display: flex;
+  flex-wrap: wrap;
 }
+/* .chat-boxes {
+  border: 3px dotted red;
+  border: 3px dotted red;
+  display: flex;
+  
+} */
 
 .box {
   width: 300px;
-  margin: 50px auto;
+  /* margin: 50px auto; */
   background: #8f63db;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   font-weight: 900;
   color: #fff;
@@ -1427,7 +1441,7 @@ lego gallery styling */
 }
 
 hr {
-  margin: 15px;
+  margin: 10px;
 }
 
 .box .slick-active {
@@ -2206,7 +2220,11 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.center-hrz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media only screen and (max-width: 600px) {
   .description {
     width: 100%;

@@ -100,30 +100,21 @@ const ServicesInfo = [
 ];
 // config information for the services
 const ParentsFeedback = [
+  
   {
-    parent: "Jennefier Metirapi",
+    parent: "Executive Director, MHETI Dr. Alfred van Kent",
     message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
+      "The Ministry of Higher Education, Training and Innovation(MHETI) hereby declares its full support for Mindsinaction",
   },
   {
-    parent: "2Jennefier Metirapi",
+    parent: "Dr Natascha Cheikhyoussef",
     message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
+      "My son Malik Cheikhyoussef is attending the classes and participating with the greatest enthusiasm. The learners learn many skills related to STEM.",
   },
   {
-    parent: "3Jennefier Metirapi",
+    parent: "Dr. Tanja Karp",
     message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
-  },
-  {
-    parent: "4Jennefier Metirapi",
-    message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
-  },
-  {
-    parent: "5Jennefier Metirapi",
-    message:
-      "My daughter is now attending the virtual camp now due to the current situation and he loves it. It is good balances of having fun and learning something new",
+      "MindsInAction staff and instructors needs to be congratulated for their professionalism and excellence in guiding the teams throughout the Virtual GEAR competition.",
   },
 ];
 
@@ -734,17 +725,17 @@ export default function Home() {
             <div className="info-content">
               {/* Place your extended information here */}
               <p>
-                STEAM education offers a host of benefits that empower students
-                to thrive in the modern world. Through hands-on projects and
+                STEAM offers a host of benefits that empower students to thrive
+                in the modern world. Through hands-on projects and
                 interdisciplinary learning, students cultivate collaboration,
                 adaptability, and resilience.
               </p>
               <p>
-                STEAM education prepares them for future job markets, fosters a
-                love of lifelong learning, and inspires innovation to drive
-                positive social change. Ultimately, STEAM equips students with
-                the tools they need to become innovative thinkers and leaders,
-                making a lasting impact in an ever-evolving society.
+                The education system prepares them for future job markets,
+                fosters a love of lifelong learning, and inspires innovation to
+                drive positive social change. Ultimately, STEAM equips students
+                with the tools they need to become innovative thinkers and
+                leaders, making a lasting impact in an ever-evolving society.
               </p>
             </div>
           )}
@@ -834,10 +825,9 @@ export default function Home() {
 
         <div className="social-media-feed">
           <h1>TESTIMONIALS</h1>
-          {/*  */}
-          <div className="products" style={{ marginTop: "60px" }}>
-            {/**Products section */}
-            <Sliderx {...parentsConfig}>
+          <div className="center-hrz" style={{ marginTop: "60px" }}>
+            {/* Products section */}
+            <div className="sliderx-container">
               {ParentsFeedback.map((x, i) => {
                 return (
                   <div key={i} className="chat-boxes">
@@ -848,9 +838,8 @@ export default function Home() {
                   </div>
                 );
               })}
-            </Sliderx>
+            </div>
           </div>
-          {/*  */}
         </div>
       </div>
       <div className="parralex-div">
