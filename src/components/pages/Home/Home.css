@@ -1419,12 +1419,11 @@ align-items: center;
   display: flex;
   flex-wrap: wrap;
 }
-/* .chat-boxes {
+.chat-boxes {
   border: 3px dotted red;
-  border: 3px dotted red;
-  display: flex;
+  /* display: flex; */
   
-} */
+}
 
 .box {
   width: 300px;
@@ -1441,7 +1440,8 @@ align-items: center;
 }
 
 hr {
-  margin: 10px;
+  /* margin: 10px; */
+  border: 3px dotted red;
 }
 
 .box .slick-active {
@@ -2420,6 +2420,7 @@ hr {
   background-color: #4F85C5;
   border-radius: 20px;
   padding: 24px;
+  padding-bottom: 20px;
   margin-top: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -2432,11 +2433,19 @@ hr {
 .info-content p{
   font-size: 18px;
   color: #ffffff;
+  text-align: left;
+}
+.info-content p ul{
+  padding-left: 2.5rem;
+
+}
+.info-content p ul li{
+list-style:disc;
 }
 .info-button.active + .info-content {
   opacity: 1;
   color: #ffffff;
-  max-height: 600px;
+  max-height: 100%;
   /* border: 3px dotted rgb(255, 217, 0); */
 }
 

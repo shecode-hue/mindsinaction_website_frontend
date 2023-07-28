@@ -100,7 +100,6 @@ const ServicesInfo = [
 ];
 // config information for the services
 const ParentsFeedback = [
-  
   {
     parent: "Executive Director, MHETI Dr. Alfred van Kent",
     message:
@@ -725,17 +724,87 @@ export default function Home() {
             <div className="info-content">
               {/* Place your extended information here */}
               <p>
-                STEAM offers a host of benefits that empower students to thrive
-                in the modern world. Through hands-on projects and
-                interdisciplinary learning, students cultivate collaboration,
-                adaptability, and resilience.
+                STEAM education offers a comprehensive and dynamic approach to
+                learning that equips students with the skills and mindset needed
+                to thrive in an increasingly technology-driven and
+                interconnected world. It empowers learners to become critical
+                thinkers, problem solvers, and creative innovators, shaping them
+                into well-rounded individuals prepared for the challenges and
+                opportunities of the future.
               </p>
               <p>
-                The education system prepares them for future job markets,
-                fosters a love of lifelong learning, and inspires innovation to
-                drive positive social change. Ultimately, STEAM equips students
-                with the tools they need to become innovative thinkers and
-                leaders, making a lasting impact in an ever-evolving society.
+                The benefits of STEAM education are numerous and have a
+                significant impact on society as a whole. Some of the key
+                advantages include:
+              </p>
+              <p>
+                <ul>
+                  <li>
+                    STEAM education equips students with technical skills in
+                    science, technology, engineering, and mathematics. This
+                    knowledge is in high demand in various industries, including
+                    technology, healthcare, engineering, and many others.
+                  </li>
+                  <li>
+                    Early exposure to STEAM educational activities encourages
+                    students to think critically, solve problems, and apply
+                    analytical skills to real-world situations. The
+                    interdisciplinary nature of STEAM fosters a deeper
+                    understanding of complex concepts, preparing students to
+                    tackle challenges effectively.
+                  </li>
+                  <li>
+                    By incorporating the arts into traditional STEM subjects,
+                    STEAM promotes creativity and imagination. This approach
+                    encourages students to think outside the box and come up
+                    with innovative solutions to problems.
+                  </li>
+                  <li>
+                    Bridging the gender gap: Traditional STEM fields have often
+                    been male-dominated. However, the integration of arts in
+                    STEAM has shown to attract more female students, bridging
+                    the gender gap and promoting inclusivity in these
+                    disciplines.
+                  </li>
+                  <li>
+                    STEAM education emphasizes real-world applications of
+                    knowledge, making learning more engaging and meaningful for
+                    students. This approach helps students see the relevance of
+                    what they are learning to their lives and future careers.
+                  </li>
+                  <li>
+                    In a rapidly changing world, adaptability is a crucial
+                    skill. STEAM education encourages students to embrace
+                    change, learn continuously, and adapt to new technologies
+                    and challenges.
+                  </li>
+                  <li>
+                    STEAM projects often involve hands-on activities and
+                    open-ended challenges, providing students with opportunities
+                    to develop their problem-solving abilities and resilience.
+                  </li>
+                  <li>
+                    STEAM projects often require teamwork and cooperation,
+                    helping students develop strong communication and
+                    collaboration skills. These skills are crucial in the
+                    professional world, where successful projects often rely on
+                    effective teamwork.
+                  </li>
+                  <li>
+                    Preparing for future careers: Many of the fastest-growing
+                    job sectors require skills and knowledge in science,
+                    technology, engineering, arts, and mathematics. STEAM
+                    education prepares students for these emerging career
+                    opportunities.
+                  </li>
+                  <li>
+                    Encouraging lifelong learning: By nurturing a passion for
+                    learning and exploration, STEAM education instills a love
+                    for knowledge that extends beyond the classroom and into
+                    adulthood. Students are more likely to pursue further
+                    education and seek continuous self-improvement.
+                  </li>
+                </ul>
               </p>
             </div>
           )}
@@ -832,15 +901,16 @@ export default function Home() {
                 return (
                   <div key={i} className="chat-boxes">
                     <div className="box sb">
-                      {x.message}
-                      <hr className="new1" />-{x.parent}-
+                      <div>{x.message}</div>
+                      <hr className="new1" />
+                      <div> -{x.parent}-</div>
                     </div>
                   </div>
                 );
               })}
             </div>
           </div>
-        </div>
+        </div>S
       </div>
       <div className="parralex-div">
         <h2>
