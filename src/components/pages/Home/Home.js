@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -403,7 +403,7 @@ export default function Home() {
   const handleWindowResize = () => {
     const screenWidth = window.innerWidth;
     // Change the threshold width according to your requirement
-    const thresholdWidth = 768;
+    const thresholdWidth = 1400;
     setDivVisible(screenWidth >= thresholdWidth);
   };
 
@@ -416,6 +416,27 @@ export default function Home() {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
+
+  const overlay = useRef(0);
+
+  const showOverlay = (event) => {
+    event.preventDefault();
+    if (overlay.current) {
+      const element = overlay.current;
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element.classList.remove("dontShow");
+        element.classList.add("Modules-item__overlay-mobile");
+      } else {
+        // If the class doesn't exist, add it
+        element.classList.remove("Modules-item__overlay-mobile");
+        element.classList.add("dontShow");
+      }
+    }
+  };
 
   return (
     <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
@@ -447,10 +468,13 @@ export default function Home() {
                   <div className="center-hr">
                     <hr />
                   </div>
-                  <p>{slide.description}</p>
-                  <div className="center-hr" style={{ borderRadius: "20px" }}>
-                    <button className="hero-button">{slide.button}</button>
-                  </div>
+                  <p style={{ color: "white" }}>{slide.description}</p>
+                  <NavLink exact to="/modules">
+                    <div className="center-hr" style={{ borderRadius: "20px" }}>
+                      <button className="hero-button">{slide.button}</button>
+                    </div>
+                  </NavLink>
+
                 </div>
               </div>
               {/* Navigation arrows */}
@@ -484,6 +508,7 @@ export default function Home() {
                     className="Modules-item"
                     style={{
                       backgroundColor: `#${x.color}`,
+                      marginBottom: "90px",
                     }}
                   >
                     <NavLink exact to="/modules" aria-labelledby={x.title}>
@@ -518,29 +543,50 @@ export default function Home() {
 
           {/* <Slider {...courseConfig}> */}
           {!isDivVisible && (
-            <div className="Modules-home-cards">
+            <div className="Modules-home-cards" style={{ marginBottom: "90px", }}>
               <Carousel
                 breakPoints={breakPoints}
                 enableAutoPlay={true}
-                autoPlaySpeed={1000}
+                autoPlaySpeed={6000}
+                style={{ margin: "0px 50px" }}
               >
                 {cards.map((x, i) => {
                   return (
                     <Item>
                       <div
                         key={i}
-                        className="Modules-item"
+                        className="Modules-item-mobile"
+                        onClick={showOverlay}
                         style={{
                           backgroundColor: `#${x.color}`,
+                          cursor: "pointer"
                         }}
                       >
-                        <NavLink exact to="/modules" aria-labelledby={x.title}>
+                        {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
-                        </NavLink>
+                        </NavLink> */}
                         <img src={x.image} alt={x.title} />
                         {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                        <p style={{ color: "white", position: "absolute", bottom: "0", top: "85%", left: "50%", transform: "translate(-50%)", fontSize: "20px" }}>{x.title}</p>
                         <div
-                          className="Modules-item__overlay"
+                          ref={overlay}
+                          className="dontShow"
+                          style={{
+                            backgroundColor: `#${x.color}`,
+                          }}
+                        >
+                          <h3
+                            id={x.title}
+                            style={{
+                              backgroundColor: `#${x.color}`,
+                              fontSize: "20px",
+                            }}
+                            aria-hidden="true"
+                          ></h3>
+                        </div>
+                        <div
+                          ref={overlay}
+                          className="dontShow"
                           style={{
                             backgroundColor: `#${x.color}`,
                           }}
@@ -555,9 +601,14 @@ export default function Home() {
                           >
                             {x.title}
                           </h3>
-                          <div className="Modules-item__body">
+                          <div className="Modules-item__body-mobile">
                             <p>{x.description}</p>
+                            <NavLink exact to="/modules" className="button-link">
+                              <button>Find out more</button>
+                            </NavLink>
+
                           </div>
+
                         </div>
                       </div>
                     </Item>
@@ -737,7 +788,7 @@ export default function Home() {
         </div>
       </div>
       <div className="Background-div-Middle">
-        <div className="LegoGallery" style={{paddingBottom: "50px"}}>
+        <div className="LegoGallery" style={{ paddingBottom: "50px" }}>
           <h3 className="LegoGallery-text">
             With the hands-on approach to STEAM, we cultivate a generation of
             innovators by providing the 4th industrial revolution skills to
@@ -915,11 +966,11 @@ export default function Home() {
 
       </div>
 
-      <div className="partners-home" style={{ marginTop: "" }} data-aos="fade-up">
-        <div style={{ marginTop: "" }} className="home-title-partners">
+      <div className="partners-home" style={{ marginTop: "" }}>
+        <div style={{ marginTop: "" }} className="home-title-partners" data-aos="fade-up">
           <h1>Our Partners</h1>
         </div>
-        <div className="our-partners" >
+        <div className="our-partners" data-aos="fade-up">
           <div className="course" style={{ marginTop: "60px" }}>
             {/**Courses section */}
             <Carousel

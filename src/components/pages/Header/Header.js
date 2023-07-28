@@ -428,7 +428,7 @@ export default function Header() {
             </li>
 
             <li>
-              <NavLink exact to="/about" activeClassName="active">Who we are <IoIosArrowDown /></NavLink> 
+              <NavLink exact to="/profile" activeClassName="active">Who we are <IoIosArrowDown /></NavLink> 
               <ul className='dropdown'>
                 <NavLink to="/profile"><li>
                   About Us

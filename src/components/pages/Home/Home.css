@@ -1192,7 +1192,7 @@ styling for modelues cards */
   box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
   margin: 15px;
   margin-top: 30px;
-  margin-bottom: 90px;
+  /* margin-bottom: 90px; */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1250,7 +1250,6 @@ styling for modelues cards */
   background: rgb(14, 61, 226);
   background: linear-gradient(90deg, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%);
   transform: translate3d(0, calc(100% - 3.5rem), 0);
-  
 }
 
 .Modules-item__body {
@@ -1261,6 +1260,109 @@ styling for modelues cards */
 .Modules-item__body p {
   margin: 0;
   color:white;
+}
+
+/* Mobile modules */
+.Modules-item-mobile {
+  position: relative;
+  height: 230px;
+  width: 240px;
+  /* background-color: lightGrey; */
+  overflow-y: hidden;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  margin-top: 30px;
+  /* margin-bottom: 90px; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding-left: 50px;
+  padding-right: auto; */
+  border-radius: 20px;
+  /* border: 3px dotted red; */
+  padding-top: 20px;
+}
+
+.Modules-item-mobile h3 {
+  margin: 0;
+  display: block;
+  /* background-color: lightGrey; */
+  padding: 1rem;
+  background: rgb(14, 61, 226);
+  background: linear-gradient(90deg, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%);
+}
+
+/* .Modules-item-mobile:hover h3 {
+  background: rgb(14, 61, 226);
+  background: linear-gradient(90deg, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%);
+} */
+
+.Modules-item-mobile a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* .Modules-item-mobile a:hover~.Modules-item__overlay-mobile,
+.Modules-item-mobile a:focus~.Modules-item__overlay-mobile {
+  transform: translate3d(0, 0, 0);
+} */
+
+.Modules-item-mobile img {
+  width: 55%;
+  height: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  /* object-fit: cover; */
+}
+
+.Modules-item__overlay-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 102%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition: transform 300ms;
+  background: rgb(14, 61, 226);
+  background: linear-gradient(90deg, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%);
+  /* transform: translate3d(0, calc(100% - 3.5rem), 0); */
+  /* transform: translate3d(0, 0, 0); */
+}
+
+.Modules-item__body-mobile {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.Modules-item__body-mobile p {
+  margin: 0;
+  color:white;
+}
+
+.Modules-item__body-mobile .button-link {
+  margin-top: 190px;
+  position: absolute;
+  bottom: 0px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.Modules-item__body-mobile .button-link button {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 300px;
+  width: max-content;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 /* why mindsinaction STEAM center styling */
