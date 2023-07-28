@@ -1252,9 +1252,30 @@ styling for modelues cards */
   transform: translate3d(0, calc(100% - 3.5rem), 0);
 }
 
+
 .Modules-item__body {
   flex-grow: 1;
   padding: 1rem;
+}
+
+.Modules-item__body .button-link {
+  margin-top: 190px;
+  position: absolute;
+  bottom: 0px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.Modules-item__body .button-link button {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 300px;
+  width: max-content;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .Modules-item__body p {
@@ -1726,7 +1747,7 @@ align-items: center;
 .What-is-STEAM-Education-home {
   display: flex;
   width: 80%;
-  /* height: 300px; */
+  height: 300px;
   /* background-color: rgb(71, 134, 241); */
   background-color: #4F85C5;
   /* border: 3px dotted red; */
@@ -1737,6 +1758,78 @@ align-items: center;
   padding-top: 40px;
   /* padding-bottom: 10px !important; */
   /* border: 3px dotted rgb(0, 17, 255); */
+}
+
+@media only screen and (max-width: 1300px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 400px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 450px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 500px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 550px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
 }
 
 .What-is-STEAM-Education-home-text {

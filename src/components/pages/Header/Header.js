@@ -32,11 +32,7 @@ export default function Header() {
 
   window.addEventListener("scroll", changeBackground);
 
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   const show = useRef(0);
   // const dropdown = () => {
@@ -92,6 +88,24 @@ export default function Header() {
       element1.classList.add("dontShow");
     }
   };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    elementRef.current.classList.remove("show");
+    elementRef.current.classList.add("dontShow");
+    elementRef2.current.classList.remove("show");
+    elementRef2.current.classList.add("dontShow");
+  };
+
+  const mobileNavigate = () => {
+    setIsOpen(!isOpen);
+  }
+
+  const DesktopNavigate = () => {
+    
+  }
 
   return (
     <>
@@ -428,7 +442,7 @@ export default function Header() {
             </li>
 
             <li>
-              <NavLink exact to="/profile" activeClassName="active">Who we are <IoIosArrowDown /></NavLink> 
+              <NavLink exact to="/profile" activeClassName="active">Who we are <IoIosArrowDown /></NavLink>
               <ul className='dropdown'>
                 <NavLink to="/profile"><li>
                   About Us
@@ -506,7 +520,7 @@ export default function Header() {
         >
           <ul>
             <li>
-              <NavLink exact to="/" activeClassName="active">
+              <NavLink onClick={mobileNavigate} exact to="/" activeClassName="active">
                 Home
               </NavLink>
             </li>
@@ -514,7 +528,7 @@ export default function Header() {
               <NavLink onClick={dropdown} exact to="/profile" activeClassName="active">
                 Who We Are <IoIosArrowDown />
               </NavLink>
-              <ul ref={elementRef} className='dropdown-who-we-are dontShow'>
+              <ul ref={elementRef} onClick={mobileNavigate} className='dropdown-who-we-are dontShow'>
                 <NavLink to="/profile"> <li>
                   About Us
                 </li></NavLink>
@@ -533,7 +547,7 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <NavLink exact to="/modules" activeClassName="active">
+              <NavLink onClick={mobileNavigate} exact to="/modules" activeClassName="active">
                 Modules
               </NavLink>
             </li>
@@ -541,7 +555,7 @@ export default function Header() {
               <NavLink onClick={dropdown2} exact to="/services" activeClassName="active">
                 Services <IoIosArrowDown />
               </NavLink>
-              <ul ref={elementRef2} className='dropdown-services dontShow'>
+              <ul ref={elementRef2} onClick={mobileNavigate} className='dropdown-services dontShow'>
                 <NavLink to="/ict"><li>
                   ICT
                 </li></NavLink>
@@ -557,12 +571,12 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <NavLink exact to="/shop" activeClassName="active">
+              <NavLink onClick={mobileNavigate} exact to="/shop" activeClassName="active">
                 Shop
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/contact" activeClassName="active">
+              <NavLink onClick={mobileNavigate} exact to="/Contact-us" activeClassName="active">
                 Contact Us
               </NavLink>
             </li>
@@ -573,7 +587,7 @@ export default function Header() {
               <NavLink exact to="/free-demo">
               <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
             </NavLink></li> */}
-            <li style={{ display: "block" }}><NavLink exact to="/register">
+            <li style={{ display: "block" }}><NavLink onClick={mobileNavigate} exact to="/register">
               <button className="header-register">Register</button>
             </NavLink></li>
           </ul>
