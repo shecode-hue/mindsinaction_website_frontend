@@ -577,7 +577,7 @@ export default function Home() {
       </div>
 
       <div className="Background-div-top">
-        <div className="Modules-home">
+        <div className="Modules-home" data-aos="fade-right">
           <h1>Modules</h1>
 
           {isDivVisible && (
@@ -947,6 +947,7 @@ export default function Home() {
         <div
           className="display-home1"
           style={{ paddingLeft: "50px", paddingRight: "50px" }}
+          data-aos="fade-left"
         >
           <div className="What-is-STEAM-Education-home">
             <div class="box-for-image-moving-UpandDown"></div>
@@ -988,7 +989,7 @@ export default function Home() {
         </div>
 
         {/* small screen */}
-        <div className="What-is-STEAM-Education-home-mobile display-home2">
+        <div className="What-is-STEAM-Education-home-mobile display-home2" data-aos="fade-left">
           <center>
             <div class="box-for-image-moving-UpandDown-mobile"></div>
           </center>
@@ -1027,7 +1028,7 @@ export default function Home() {
             Trigger
           </button>
         </div>
-        <div className="button-container">
+        <div className="button-container" data-aos="fade-left">
           <button
             className={`info-button ${showInfo ? "active" : ""}`}
             onClick={handleClick}
@@ -1056,7 +1057,7 @@ export default function Home() {
             </div>
           )}
         </div>
-        <div className="Why-steam">
+        <div className="Why-steam" data-aos="fade-right">
           <h1>Why Mindsinaction STEAM Center?</h1>
           <div className="Why-steam-cards-outer">
             {isDivVisible && (
@@ -1112,7 +1113,7 @@ export default function Home() {
         </div>
       </div>
       <div className="Background-div-Middle">
-        <div className="LegoGallery" style={{ paddingBottom: "50px" }}>
+        <div className="LegoGallery" style={{ paddingBottom: "50px" }} data-aos="fade-left">
           <h3 className="LegoGallery-text">
             With the hands-on approach to STEAM, we cultivate a generation of
             innovators by providing the 4th industrial revolution skills to
@@ -1139,7 +1140,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="social-media-feed" style={{ marginTop: "60px" }}>
+        <div className="social-media-feed" style={{ marginTop: "60px" }} data-aos="fade-right">
           <h1>TESTIMONIALS</h1>
           <div className="center-hrz" style={{ marginTop: "60px" }}>
             {/* Products section */}
@@ -1291,10 +1292,11 @@ export default function Home() {
       </div>
 
       <div className="partners-home" style={{ marginTop: "" }}>
-        <div style={{ marginTop: "" }} className="home-title-partners" data-aos="fade-up">
+        <div data-aos="fade-up">
+        <div style={{ marginTop: "" }} className="home-title-partners">
           <h1>Our Partners</h1>
         </div>
-        <div className="our-partners" data-aos="fade-up">
+        <div className="our-partners">
           <div className="course" style={{ marginTop: "60px" }}>
             {/**Courses section */}
             <Carousel
@@ -1320,6 +1322,8 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
+        </div>
+       
       </div>
     </div>
   );

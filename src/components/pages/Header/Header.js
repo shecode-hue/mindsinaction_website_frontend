@@ -442,7 +442,7 @@ export default function Header() {
             </li>
 
             <li>
-              <NavLink exact to="/profile" activeClassName="active">Who we are <IoIosArrowDown /></NavLink>
+              <NavLink exact to="/profile" activeClassName="active">Who we are <IoIosArrowDown style={{fontSize: "12px"}}/></NavLink>
               <ul className='dropdown'>
                 <NavLink to="/profile"><li>
                   About Us
@@ -456,7 +456,7 @@ export default function Header() {
                 <NavLink to="/projects"><li>
                   Projects
                 </li></NavLink>
-                <NavLink to="/blog"><li>
+                <NavLink to="/blog"><li className="last-navlink">
                   Blog
                 </li></NavLink>
               </ul>
@@ -466,7 +466,7 @@ export default function Header() {
               <NavLink exact to="/modules" activeClassName="active">Modules</NavLink>
             </li>
             <li>
-              <NavLink exact to="/services" activeClassName="active">Services <IoIosArrowDown /></NavLink>
+              <NavLink exact to="/services" activeClassName="active">Services <IoIosArrowDown style={{fontSize: "12px"}}/></NavLink>
               <ul className='dropdown'>
                 <NavLink to="/ict"><li>
                   ICT
@@ -477,7 +477,7 @@ export default function Header() {
                 <NavLink to="/electrical-engineering"><li>
                   Electrical Engineering
                 </li></NavLink>
-                <NavLink to="/electronic-engineering"><li>
+                <NavLink to="/electronic-engineering"><li className="last-navlink">
                   Electronics Engineering
                 </li></NavLink>
               </ul>
@@ -541,7 +541,7 @@ export default function Header() {
                 <NavLink to="/projects"><li>
                   Projects
                 </li></NavLink>
-                <NavLink to="/blog"><li>
+                <NavLink to="/blog"><li className="last-navlink">
                   Blog
                 </li></NavLink>
               </ul>
@@ -565,7 +565,7 @@ export default function Header() {
                 <NavLink to="/electrical-engineering"><li>
                   Electrical Engineering
                 </li></NavLink>
-                <NavLink to="/electronic-engineering"><li>
+                <NavLink to="/electronic-engineering"><li className="last-navlink">
                   Electronics Engineering
                 </li></NavLink>
               </ul>

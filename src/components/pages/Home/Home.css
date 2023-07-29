@@ -1175,6 +1175,7 @@ styling for modelues cards */
   background: url("../../images/Home_images/BG_Gradient Absract.svg") no-repeat center center;
   background-size: cover;
   /* border: 3px dotted red; */
+  padding-bottom: 50px;
 }
 
 .Modules-home-cards {
@@ -1411,15 +1412,28 @@ styling for modelues cards */
 .Why-steam-cards {
   display: flex;
   width: 1200px;
+  /* width: 95%; */
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   /* border:3px rgb(93, 0, 255) dotted; */
 }
 
+@media only screen and (max-width: 1400px) {
+  .Why-steam-cards {
+    display: flex;
+    /* width: 1200px; */
+    width: 95%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* border:3px rgb(93, 0, 255) dotted; */
+  }
+}
+
 .Why-steam-card {
   width: 250px;
-  height: 220PX;
+  height: 235PX;
   /* border:3px red dotted; */
   background-color: white;
   color: #061fae;
@@ -1501,7 +1515,7 @@ lego gallery styling */
 
 .LegoGallery-images-box {
   /* border:3px dotted red; */
-  width: 1230px;
+  width: 90%;
   height: 270px;
   /* overflow:hidden; */
 }
@@ -1511,9 +1525,41 @@ lego gallery styling */
   display: block;
   /* object-position: 100%; */
   /* margin-top: 13px; */
-  width: 300px;
+  width: 350px;
   /* height: 175px; */
   border-radius: 40px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .image-for-lego img {
+    object-fit: contain;
+    display: block;
+    /* object-position: 100%; */
+    /* margin-top: 13px; */
+    width: 100%;
+    /* height: 175px; */
+    border-radius: 40px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .LegoGallery-images-box {
+    /* border:3px dotted red; */
+    width: 95%;
+    height: 270px;
+    /* overflow:hidden; */
+    /* padding: 0px 70px; */
+  }
+  
+  .image-for-lego img {
+    object-fit: contain;
+    display: block;
+    /* object-position: 100%; */
+    /* margin-top: 13px; */
+    width: 100%;
+    /* height: 175px; */
+    border-radius: 40px;
+  }
 }
 
 /* styling for chat-boxes */

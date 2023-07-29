@@ -502,10 +502,14 @@ header {
 
 .navbar .links li a.active {
   color: #94C93D;
+  border-top: #94C93D 4px solid;
+  padding-top: 15px;
 }
 
 .navbar .links li a:hover {
   color: #94C93D;
+  border-top: #94C93D 4px solid;
+  padding-top: 15px;
 }
 
 /* Add a bar on top of the links when hovered or active */
@@ -720,8 +724,8 @@ header {
 /* DROPDOWN MENU */
 .dropdown {
   background: #fff;
-  /* border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   /* width: 100px; */
   /* padding: 10px; */
   /* color: black; */
@@ -753,19 +757,16 @@ header {
   text-decoration: none;
 }
 
-/* Add this style to target the last child of the dropdown */
-.dropdown li:last-of-type {
-  /* border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
-}
-
 /* Add specific hover styles for the last child */
-.dropdown li:last-of-type:hover {
+.dropdown li:hover {
   /* Add your hover styles here */
   background-color: #94C93D; /* Change the color on hover as desired */
   color: #fff;
-  /* border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
+}
+
+.dropdown .last-navlink:hover {
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 .dropdown li:hover {
@@ -783,8 +784,8 @@ header {
 @media only screen and (max-width: 1050px) {
   .dropdown-who-we-are {
     background: #fff;
-    /* border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     /* width: 100px; */
     /* padding: 10px; */
     /* color: black; */
@@ -822,12 +823,10 @@ header {
     /* width: 100%; */
     color: #fff;
   }
-  
-  .dropdown-who-we-are a li:last-child:hover {
-    background-color: #94C93D; /* Change the color on hover as desired */
-    /* width: 100%; */
-    /* border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; */
+
+  .dropdown-who-we-are a .last-navlink:hover {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
   }
   
   .dropdown-who-we-are li a:hover {
@@ -837,8 +836,8 @@ header {
   /* Services */
   .dropdown-services {
     background: #fff;
-    /* border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     /* width: 100px; */
     /* padding: 10px; */
     /* color: black; */
@@ -876,12 +875,10 @@ header {
     /* width: 100%; */
     color: #fff;
   }
-  
-  .dropdown-services a li:last-child:hover {
-    background-color: #94C93D; /* Change the color on hover as desired */
-    /* width: 100%; */
-    /* border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; */
+
+  .dropdown-services a .last-navlink:hover {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
   }
   
   .dropdown-services li a:hover {
