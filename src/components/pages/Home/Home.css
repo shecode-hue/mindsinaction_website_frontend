@@ -1528,6 +1528,7 @@ align-items: center;
   flex-wrap: wrap;
 }
 
+
 .box {
   display: flex;
   flex-direction:column;
@@ -1571,7 +1572,7 @@ margin-top: 2rem;
 }
 
 /* styling for parralex effect div */
-.parralex-div  .active{
+.parallax-div {
   /* The image used */
   background-image:
     /* top, transparent red */
@@ -1591,28 +1592,34 @@ margin-top: 2rem;
   justify-content: center;
   align-items: center;
   /* border: 3px dotted red;  */
-  transition: opacity 1.5s ease;
 }
 
-.parralex-div {
+.parallax-div {
   padding: 0px 50px;
 }
 
-.parralex-div h2 {
+.parallax-div h2 {
   color: #6de517;
   width: 800px;
 
 }
 
-.parralex-div h2 span {
+.parallax-div h2 span {
   color: #ffffff;
   font-weight: 700;
   font-size: 1.5em;
+  animation: fadeIn 2s ease-in-out;
 }
 
-#changingText {
-  transition: opacity 1s ease-in-out; /* Smooth fading transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
 @media only screen and (max-width: 768px) {
   .parralex-div h2 span {
     font-size: 90%;

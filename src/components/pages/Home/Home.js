@@ -20,7 +20,6 @@ import "react-animated-slider/build/horizontal.css";
 import "./SliderStyling/slider-animations.css";
 import sliderArrow from "../../icons/Home-Sider-right.png";
 import imageSlide from "./data";
-import textSlide from "./data2";
 
 import legoImage1 from "../../images/Home_images/LegoGallery/lego1.jpg";
 import legoImage2 from "../../images/Home_images/LegoGallery/lego2.jpg";
@@ -170,6 +169,25 @@ const legoimages = [
   },
   {
     image: legoImage3,
+  },
+];
+// parralex info
+const textSlide = [
+  {
+    description:
+      "STEAM education encourages students to think critically, solve problems, and apply analytical skills to real-world situations",
+  },
+  {
+    description:
+      "By incorporating the arts into traditional STEM subjects, STEAM promotes creativity and imagination",
+  },
+  {
+    description:
+      "Students are more likely to pursue further education and seek continuous self-improvement",
+  },
+  {
+    description:
+      "Empowering students to be makers and agile problem solvers, able to imagine and create the future.",
   },
 ];
 // information for why-steam cards
@@ -337,16 +355,19 @@ export default function Home() {
       setCurrentState(currentState - 1);
     }
   };
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentState === textSlide.length - 1) {
-        setCurrentState(0);
+      if (currentTextIndex === textSlide.length - 1) {
+        setCurrentTextIndex(0);
       } else {
-        setCurrentState(currentState + 1);
+        setCurrentTextIndex(currentTextIndex + 1);
       }
     }, 5000);
     return () => clearTimeout(timer);
-  }, [currentState]);
+  }, [currentTextIndex]);
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -374,12 +395,92 @@ export default function Home() {
     };
   }, []);
 
-  const overlay = useRef(0);
+  const overlay1 = useRef(0);
+  const overlay2 = useRef(0);
+  const overlay3 = useRef(0);
+  const overlay4 = useRef(0);
+  const overlay5 = useRef(0);
 
-  const showOverlay = (event) => {
+  const showOverlay1 = (event) => {
     event.preventDefault();
-    if (overlay.current) {
-      const element = overlay.current;
+    if (overlay1.current) {
+      const element = overlay1.current;
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element.classList.remove("dontShow");
+        element.classList.add("Modules-item__overlay-mobile");
+      } else {
+        // If the class doesn't exist, add it
+        element.classList.remove("Modules-item__overlay-mobile");
+        element.classList.add("dontShow");
+      }
+    }
+  };
+
+  const showOverlay2 = (event) => {
+    event.preventDefault();
+    if (overlay2.current) {
+      const element = overlay2.current;
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element.classList.remove("dontShow");
+        element.classList.add("Modules-item__overlay-mobile");
+      } else {
+        // If the class doesn't exist, add it
+        element.classList.remove("Modules-item__overlay-mobile");
+        element.classList.add("dontShow");
+      }
+    }
+  };
+
+  const showOverlay3 = (event) => {
+    event.preventDefault();
+    if (overlay3.current) {
+      const element = overlay3.current;
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element.classList.remove("dontShow");
+        element.classList.add("Modules-item__overlay-mobile");
+      } else {
+        // If the class doesn't exist, add it
+        element.classList.remove("Modules-item__overlay-mobile");
+        element.classList.add("dontShow");
+      }
+    }
+  };
+
+  const showOverlay4 = (event) => {
+    event.preventDefault();
+    if (overlay4.current) {
+      const element = overlay4.current;
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element.classList.remove("dontShow");
+        element.classList.add("Modules-item__overlay-mobile");
+      } else {
+        // If the class doesn't exist, add it
+        element.classList.remove("Modules-item__overlay-mobile");
+        element.classList.add("dontShow");
+      }
+    }
+  };
+
+  const showOverlay5 = (event) => {
+    event.preventDefault();
+    if (overlay5.current) {
+      const element = overlay5.current;
       // const className = initialClass.trim();
 
       // Check if the class exists on the element
@@ -453,7 +554,7 @@ export default function Home() {
       </div>
 
       <div className="Background-div-top">
-        <div className="Modules-home">
+        <div className="Modules-home" data-aos="fade-right">
           <h1>Modules</h1>
 
           {isDivVisible && (
@@ -490,6 +591,9 @@ export default function Home() {
                       </h3>
                       <div className="Modules-item__body">
                         <p>{x.description}</p>
+                        {/* <NavLink exact to="/modules" className="button-link">
+                          <button>Find out more</button>
+                        </NavLink> */}
                       </div>
                     </div>
                   </div>
@@ -510,84 +614,379 @@ export default function Home() {
                 autoPlaySpeed={6000}
                 style={{ margin: "0px 50px" }}
               >
-                {cards.map((x, i) => {
-                  return (
-                    <Item>
-                      <div
-                        key={i}
-                        className="Modules-item-mobile"
-                        onClick={showOverlay}
-                        style={{
-                          backgroundColor: `#${x.color}`,
-                          cursor: "pointer",
-                        }}
-                      >
-                        {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                {/* {cards.map((x, i) => { */}
+                {/* return ( */}
+                <Item>
+                  <div
+                    // key={i}
+                    className="Modules-item-mobile"
+                    onClick={showOverlay1}
+                    style={{
+                      backgroundColor: "#33A85B",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
                         </NavLink> */}
-                        <img src={x.image} alt={x.title} />
-                        {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                        <p
-                          style={{
-                            color: "white",
-                            position: "absolute",
-                            bottom: "0",
-                            top: "85%",
-                            left: "50%",
-                            transform: "translate(-50%)",
-                            fontSize: "20px",
-                          }}
-                        >
-                          {x.title}
+                    <img src={Robotics} alt="Robotics" />
+                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                    <p
+                      style={{
+                        color: "white",
+                        position: "absolute",
+                        bottom: "0",
+                        top: "85%",
+                        left: "50%",
+                        transform: "translate(-50%)",
+                        fontSize: "20px",
+                      }}
+                    >
+                      Robotics
+                    </p>
+                    <div
+                      ref={overlay1}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#33A85B",
+                      }}
+                    >
+                      <h3
+                        id="Robotics"
+                        style={{
+                          backgroundColor: "#33A85B",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      ></h3>
+                    </div>
+                    <div
+                      ref={overlay1}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#33A85B",
+                      }}
+                    >
+                      <h3
+                        id="Robotics"
+                        style={{
+                          backgroundColor: "#33A85B",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      >
+                        Robotics
+                      </h3>
+                      <div className="Modules-item__body-mobile">
+                        <p>
+                          Students are introduced to the basics of robotics,
+                          programming, engineering, problem identification and
+                          collaboration.
                         </p>
-                        <div
-                          ref={overlay}
-                          className="dontShow"
-                          style={{
-                            backgroundColor: `#${x.color}`,
-                          }}
-                        >
-                          <h3
-                            id={x.title}
-                            style={{
-                              backgroundColor: `#${x.color}`,
-                              fontSize: "20px",
-                            }}
-                            aria-hidden="true"
-                          ></h3>
-                        </div>
-                        <div
-                          ref={overlay}
-                          className="dontShow"
-                          style={{
-                            backgroundColor: `#${x.color}`,
-                          }}
-                        >
-                          <h3
-                            id={x.title}
-                            style={{
-                              backgroundColor: `#${x.color}`,
-                              fontSize: "20px",
-                            }}
-                            aria-hidden="true"
-                          >
-                            {x.title}
-                          </h3>
-                          <div className="Modules-item__body-mobile">
-                            <p>{x.description}</p>
-                            <NavLink
-                              exact
-                              to="/modules"
-                              className="button-link"
-                            >
-                              <button>Find out more</button>
-                            </NavLink>
-                          </div>
-                        </div>
+                        <NavLink exact to="/modules" className="button-link">
+                          <button>Find out more</button>
+                        </NavLink>
                       </div>
-                    </Item>
-                  );
-                })}
+                    </div>
+                  </div>
+                </Item>
+                <Item>
+                  <div
+                    // key={i}
+                    className="Modules-item-mobile"
+                    onClick={showOverlay2}
+                    style={{
+                      backgroundColor: "#F37021",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                          {" "}
+                        </NavLink> */}
+                    <img src={Electronics} alt="Electronics" />
+                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                    <p
+                      style={{
+                        color: "white",
+                        position: "absolute",
+                        bottom: "0",
+                        top: "85%",
+                        left: "50%",
+                        transform: "translate(-50%)",
+                        fontSize: "20px",
+                      }}
+                    >
+                      Electronics
+                    </p>
+                    <div
+                      ref={overlay2}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#F37021",
+                      }}
+                    >
+                      <h3
+                        id="Electronics"
+                        style={{
+                          backgroundColor: "#F37021",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      ></h3>
+                    </div>
+                    <div
+                      ref={overlay2}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#F37021",
+                      }}
+                    >
+                      <h3
+                        id="Electronics"
+                        style={{
+                          backgroundColor: "#F37021",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      >
+                        Electronics
+                      </h3>
+                      <div className="Modules-item__body-mobile">
+                        <p>
+                          Students learn how to solder, program electronics
+                          parts and circuits, and prototype using
+                          microcontrollers.
+                        </p>
+                        <NavLink exact to="/modules" className="button-link">
+                          <button>Find out more</button>
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </Item>
+                <Item>
+                  <div
+                    // key={i}
+                    className="Modules-item-mobile"
+                    onClick={showOverlay3}
+                    style={{
+                      backgroundColor: "#FFCD05",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                          {" "}
+                        </NavLink> */}
+                    <img src={Mechatronics} alt="Mechatronics" />
+                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                    <p
+                      style={{
+                        color: "white",
+                        position: "absolute",
+                        bottom: "0",
+                        top: "85%",
+                        left: "50%",
+                        transform: "translate(-50%)",
+                        fontSize: "20px",
+                      }}
+                    >
+                      Mechatronics
+                    </p>
+                    <div
+                      ref={overlay3}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#FFCD05",
+                      }}
+                    >
+                      <h3
+                        id="Mechatronics"
+                        style={{
+                          backgroundColor: "#FFCD05",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      ></h3>
+                    </div>
+                    <div
+                      ref={overlay3}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#FFCD05",
+                      }}
+                    >
+                      <h3
+                        id="Mechatronics"
+                        style={{
+                          backgroundColor: "#FFCD05",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      >
+                        Mechatronics
+                      </h3>
+                      <div className="Modules-item__body-mobile">
+                        <p>
+                          Students will learn a design process that includes a
+                          combination of mechanical, electrical and computer
+                          engineering.
+                        </p>
+                        <NavLink exact to="/modules" className="button-link">
+                          <button>Find out more</button>
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </Item>
+                <Item>
+                  <div
+                    // key={i}
+                    className="Modules-item-mobile"
+                    onClick={showOverlay4}
+                    style={{
+                      backgroundColor: "#F05023",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                          {" "}
+                        </NavLink> */}
+                    <img src={Science} alt="Science" />
+                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                    <p
+                      style={{
+                        color: "white",
+                        position: "absolute",
+                        bottom: "0",
+                        top: "85%",
+                        left: "50%",
+                        transform: "translate(-50%)",
+                        fontSize: "20px",
+                      }}
+                    >
+                      Science
+                    </p>
+                    <div
+                      ref={overlay4}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#F05023",
+                      }}
+                    >
+                      <h3
+                        id="Science"
+                        style={{
+                          backgroundColor: "#F05023",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      ></h3>
+                    </div>
+                    <div
+                      ref={overlay4}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#F05023",
+                      }}
+                    >
+                      <h3
+                        id="Science"
+                        style={{
+                          backgroundColor: "#F05023",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      >
+                        Science
+                      </h3>
+                      <div className="Modules-item__body-mobile">
+                        <p>
+                          Students perform experiments in biology, chemistry and
+                          physical science based on the school curriculum.
+                        </p>
+                        <NavLink exact to="/modules" className="button-link">
+                          <button>Find out more</button>
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </Item>
+                <Item>
+                  <div
+                    // key={i}
+                    className="Modules-item-mobile"
+                    onClick={showOverlay5}
+                    style={{
+                      backgroundColor: "#7965AC",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                          {" "}
+                        </NavLink> */}
+                    <img src={Software} alt="Software" />
+                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                    <p
+                      style={{
+                        color: "white",
+                        position: "absolute",
+                        bottom: "0",
+                        top: "85%",
+                        left: "50%",
+                        transform: "translate(-50%)",
+                        fontSize: "20px",
+                      }}
+                    >
+                      Software
+                    </p>
+                    <div
+                      ref={overlay5}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#7965AC",
+                      }}
+                    >
+                      <h3
+                        id="Software"
+                        style={{
+                          backgroundColor: "#7965AC",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      ></h3>
+                    </div>
+                    <div
+                      ref={overlay5}
+                      className="dontShow"
+                      style={{
+                        backgroundColor: "#7965AC",
+                      }}
+                    >
+                      <h3
+                        id="Software"
+                        style={{
+                          backgroundColor: "#7965AC",
+                          fontSize: "20px",
+                        }}
+                        aria-hidden="true"
+                      >
+                        Software
+                      </h3>
+                      <div className="Modules-item__body-mobile">
+                        <p>
+                          Students are introduced to the basics of robotics,
+                          programming, engineering, problem identification and
+                          collaboration.
+                        </p>
+                        <NavLink exact to="/modules" className="button-link">
+                          <button>Find out more</button>
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </Item>
+                {/* ); */}
+                {/* })} */}
               </Carousel>
             </div>
           )}
@@ -597,6 +996,7 @@ export default function Home() {
         <div
           className="display-home1"
           style={{ paddingLeft: "50px", paddingRight: "50px" }}
+          data-aos="fade-left"
         >
           <div className="What-is-STEAM-Education-home">
             <div class="box-for-image-moving-UpandDown"></div>
@@ -638,7 +1038,10 @@ export default function Home() {
         </div>
 
         {/* small screen */}
-        <div className="What-is-STEAM-Education-home-mobile display-home2">
+        <div
+          className="What-is-STEAM-Education-home-mobile display-home2"
+          data-aos="fade-left"
+        >
           <center>
             <div class="box-for-image-moving-UpandDown-mobile"></div>
           </center>
@@ -677,7 +1080,7 @@ export default function Home() {
             Trigger
           </button>
         </div>
-        <div className="button-container">
+        <div className="button-container" data-aos="fade-left">
           <button
             className={`info-button ${showInfo ? "active" : ""}`}
             onClick={handleClick}
@@ -776,7 +1179,7 @@ export default function Home() {
             </div>
           )}
         </div>
-        <div className="Why-steam">
+        <div className="Why-steam" data-aos="fade-right">
           <h1>Why Mindsinaction STEAM Center?</h1>
           <div className="Why-steam-cards-outer">
             {isDivVisible && (
@@ -832,7 +1235,11 @@ export default function Home() {
         </div>
       </div>
       <div className="Background-div-Middle">
-        <div className="LegoGallery" style={{ paddingBottom: "50px" }}>
+        <div
+          className="LegoGallery"
+          style={{ paddingBottom: "50px" }}
+          data-aos="fade-left"
+        >
           <h3 className="LegoGallery-text">
             With the hands-on approach to STEAM, we cultivate a generation of
             innovators by providing the 4th industrial revolution skills to
@@ -858,7 +1265,12 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
-        <div className="social-media-feed" style={{ marginTop: "60px" }}>
+
+        <div
+          className="social-media-feed"
+          style={{ marginTop: "60px" }}
+          data-aos="fade-right"
+        >
           <h1>TESTIMONIALS</h1>
           <div className="center-hrz" style={{ marginTop: "60px" }}>
             {/* Products section */}
@@ -878,27 +1290,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="parralex-div">
-        <div className="container-style">
-          {/* zimage slides */}
-          {textSlide.map((slide, index) => (
-            <div
-              key={index}
-              className={`image-slide ${
-                index === currentState ? "active" : ""
-              }`}
-            >
-              <div className="description">
-                <div className="text">
-                  <h2>
-                    <FaQuoteLeft />
-                    <span> {slide.description} </span> <FaQuoteRight />
-                  </h2>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* The parallax div */}
+      <div className="parallax-div">
+        <h2>
+          <FaQuoteLeft />
+          <span className="fade-in-text">
+            {textSlide[currentTextIndex].description}
+          </span>{" "}
+          <FaQuoteRight />
+        </h2>
       </div>
       <div className="Background-div-bottom">
         <div className="services-home-div" data-aos="fade-up">
@@ -1025,37 +1425,35 @@ export default function Home() {
       </div>
 
       <div className="partners-home" style={{ marginTop: "" }}>
-        <div
-          style={{ marginTop: "" }}
-          className="home-title-partners"
-          data-aos="fade-up"
-        >
-          <h1>Our Partners</h1>
-        </div>
-        <div className="our-partners" data-aos="fade-up">
-          <div className="course" style={{ marginTop: "60px" }}>
-            {/**Courses section */}
-            <Carousel
-              breakPoints={breakPoints}
-              enableAutoPlay={true}
-              autoPlaySpeed={6000}
-            >
-              {partners.map((partner, index) => (
-                <Item>
-                  <div key={index} className="partners-swiper-slide-home">
-                    <div className="image">
-                      <a
-                        href={partner.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img src={partner.image} alt="partner" />
-                      </a>
+        <div data-aos="fade-up">
+          <div style={{ marginTop: "" }} className="home-title-partners">
+            <h1>Our Partners</h1>
+          </div>
+          <div className="our-partners">
+            <div className="course" style={{ marginTop: "60px" }}>
+              {/**Courses section */}
+              <Carousel
+                breakPoints={breakPoints}
+                enableAutoPlay={true}
+                autoPlaySpeed={6000}
+              >
+                {partners.map((partner, index) => (
+                  <Item>
+                    <div key={index} className="partners-swiper-slide-home">
+                      <div className="image">
+                        <a
+                          href={partner.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img src={partner.image} alt="partner" />
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </Item>
-              ))}
-            </Carousel>
+                  </Item>
+                ))}
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>
