@@ -500,6 +500,34 @@ header {
   color: black;
 }
 
+.navbar .links li a.active {
+  color: #94C93D;
+}
+
+.navbar .links li a:hover {
+  color: #94C93D;
+}
+
+/* Add a bar on top of the links when hovered or active */
+/* .navbar .links > li > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  /* left: 0; *
+  width: 50px;
+  height: 4px; /* Change the height of the bar as desired *
+  background-color: #94C93D; /* Change the color of the bar as desired *
+  transform: scaleX(0); /* Initially, the bar has zero width *
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* Show the bar on hover or when the link is active *
+.navbar .links > li > a:hover::before,
+.navbar .links > li > a.active::before {
+  transform: scaleX(1); /* Scale the bar to full width on hover or when active *
+} */
+
 .navbar .toggle_btn {
   color: #fff;
   font-size: 1.5rem;
@@ -530,8 +558,8 @@ header {
   scale: 0.95;
 }
 
-/* DROPDOWN MENU */
-.dropdown_menu {
+/* MOBILE NAVBAR MENU */
+.mobile-navbar {
   display: none;
   position: fixed;
   right: 2rem;
@@ -560,23 +588,31 @@ header {
   display: none;
 }
 
-/* .dropdown_menu .open {
+/* .mobile-navbar .open {
   height: 240px!important;
   display: block;
 } */
 
-.dropdown_menu li {
+.mobile-navbar li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.dropdown_menu li a {
+.mobile-navbar li a {
   color: black;
 }
 
-.dropdown_menu .action_btn {
+.mobile-navbar li a:hover {
+  color: #94C93D;
+}
+
+.mobile-navbar li a.active {
+  color: #94C93D;
+}
+
+.mobile-navbar .action_btn {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -647,7 +683,7 @@ header {
     color: black;
   }
 
-  .dropdown_menu {
+  .mobile-navbar {
     display: block;
   }
   .header-right-buttons{
@@ -665,7 +701,7 @@ header {
 }
 
 @media (max-width: 576px) {
-  .dropdown_menu {
+  .mobile-navbar {
     left: 2rem;
     width: unset;
   }
@@ -675,3 +711,180 @@ header {
   width: 200px;
 }
 
+.list li ul.dropdown li {
+  display: block;
+}
+
+/* ... Your previous CSS ... */
+
+/* DROPDOWN MENU */
+.dropdown {
+  background: #fff;
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  /* width: 100px; */
+  /* padding: 10px; */
+  /* color: black; */
+  position: absolute;
+  z-index: 999;
+  display: none;
+  /* transition: 0.3s ease; */
+  box-shadow: 
+  8px 0px 8px -4px rgba(0, 0, 0, 0.3),
+              -8px 0px 8px -4px rgba(0, 0, 0, 0.3),
+              0px 8px 13px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* Make the dropdown visible when the parent li is hovered */
+.navbar .links li:hover .dropdown {
+  display: block;
+}
+
+/* Additional styles for the dropdown items */
+.dropdown li {
+  list-style: none;
+  padding: 5px 10px;
+  /* margin: 5px; */
+  /* text-align: center; */
+}
+
+.dropdown a li {
+  color: grey;
+  text-decoration: none;
+}
+
+/* Add this style to target the last child of the dropdown */
+.dropdown li:last-of-type {
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+}
+
+/* Add specific hover styles for the last child */
+.dropdown li:last-of-type:hover {
+  /* Add your hover styles here */
+  background-color: #94C93D; /* Change the color on hover as desired */
+  color: #fff;
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+}
+
+.dropdown li:hover {
+  color: #fff;
+}
+
+.dontShow {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media only screen and (max-width: 1050px) {
+  .dropdown-who-we-are {
+    background: #fff;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    /* width: 100px; */
+    /* padding: 10px; */
+    /* color: black; */
+    position: absolute;
+    top: 90px;
+    z-index: 999;
+    /* display: none; */
+    /* transition: 0.3s ease; */
+    box-shadow: 
+  8px 0px 8px -4px rgba(0, 0, 0, 0.3),
+              -8px 0px 8px -4px rgba(0, 0, 0, 0.3),
+              0px 8px 13px -4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Make the dropdown-who-we-are visible when the parent li is hovered */
+  .navbar .links li:hover .dropdown-who-we-are {
+    display: block;
+  }
+  
+  /* Additional styles for the dropdown-who-we-are items */
+  .dropdown-who-we-are li {
+    list-style: none;
+    padding: 5px 10px;
+    /* margin: 5px; */
+    /* text-align: center; */
+  }
+  
+  .dropdown-who-we-are a li {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  .dropdown-who-we-are a li:hover {
+    background-color: #94C93D; /* Change the color on hover as desired */
+    /* width: 100%; */
+    color: #fff;
+  }
+  
+  .dropdown-who-we-are a li:last-child:hover {
+    background-color: #94C93D; /* Change the color on hover as desired */
+    /* width: 100%; */
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+  }
+  
+  .dropdown-who-we-are li a:hover {
+    color: #fff;
+  }
+
+  /* Services */
+  .dropdown-services {
+    background: #fff;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    /* width: 100px; */
+    /* padding: 10px; */
+    /* color: black; */
+    position: absolute;
+    top: 170px;
+    z-index: 999;
+    /* display: none; */
+    /* transition: 0.3s ease; */
+    box-shadow: 
+  8px 0px 8px -4px rgba(0, 0, 0, 0.3),
+              -8px 0px 8px -4px rgba(0, 0, 0, 0.3),
+              0px 8px 13px -4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Make the dropdown-services visible when the parent li is hovered */
+  .navbar .links li:hover .dropdown-services {
+    display: block;
+  }
+  
+  /* Additional styles for the dropdown-services items */
+  .dropdown-services li {
+    list-style: none;
+    padding: 5px 10px;
+    /* margin: 5px; */
+    /* text-align: center; */
+  }
+  
+  .dropdown-services a li {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  .dropdown-services a li:hover {
+    background-color: #94C93D; /* Change the color on hover as desired */
+    /* width: 100%; */
+    color: #fff;
+  }
+  
+  .dropdown-services a li:last-child:hover {
+    background-color: #94C93D; /* Change the color on hover as desired */
+    /* width: 100%; */
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+  }
+  
+  .dropdown-services li a:hover {
+    color: #fff;
+  }
+}

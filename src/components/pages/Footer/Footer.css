@@ -241,14 +241,18 @@ footer {
   color: #fff;
 }
 
-ul li {
+.footer-list li {
   list-style: none;
   margin-bottom: 12px;
 }
 
-ul li a {
+.footer-list li a {
   text-decoration: none;
   color: #fff;
+}
+
+.footer-list li a:hover {
+  color: #94C93D;
 }
 
 /* form {
@@ -287,9 +291,9 @@ form button .fas {
   color: #ccc;
 } */
 
-.social-icons {
+/* .social-icons {
   float: right;
-}
+} */
 
 .social-icons .fab {
   width: 25px;
@@ -401,7 +405,8 @@ hr {
   outline: none;
   border-radius: 25px;
   background-color: #fff;
-  color: #6fb73f;
+  cursor: pointer;
+  color: #94C93D;
   position: absolute;
   bottom: 0;
   right: 0px;

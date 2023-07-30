@@ -1,38 +1,68 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/logo.png";
 import {
-  IoIosArrowDown,
-  AiFillHome,
-  BsFillInfoSquareFill,
-  FaBookReader,
-  RiTeamFill,
-  FaShoppingCart,
-  MdContactPhone,
   VscThreeBars,
   FaTimes,
+  IoIosArrowDown,
 } from "react-icons/all";
 import "./Header.css";
 
 export default function Header() {
-  const [click, setClick] = useState(false);
-  const [navbar, setNavbar] = useState(false);
-  const handleClick = () => setClick(!click);
-
-  const changeBackground = () => {
-    if (window.scrollY >= 60) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-
-  window.addEventListener("scroll", changeBackground);
 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+
+  const elementRef = useRef();
+  const elementRef2 = useRef();
+
+  const dropdown = (event) => {
+    event.preventDefault();
+    if (elementRef.current) {
+      const element1 = elementRef.current;
+      const element2 = elementRef2.current;
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element1.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element1.classList.remove("dontShow");
+        element1.classList.add("show");
+      } else {
+        // If the class doesn't exist, add it
+        element1.classList.remove("show");
+        element1.classList.add("dontShow");
+      }
+      element2.classList.remove("show");
+      element2.classList.add("dontShow");
+    }
+  };
+
+  const dropdown2 = (event) => {
+    event.preventDefault();
+    if (elementRef2.current) {
+      const element2 = elementRef2.current;
+      const element1 = elementRef.current;
+
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element2.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element2.classList.remove("dontShow");
+        element2.classList.add("show");
+      } else {
+        // If the class doesn't exist, add it
+        element2.classList.remove("show");
+        element2.classList.add("dontShow");
+      }
+      element1.classList.remove("show");
+      element1.classList.add("dontShow");
+    }
   };
 
   return (
@@ -364,33 +394,60 @@ export default function Header() {
             <img src={logo} alt=""></img>
           </NavLink>
           <ul className={`links ${isOpen ? 'open' : ''}`}>
+
             <li>
-              <NavLink exact to="/hero" activeClassName="active">
-                Home
-              </NavLink>
+              <NavLink exact to="/" activeClassName="active">Home</NavLink>
+            </li>
+
+            <li>
+              <NavLink exact to="/profile" activeClassName="active">Who we are <IoIosArrowDown /></NavLink> 
+              <ul className='dropdown'>
+                <NavLink to="/profile"><li>
+                  About Us
+                </li></NavLink>
+                <NavLink to="/founders"><li>
+                  Founders
+                </li></NavLink>
+                <NavLink to="/Coaches"><li>
+                  Coaches
+                </li></NavLink>
+                <NavLink to="/projects"><li>
+                  Projects
+                </li></NavLink>
+                <NavLink to="/blog"><li>
+                  Blog
+                </li></NavLink>
+              </ul>
+            </li>
+
+            <li>
+              <NavLink exact to="/modules" activeClassName="active">Modules</NavLink>
             </li>
             <li>
-              <NavLink exact to="/about" activeClassName="active">
-                Who We Are
-              </NavLink>
+              <NavLink exact to="/services" activeClassName="active">Services <IoIosArrowDown /></NavLink>
+              <ul className='dropdown'>
+                <NavLink to="/ict"><li>
+                  ICT
+                </li></NavLink>
+                <NavLink to="/mechanical-engineering"><li>
+                  Mechanical Engineering
+                </li></NavLink>
+                <NavLink to="/electrical-engineering"><li>
+                  Electrical Engineering
+                </li></NavLink>
+                <NavLink to="/electronic-engineering"><li>
+                  Electronics Engineering
+                </li></NavLink>
+              </ul>
             </li>
+
             <li>
-              <NavLink exact to="/modules" activeClassName="active">
-                Modules
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to="/services" activeClassName="active">
-                Services
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to="/shop" activeClassName="active">
+              <NavLink exact to="/Shop" activeClassName="active">
                 Shop
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/contact" activeClassName="active">
+              <NavLink exact to="/Contact-us" activeClassName="active">
                 Contact Us
               </NavLink>
             </li>
@@ -401,9 +458,9 @@ export default function Header() {
             <span style={{ marginRight: "20px" }}></span>
             <a href="#" className="action_btn2">Register</a> */}
           <div className="header-right-buttons">
-            <NavLink exact to="/free-demo">
+            {/* <NavLink exact to="/free-demo">
               <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
-            </NavLink>
+            </NavLink> */}
             <NavLink exact to="/register">
               <button className="header-register">Register</button>
             </NavLink>
@@ -416,19 +473,36 @@ export default function Header() {
           </div>
         </div>
         <div
-          className={`${isOpen ? 'dropdown_menu' : 'none'}`}
-        // className="dropdown_menu open"
+          className={`${isOpen ? 'mobile-navbar' : 'none'}`}
+        // className="mobile-navbar open"
         >
           <ul>
-          <li>
-              <NavLink exact to="/hero" activeClassName="active">
+            <li>
+              <NavLink exact to="/" activeClassName="active">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/about" activeClassName="active">
-                Who We Are
+              <NavLink onClick={dropdown} exact to="/profile" activeClassName="active">
+                Who We Are <IoIosArrowDown />
               </NavLink>
+              <ul ref={elementRef} className='dropdown-who-we-are dontShow'>
+                <NavLink to="/profile"> <li>
+                  About Us
+                </li></NavLink>
+                <NavLink to="/founders"><li>
+                  Founders
+                </li></NavLink>
+                <NavLink to="/Coaches"><li>
+                  Coaches
+                </li></NavLink>
+                <NavLink to="/projects"><li>
+                  Projects
+                </li></NavLink>
+                <NavLink to="/blog"><li>
+                  Blog
+                </li></NavLink>
+              </ul>
             </li>
             <li>
               <NavLink exact to="/modules" activeClassName="active">
@@ -436,9 +510,23 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/services" activeClassName="active">
-                Services
+              <NavLink onClick={dropdown2} exact to="/services" activeClassName="active">
+                Services <IoIosArrowDown />
               </NavLink>
+              <ul ref={elementRef2} className='dropdown-services dontShow'>
+                <NavLink to="/ict"><li>
+                  ICT
+                </li></NavLink>
+                <NavLink to="/mechanical-engineering"><li>
+                  Mechanical Engineering
+                </li></NavLink>
+                <NavLink to="/electrical-engineering"><li>
+                  Electrical Engineering
+                </li></NavLink>
+                <NavLink to="/electronic-engineering"><li>
+                  Electronics Engineering
+                </li></NavLink>
+              </ul>
             </li>
             <li>
               <NavLink exact to="/shop" activeClassName="active">
@@ -453,10 +541,11 @@ export default function Header() {
             {/* <li><a href="#" className="action_btn">Free Demo</a></li> */}
             {/* <span style={{marginRight: "20px"}}></span> */}
             {/* <li><a href="#" className="action_btn">Register</a></li> */}
-            <li style={{display: "block"}}><NavLink exact to="/free-demo">
+            {/* <li style={{ display: "block" }}>
+              <NavLink exact to="/free-demo">
               <button className="freedemo-button-outer"><div className="freedemo-button-inner">Free Demo</div></button>
-            </NavLink></li>
-            <li style={{display: "block"}}><NavLink exact to="/register">
+            </NavLink></li> */}
+            <li style={{ display: "block" }}><NavLink exact to="/register">
               <button className="header-register">Register</button>
             </NavLink></li>
           </ul>

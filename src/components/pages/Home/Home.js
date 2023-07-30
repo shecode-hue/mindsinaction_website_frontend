@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -7,7 +7,6 @@ import { NavLink } from "react-router-dom";
 // import dundee from '../../images/dundee.jpg';
 import "react-slideshow-image/dist/styles.css";
 // import { Fade } from "react-slideshow-image";
-import Sliderx from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Axios from "axios";
@@ -21,6 +20,11 @@ import "react-animated-slider/build/horizontal.css";
 import "./SliderStyling/slider-animations.css";
 import sliderArrow from "../../icons/Home-Sider-right.png";
 import imageSlide from "./data";
+import textSlide from "./data2";
+
+import legoImage1 from "../../images/Home_images/LegoGallery/lego1.jpg";
+import legoImage2 from "../../images/Home_images/LegoGallery/lego2.jpg";
+import legoImage3 from "../../images/Home_images/LegoGallery/lego3.jpg";
 
 import WhySteam1 from "../../images/Home_images/why-steam-images/why-steam (1).png";
 import WhySteam2 from "../../images/Home_images/why-steam-images/why-steam (2).png";
@@ -30,19 +34,11 @@ import WhySteam5 from "../../images/Home_images/why-steam-images/why-steam (5).p
 import WhySteam6 from "../../images/Home_images/why-steam-images/why-steam (6).png";
 import WhySteam7 from "../../images/Home_images/why-steam-images/why-steam (7).png";
 import WhySteam8 from "../../images/Home_images/why-steam-images/why-steam (8).png";
-import lego1 from "../../images/Home_images/LegoGallery/lego (1).jpg";
-import lego2 from "../../images/Home_images/LegoGallery/lego (2).jpg";
-// import lego3 from "../../images/Home_images/LegoGallery/lego (3).jpg";
-import lego4 from "../../images/Home_images/LegoGallery/lego (4).jpg";
-// import lego5 from "../../images/Home_images/LegoGallery/lego (5).jpg";
-import lego6 from "../../images/Home_images/LegoGallery/lego (6).jpg";
-import lego7 from "../../images/Home_images/LegoGallery/lego (7).jpg";
 import Science from "../../images/Home_images/Home-modules-images/Science.svg";
 import Software from "../../images/Home_images/Home-modules-images/Software.svg";
 import Mechatronics from "../../images/Home_images/Home-modules-images/Mechatronics.svg";
 import Electronics from "../../images/Home_images/Home-modules-images/Electronics.svg";
 import Robotics from "../../images/Home_images/Home-modules-images/Robotics.svg";
-// import BackgroundOne from "../../images/Home_images/home_Floating image.svg"
 import services1 from "../../images/Home_images/Home-services/icon_Mobile App Dev.svg";
 import services2 from "../../images/Home_images/Home-services/icon_Web Dev.svg";
 import services3 from "../../images/Home_images/Home-services/icon_Data Center Solutions.svg";
@@ -113,7 +109,7 @@ const ParentsFeedback = [
   {
     parent: "Dr. Tanja Karp",
     message:
-      "MindsInAction staff and instructors needs to be congratulated for their professionalism and excellence in guiding the teams throughout the Virtual GEAR competition.",
+      "Mindsinaction staff and instructors needs to be congratulated for their professionalism and excellence in guiding the teams throughout the Virtual GEAR competition.",
   },
 ];
 
@@ -157,20 +153,23 @@ const partners = [
 
 // images for the legoslider
 const legoimages = [
+  // {
+  //   image: lego1,
+  // },
+  // {
+  //   image: lego2,
+  // },
+  // {
+  //   image: lego4,
+  // },
   {
-    image: lego1,
+    image: legoImage1,
   },
   {
-    image: lego2,
+    image: legoImage2,
   },
   {
-    image: lego4,
-  },
-  {
-    image: lego6,
-  },
-  {
-    image: lego7,
+    image: legoImage3,
   },
 ];
 // information for why-steam cards
@@ -188,12 +187,12 @@ const WhySteam = [
   {
     id: 3,
     image: WhySteam3,
-    title: "Hands on learning",
+    title: "Hands on Learning",
   },
   {
     id: 4,
     image: WhySteam4,
-    title: "Cutting-edge resources",
+    title: "Cutting-Edge Resources",
   },
   {
     id: 5,
@@ -208,65 +207,22 @@ const WhySteam = [
   {
     id: 7,
     image: WhySteam7,
-    title: "Expert educators",
+    title: "Expert Educators",
   },
   {
     id: 8,
     image: WhySteam8,
-    title: "Real-world relevance",
+    title: "Real-World Relevance",
   },
 ];
 //parents feedback slide configuration
 
-const parentsConfig = {
-  dots: true,
-  arrows: true,
-  indicators: true,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 6000,
-  prevArrow: <SlickArrowLeft />,
-  nextArrow: <SlickArrowRight />,
-  responsive: [
-    {
-      breakpoint: 1124,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-        arrows: true,
-      },
-    },
-
-    {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        dots: true,
-        arrows: true,
-      },
-    },
-    {
-      breakpoint: 580,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-      },
-    },
-  ],
-};
 const cards = [
   {
     icon: AiOutlineRobot,
     title: "Robotics",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students are introduced to the basics of robotics, programming, engineering, problem identification and collaboration.",
     image: Robotics,
     color: "33A85B",
   },
@@ -274,7 +230,7 @@ const cards = [
     icon: VscCircuitBoard,
     title: "Electronics",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students learn how to solder, program electronics parts and circuits, and prototype using microcontrollers.",
     image: Electronics,
     color: "F37021",
   },
@@ -282,7 +238,7 @@ const cards = [
     icon: RiMicroscopeLine,
     title: "Mechatronics",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students will learn a design process that includes a combination of mechanical, electrical and computer engineering.",
     image: Mechatronics,
     color: "FFCD05",
   },
@@ -290,7 +246,7 @@ const cards = [
     icon: GiMaterialsScience,
     title: "Science",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students perform experiments in biology, chemistry and physical science based on the school curriculum.",
     image: Science,
     color: "F05023",
   },
@@ -298,7 +254,7 @@ const cards = [
     icon: BsCode,
     title: "Software",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Students are introduced to graphics design through UX/UI, mobile app development and web design.",
     image: Software,
     color: "7965AC",
   },
@@ -381,6 +337,16 @@ export default function Home() {
       setCurrentState(currentState - 1);
     }
   };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (currentState === textSlide.length - 1) {
+        setCurrentState(0);
+      } else {
+        setCurrentState(currentState + 1);
+      }
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [currentState]);
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -394,7 +360,7 @@ export default function Home() {
   const handleWindowResize = () => {
     const screenWidth = window.innerWidth;
     // Change the threshold width according to your requirement
-    const thresholdWidth = 768;
+    const thresholdWidth = 1400;
     setDivVisible(screenWidth >= thresholdWidth);
   };
 
@@ -408,76 +374,29 @@ export default function Home() {
     };
   }, []);
 
+  const overlay = useRef(0);
+
+  const showOverlay = (event) => {
+    event.preventDefault();
+    if (overlay.current) {
+      const element = overlay.current;
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element.classList.remove("dontShow");
+        element.classList.add("Modules-item__overlay-mobile");
+      } else {
+        // If the class doesn't exist, add it
+        element.classList.remove("Modules-item__overlay-mobile");
+        element.classList.add("dontShow");
+      }
+    }
+  };
+
   return (
     <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
-      {/* <div style={{ paddingTop: "0px" }}>
-        <div className="home-page-top-slider" style={{ height: "100vh" }}>
-          <Slider className="slider-wrapper"
-            autoplay={1000}
-            activeIndex={currentSlide}
-            onSlideChange={(slideIndex) => setCurrentSlide(slideIndex)}
-            handleDotClick={handleDotClick}
-          >
-            {content.map((item, index) => (
-              <div
-                key={index}
-                className="slider-content"
-                style={{ background: `url('${item.image}') center center`, height: "100%" }}
-              >
-                <div className="inner">
-                  <h1>{item.title}</h1>
-                  <p>{item.description}</p>
-                  <button className='Home-page-Slider-button-outer'><div className="Home-page-Slider-button-inner">{item.button}</div></button>
-                </div>
-                {/* <section>
-                <span>
-                  Date Posted <strong>{item.user}</strong>
-                </span>
-              </section> *
-              </div>
-            ))}
-          </Slider>
-          <div className="slider-dots">
-            {content.map((content, index) => (
-              <span
-                key={index}
-                className={activeSlide === index ? 'active' : ''}
-                onClick={() => handleDotClick(index)}
-              />
-            ))}
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div style={{height: "100vh", backgroundColor: "white", textAlign: "center"}}>
-             <div className='container-style'>
-                <div style={{
-                  backgroundImage: `url(${imageSlide[currentState].image})`, 
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover',
-                  height: '100%',
-              }}>
-                </div>
-                <div className='transparent-background'></div>
-                <div className='description'>
-                  <div className='text'>
-                    <h1>{imageSlide[currentState].title}</h1>
-                    <hr/>
-                    <p>{imageSlide[currentState].description}</p>
-                  </div>
-                  <button className='hero-button'>{imageSlide[currentState].button}</button>
-                  
-                </div>
-                <div className='carousel-boullt'>
-                    {
-                      imageSlide.map((imageSlide, currentState) => (
-                        <span key={currentState} onClick={() => goToNext(currentState)}></span>
-                      ))
-                    }
-                  </div>
-             </div>
-      </div> */}
-
       <div
         style={{
           height: "100vh",
@@ -507,10 +426,12 @@ export default function Home() {
                   <div className="center-hr">
                     <hr />
                   </div>
-                  <p>{slide.description}</p>
-                  <div className="center-hr" style={{ borderRadius: "20px" }}>
-                    <button className="hero-button">{slide.button}</button>
-                  </div>
+                  <p style={{ color: "white" }}>{slide.description}</p>
+                  <NavLink exact to="/modules">
+                    <div className="center-hr" style={{ borderRadius: "20px" }}>
+                      <button className="hero-button">{slide.button}</button>
+                    </div>
+                  </NavLink>
                 </div>
               </div>
               {/* Navigation arrows */}
@@ -544,11 +465,12 @@ export default function Home() {
                     className="Modules-item"
                     style={{
                       backgroundColor: `#${x.color}`,
+                      marginBottom: "90px",
                     }}
                   >
-                    <a href="#0" aria-labelledby={x.title}>
+                    <NavLink exact to="/modules" aria-labelledby={x.title}>
                       {" "}
-                    </a>
+                    </NavLink>
                     <img src={x.image} alt={x.title} />
                     {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
                     <div
@@ -578,29 +500,65 @@ export default function Home() {
 
           {/* <Slider {...courseConfig}> */}
           {!isDivVisible && (
-            <div className="Modules-home-cards">
+            <div
+              className="Modules-home-cards"
+              style={{ marginBottom: "90px" }}
+            >
               <Carousel
                 breakPoints={breakPoints}
                 enableAutoPlay={true}
-                autoPlaySpeed={1000}
+                autoPlaySpeed={6000}
+                style={{ margin: "0px 50px" }}
               >
                 {cards.map((x, i) => {
                   return (
                     <Item>
                       <div
                         key={i}
-                        className="Modules-item"
+                        className="Modules-item-mobile"
+                        onClick={showOverlay}
                         style={{
                           backgroundColor: `#${x.color}`,
+                          cursor: "pointer",
                         }}
                       >
-                        <a href="#0" aria-labelledby={x.title}>
+                        {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
-                        </a>
+                        </NavLink> */}
                         <img src={x.image} alt={x.title} />
                         {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                        <p
+                          style={{
+                            color: "white",
+                            position: "absolute",
+                            bottom: "0",
+                            top: "85%",
+                            left: "50%",
+                            transform: "translate(-50%)",
+                            fontSize: "20px",
+                          }}
+                        >
+                          {x.title}
+                        </p>
                         <div
-                          className="Modules-item__overlay"
+                          ref={overlay}
+                          className="dontShow"
+                          style={{
+                            backgroundColor: `#${x.color}`,
+                          }}
+                        >
+                          <h3
+                            id={x.title}
+                            style={{
+                              backgroundColor: `#${x.color}`,
+                              fontSize: "20px",
+                            }}
+                            aria-hidden="true"
+                          ></h3>
+                        </div>
+                        <div
+                          ref={overlay}
+                          className="dontShow"
                           style={{
                             backgroundColor: `#${x.color}`,
                           }}
@@ -615,8 +573,15 @@ export default function Home() {
                           >
                             {x.title}
                           </h3>
-                          <div className="Modules-item__body">
+                          <div className="Modules-item__body-mobile">
                             <p>{x.description}</p>
+                            <NavLink
+                              exact
+                              to="/modules"
+                              className="button-link"
+                            >
+                              <button>Find out more</button>
+                            </NavLink>
                           </div>
                         </div>
                       </div>
@@ -689,17 +654,19 @@ export default function Home() {
               Education?
             </h1>
             <p>
-              STEAM stands for Science, Technology, Engineering, Arts and
-              Mathematics. Students uncover the dynamic power and potential of
-              STEAM modules through projects featuring robotics, electronics,
-              exploring mechatronics, engineering, programming and more.
+              STEAM Education is a dynamic blend of Science, Technology,
+              Engineering, Arts, and Mathematics, designed to inspire and
+              cultivate the leaders of tomorrow. It offers a comprehensive and
+              interdisciplinary approach that fosters risk-taking, experiential
+              learning, and collaboration among students. By integrating these
+              diverse disciplines, it cultivates innovators and leaders who can
+              thrive in the 21st-century landscape, equipping them with
+              essential skills for addressing real-world challenges effectively.
+              Through hands-on learning, critical thinking, and teamwork, STEAM
+              education prepares well-rounded individuals capable of driving
+              innovation and making a positive impact on society in various
+              professional settings.
             </p>
-            <hr />
-            <div>
-              <h2 style={{ color: "#E8F2F5", paddingLeft: "20px" }}>
-                Benefits of STEAM
-              </h2>
-            </div>
           </div>
 
           <div
@@ -810,7 +777,7 @@ export default function Home() {
           )}
         </div>
         <div className="Why-steam">
-          <h1>Why Mindsinaction STEAM Center</h1>
+          <h1>Why Mindsinaction STEAM Center?</h1>
           <div className="Why-steam-cards-outer">
             {isDivVisible && (
               <div className="Why-steam-cards">
@@ -865,7 +832,7 @@ export default function Home() {
         </div>
       </div>
       <div className="Background-div-Middle">
-        <div className="LegoGallery">
+        <div className="LegoGallery" style={{ paddingBottom: "50px" }}>
           <h3 className="LegoGallery-text">
             With the hands-on approach to STEAM, we cultivate a generation of
             innovators by providing the 4th industrial revolution skills to
@@ -875,7 +842,7 @@ export default function Home() {
             <Carousel
               breakPoints={breakPoints}
               enableAutoPlay={true}
-              autoPlaySpeed={1000}
+              autoPlaySpeed={6000}
             >
               {legoimages.map((x, y) => {
                 return (
@@ -891,8 +858,7 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
-
-        <div className="social-media-feed">
+        <div className="social-media-feed" style={{ marginTop: "60px" }}>
           <h1>TESTIMONIALS</h1>
           <div className="center-hrz" style={{ marginTop: "60px" }}>
             {/* Products section */}
@@ -902,30 +868,42 @@ export default function Home() {
                   <div key={i} className="chat-boxes">
                     <div className="box sb">
                       <div>{x.message}</div>
-                      <hr className="new1" />
-                      <div> -{x.parent}-</div>
+                      {/* <hr className="new1" /> */}
+                      <div className="boxes"> -{x.parent}-</div>
                     </div>
                   </div>
                 );
               })}
             </div>
           </div>
-        </div>S
+        </div>
       </div>
       <div className="parralex-div">
-        <h2>
-          <FaQuoteLeft />
-          <span>
-            {" "}
-            Namibian Learners Deserve Exciting, Hands-on Experiences{" "}
-          </span>{" "}
-          <FaQuoteRight />
-        </h2>
+        <div className="container-style">
+          {/* zimage slides */}
+          {textSlide.map((slide, index) => (
+            <div
+              key={index}
+              className={`image-slide ${
+                index === currentState ? "active" : ""
+              }`}
+            >
+              <div className="description">
+                <div className="text">
+                  <h2>
+                    <FaQuoteLeft />
+                    <span> {slide.description} </span> <FaQuoteRight />
+                  </h2>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="Background-div-bottom">
         <div className="services-home-div" data-aos="fade-up">
           <div className="home-title-electronic">
-            <h1>Our Services</h1>
+            <h1>Other Services</h1>
           </div>
           <div className="center-hrz">
             {isDivVisible && (
@@ -958,7 +936,12 @@ export default function Home() {
 
             {!isDivVisible && (
               <div className="home-services-cards">
-                <Carousel>
+                <Carousel
+                  breakPoints={breakPoints}
+                  enableAutoPlay={true}
+                  autoPlaySpeed={6000}
+                  style={{ color: "black" }}
+                >
                   {ServicesInfo.map((x, i) => {
                     return (
                       <Item>
@@ -1026,7 +1009,7 @@ export default function Home() {
                       <NavLink exact to="/Shop">
                         <div className="btn-buy-outer">
                           <button className="shop-button-home-inner">
-                            buy
+                            View
                           </button>
                         </div>
                       </NavLink>
@@ -1042,10 +1025,14 @@ export default function Home() {
       </div>
 
       <div className="partners-home" style={{ marginTop: "" }}>
-        <div style={{ marginTop: "" }} className="home-title-partners">
+        <div
+          style={{ marginTop: "" }}
+          className="home-title-partners"
+          data-aos="fade-up"
+        >
           <h1>Our Partners</h1>
         </div>
-        <div className="our-partners">
+        <div className="our-partners" data-aos="fade-up">
           <div className="course" style={{ marginTop: "60px" }}>
             {/**Courses section */}
             <Carousel
