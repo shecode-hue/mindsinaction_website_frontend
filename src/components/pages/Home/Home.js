@@ -604,6 +604,7 @@ export default function Home() {
 
           {/* <Slider {...courseConfig}> */}
           {!isDivVisible && (
+            <div className="center-hrz">
             <div
               className="Modules-home-cards"
               style={{ marginBottom: "90px" }}
@@ -988,6 +989,7 @@ export default function Home() {
                 {/* ); */}
                 {/* })} */}
               </Carousel>
+            </div>
             </div>
           )}
           {/* </Slider> */}
