@@ -527,7 +527,7 @@ export default function Home() {
                   <div className="center-hr">
                     <hr />
                   </div>
-                  <p style={{ color: "white" }}>{slide.description}</p>
+                  <p>{slide.description}</p>
                   <NavLink exact to="/modules">
                     <div className="center-hr" style={{ borderRadius: "20px" }}>
                       <button className="hero-button">{slide.button}</button>
@@ -612,7 +612,7 @@ export default function Home() {
                 breakPoints={breakPoints}
                 enableAutoPlay={true}
                 autoPlaySpeed={6000}
-                style={{ margin: "0px 50px" }}
+                style={{ margin: "0px 10px 50px 10px" }}
               >
                 {/* {cards.map((x, i) => { */}
                 {/* return ( */}
@@ -1237,7 +1237,7 @@ export default function Home() {
       <div className="Background-div-Middle">
         <div
           className="LegoGallery"
-          style={{ paddingBottom: "50px" }}
+          style={{ paddingBottom: "80px" }}
           data-aos="fade-left"
         >
           <h3 className="LegoGallery-text">
@@ -1268,7 +1268,6 @@ export default function Home() {
 
         <div
           className="social-media-feed"
-          style={{ marginTop: "60px" }}
           data-aos="fade-right"
         >
           <h1>TESTIMONIALS</h1>
