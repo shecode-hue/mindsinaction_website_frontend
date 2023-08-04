@@ -1208,7 +1208,13 @@ styling for modelues cards */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 90%;
+  /* width: 90%; */
+}
+
+@media only screen and (max-width: 1400px) {
+  .Modules-home-cards {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1498,7 +1504,7 @@ styling for modelues cards */
   
   .Why-steam-card-image {
     width: 250px;
-    height: 150PX;
+    height: 150px;
     /* filter: grayscale(60%); */
     padding-left: 10px;
   }
