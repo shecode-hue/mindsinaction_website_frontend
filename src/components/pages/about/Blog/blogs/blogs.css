@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+#blogs-all {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+.main-blogs{
+    padding-top: 200px;
+    background: linear-gradient(135deg,
+    rgba(55, 95, 128, 0.85) 1%,
+    rgba(81, 112, 170, 0.75) 30%),
+    url('../../../../images/about-images/Profile_boy compressed.webp') center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 2rem; 
+    
+}
+.main-blogs h1{
+    /* color:rgb(17, 20, 233); */
+    /* color: #000; */
+    /* font-weight: bold; */
+    text-align: center;
+    padding:2rem;
+}
+.blogs-main{
+    border-radius: 20px;
+    width:90%;
+    height:auto;
+    background-color: white;
+    box-shadow: 2px 2px rgba(255,255,255,0.1);
+    margin-bottom: 2rem;
+}
+
+.blogs-main h1 {
+    color: #36b90e;;
+}
+
+.blogs-head{
+    width:100%;
+    text-align: center;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.bloger-image img{
+width:70px;
+height:70px;
+border-radius: 50%;
+/* margin-right: 3rem; */
+}
+.bloger-name{
+    text-transform: uppercase;
+    /* margin-right: 3rem; */
+}
+.blogs-head span{
+color:greenyellow;
+}
+/* .blogs-date{
+    margin-left: 3rem;
+} */
+.blogs-main-image{
+    /* background-image: linear-gradient(rgba(76, 143, 93, 0.5),rgba(76, 143, 93, 0.5)), url(../../../../images/blog-images/blog-background.jpg); */
+    background-image: linear-gradient(rgba(76, 143, 93, 0.5),rgba(76, 143, 93, 0.5)), url(../../../../images/blog-images/IMG_5848.jpg);
+    width:100%;
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.blog-body{
+    color:white;
+}
+.blog-body h2{
+    text-align: center;
+    margin:1rem;
+}
+.blog-body p{
+    margin: 2rem;
+    /* color:black; */
+    color: gray;
+    text-align: center;
+}
+
+/* @media only screen and (max-width: 800px){
+    .blog-body p{
+        text-align: left;
+    } 
+} */
+@media only screen and (min-width: 1500px){
+    .blogs-main{
+        width:60%;
+    }
+}

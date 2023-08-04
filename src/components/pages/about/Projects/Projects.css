@@ -1,0 +1,1310 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.project-home p {
+  font-family: "Philosopher", sans-serif;
+  font-size: 16px;
+}
+
+.project-main h1 {
+  line-height: 380px;
+  text-align: center;
+  color: white;
+  font-family: "Abel", sans-serif;
+  font-size: 40px;
+}
+
+.projects-main-container {
+  background: linear-gradient(135deg,
+      rgba(55, 95, 128, 0.85) 1%,
+      rgba(81, 112, 170, 0.75) 30%),
+    url('../../../images/about-images/Profile_boy.webp') center no-repeat fixed;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  order: 3px dotted rgb(19, 18, 18);
+  height: auto;
+  padding: 150px 0px;
+}
+
+.projects-main-section {
+  position: relative;
+  z-index: 0;
+  width: 90%;
+}
+
+.projects-main-section-small {
+  display: none;
+}
+
+.projects-title-header {
+  margin: 0px 40px;
+}
+
+.projects-title-header h1 {
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  margin: 15px 0;
+  border-radius: 30px;
+  font-size: 35px;
+}
+
+.projects-title-header h1::after {
+  content: '';
+  background: #fff;
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 10px auto 30px;
+}
+
+.projects-title-header-small h2, h3 {
+  color: #fff;
+  text-align: center;
+}
+
+.projects-title-header-small h3::after {
+  content: '';
+  background: #fff;
+  display: block;
+  height: 3px;
+  width: 150px;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+}
+
+.projects-card {
+  width: 330px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 2% auto;
+  animation: ease-in;
+  cursor: pointer;
+  border-bottom: 4px solid #90d91e;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #fff;
+}
+
+.projects-card:hover {
+  transform: scale(1.05);
+}
+
+.projects-card img {
+  width: 100%;
+  height: 200px;
+}
+
+.projects-card .hr {
+  background-color: rgba(12, 80, 163, 0.70);
+  border: none;
+  width: 135px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  border-radius: 0 0 10px 0px;
+}
+
+.projects-card:hover .hr {
+  display: inline;
+}
+
+.projects-card .hr button {
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.projects-card .projects-content p span {
+  color: #90d91e;
+  font-size: 18px;
+  padding: 0 3%;
+}
+
+.projects-card .hr:hover {
+  background-color: rgba(12, 80, 163, 0.90);
+  transition: 0.5s ease-in-out;
+}
+
+.projects-card .hr button:hover {
+  color: whitesmoke;
+}
+
+.project-each {
+  height: auto;
+}
+
+.project-text .title {
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.project-text .description {
+  color: #808080;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1268px) {
+  .project-image {
+    width: 70%;
+  }
+
+  .project-text {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1268px) {
+  .project-each {
+    margin-left: 0px;
+  }
+
+  .project-image {
+    width: 90%;
+  }
+
+  .project-text {
+    width: 90%;
+  }
+
+}
+
+.projects-card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 80px;
+  margin-bottom: -100px;
+}
+
+
+.project-image-1 {
+  text-align: center;
+  height: 300px;
+  background-image: url("../../../images/projects-images/gallery-image-03.jpg");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #808080;
+  margin-bottom: 20px;
+}
+
+.project-image-2 {
+  text-align: center;
+  height: 300px;
+  background-image: url("../../../images/projects-images/steam-project-katutura.jpg");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #808080;
+  margin-bottom: 20px;
+}
+
+.project-image-3 {
+  text-align: center;
+  height: 300px;
+  background-image: url("../../../images/projects-images/steam-project-kunene.jpg");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #808080;
+  margin-bottom: 20px;
+}
+
+.project-image h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgb(29, 93, 233);
+  margin: 15px 0;
+  border-radius: 30px;
+}
+
+.project-image h2::after {
+  content: '';
+  background: rgb(29, 93, 233);
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 10px auto 30px;
+}
+
+.project-text {
+  color: #90d91e;
+  height: auto;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 20px 0px;
+}
+
+.project-text p {
+  margin: 0px 20px;
+}
+
+.project-details {
+  height: 30px;
+  width: 700px;
+}
+
+.project-details button {
+  border-radius: 10px;
+  padding: 10px 5px;
+  background-color: #90d91e;
+  color: white;
+  border: none;
+}
+
+.project-details button:hover {
+  color: #90d91e;
+  background-color: transparent;
+  border: none;
+}
+
+.project-text p {
+  color: rgb(46, 100, 9)
+}
+
+.project-gallery {
+  width: 700px;
+  margin: 10px auto;
+  /* object-fit: cover; */
+}
+
+.project-gallery .project-gallery-image-cards img {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.download-btn {
+  border-radius: 10px;
+  padding: 10px 5px;
+  background-color: #90d91e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all .5s ease-in-out;
+}
+
+.download-btn:hover {
+  transform: scale(1.2);
+}
+
+/* .........................antd css....................................... */
+.ant-tabs-small>.ant-tabs-nav .ant-tabs-tab {
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.ant-tabs-large>.ant-tabs-nav .ant-tabs-tab {
+  padding: 16px 0;
+  font-size: 16px;
+}
+
+.ant-tabs-card.ant-tabs-small>.ant-tabs-nav .ant-tabs-tab {
+  padding: 6px 16px;
+}
+
+.ant-tabs-card.ant-tabs-large>.ant-tabs-nav .ant-tabs-tab {
+  padding: 7px 16px 6px;
+}
+
+.ant-tabs-rtl {
+  direction: rtl;
+}
+
+.ant-tabs-rtl .ant-tabs-nav .ant-tabs-tab {
+  margin: 0 0 0 32px;
+}
+
+.ant-tabs-rtl .ant-tabs-nav .ant-tabs-tab:last-of-type {
+  margin-left: 0;
+}
+
+.ant-tabs-rtl .ant-tabs-nav .ant-tabs-tab .anticon {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+.ant-tabs-rtl .ant-tabs-nav .ant-tabs-tab .ant-tabs-tab-remove {
+  margin-right: 8px;
+  margin-left: -4px;
+}
+
+.ant-tabs-rtl .ant-tabs-nav .ant-tabs-tab .ant-tabs-tab-remove .anticon {
+  margin: 0;
+}
+
+.ant-tabs-rtl.ant-tabs-left>.ant-tabs-nav {
+  order: 1;
+}
+
+.ant-tabs-rtl.ant-tabs-left>.ant-tabs-content-holder {
+  order: 0;
+}
+
+.ant-tabs-rtl.ant-tabs-right>.ant-tabs-nav {
+  order: 0;
+}
+
+.ant-tabs-rtl.ant-tabs-right>.ant-tabs-content-holder {
+  order: 1;
+}
+
+.ant-tabs-rtl.ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-rtl.ant-tabs-card.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-rtl.ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-rtl.ant-tabs-card.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab {
+  margin-right: 2px;
+  margin-left: 0;
+}
+
+.ant-tabs-rtl.ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-nav-add,
+.ant-tabs-rtl.ant-tabs-card.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-nav-add,
+.ant-tabs-rtl.ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-nav-add,
+.ant-tabs-rtl.ant-tabs-card.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-nav-add {
+  margin-right: 2px;
+  margin-left: 0;
+}
+
+.ant-tabs-dropdown-rtl {
+  direction: rtl;
+}
+
+.ant-tabs-dropdown-rtl .ant-tabs-dropdown-menu-item {
+  text-align: right;
+}
+
+.ant-tabs-top,
+.ant-tabs-bottom {
+  flex-direction: column;
+}
+
+.ant-tabs-top>.ant-tabs-nav,
+.ant-tabs-bottom>.ant-tabs-nav,
+.ant-tabs-top>div>.ant-tabs-nav,
+.ant-tabs-bottom>div>.ant-tabs-nav {
+  margin: 0 0 16px 0;
+}
+
+.ant-tabs-top>.ant-tabs-nav::before,
+.ant-tabs-bottom>.ant-tabs-nav::before,
+.ant-tabs-top>div>.ant-tabs-nav::before,
+.ant-tabs-bottom>div>.ant-tabs-nav::before {
+  position: absolute;
+  right: 0;
+  left: 0;
+  /* border-bottom: 1px solid #f0f0f0; */
+  content: '';
+}
+
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  height: 2px;
+}
+
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-ink-bar-animated,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-ink-bar-animated,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-ink-bar-animated,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-ink-bar-animated {
+  transition: width 0.3s, left 0.3s, right 0.3s;
+}
+
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-nav-wrap::after {
+  top: 0;
+  bottom: 0;
+  width: 30px;
+}
+
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-nav-wrap::before {
+  left: 0;
+  box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.08);
+}
+
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-nav-wrap::after {
+  right: 0;
+  box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.08);
+}
+
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-left::before,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-left::before,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-left::before,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-left::before {
+  opacity: 1;
+}
+
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-right::after,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-right::after,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-right::after,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-right::after {
+  opacity: 1;
+}
+
+.ant-tabs-top>.ant-tabs-nav::before,
+.ant-tabs-top>div>.ant-tabs-nav::before {
+  bottom: 0;
+}
+
+.ant-tabs-top>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  bottom: 0;
+}
+
+.ant-tabs-bottom>.ant-tabs-nav,
+.ant-tabs-bottom>div>.ant-tabs-nav {
+  order: 1;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.ant-tabs-bottom>.ant-tabs-nav::before,
+.ant-tabs-bottom>div>.ant-tabs-nav::before {
+  top: 0;
+}
+
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  top: 0;
+}
+
+.ant-tabs-bottom>.ant-tabs-content-holder,
+.ant-tabs-bottom>div>.ant-tabs-content-holder {
+  order: 0;
+}
+
+.ant-tabs-left>.ant-tabs-nav,
+.ant-tabs-right>.ant-tabs-nav,
+.ant-tabs-left>div>.ant-tabs-nav,
+.ant-tabs-right>div>.ant-tabs-nav {
+  flex-direction: column;
+  min-width: 50px;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab {
+  padding: 8px 24px;
+  text-align: center;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab {
+  margin: 16px 0 0 0;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-wrap,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-wrap,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-wrap,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-wrap {
+  flex-direction: column;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-wrap::after {
+  right: 0;
+  left: 0;
+  height: 30px;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-wrap::before {
+  top: 0;
+  box-shadow: inset 0 10px 8px -8px rgba(0, 0, 0, 0.08);
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-wrap::after {
+  bottom: 0;
+  box-shadow: inset 0 -10px 8px -8px rgba(0, 0, 0, 0.08);
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-top::before,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-top::before,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-top::before,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-top::before {
+  opacity: 1;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-bottom::after,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-bottom::after,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-bottom::after,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-wrap.ant-tabs-nav-wrap-ping-bottom::after {
+  opacity: 1;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  width: 2px;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-ink-bar-animated,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-ink-bar-animated,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-ink-bar-animated,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-ink-bar-animated {
+  transition: height 0.3s, top 0.3s;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-nav-operations,
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-nav-operations,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-nav-operations,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-nav-operations {
+  /* flex: 1 0 auto; */
+  flex-direction: column;
+}
+
+.ant-tabs-left>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  right: 0;
+}
+
+.ant-tabs-left>.ant-tabs-content-holder>.ant-tabs-content>.ant-tabs-tabpane,
+.ant-tabs-left>div>.ant-tabs-content-holder>.ant-tabs-content>.ant-tabs-tabpane {
+  padding-left: 24px;
+  height: fit-content;
+}
+
+.ant-tabs-right>.ant-tabs-nav,
+.ant-tabs-right>div>.ant-tabs-nav {
+  order: 1;
+}
+
+.ant-tabs-right>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  left: 0;
+}
+
+.ant-tabs-right>.ant-tabs-content-holder,
+.ant-tabs-right>div>.ant-tabs-content-holder {
+  order: 0;
+  margin-right: -1px;
+  border-right: 1px solid #f0f0f0;
+}
+
+.ant-tabs-right>.ant-tabs-content-holder>.ant-tabs-content>.ant-tabs-tabpane,
+.ant-tabs-right>div>.ant-tabs-content-holder>.ant-tabs-content>.ant-tabs-tabpane {
+  padding-right: 24px;
+}
+
+.ant-tabs-dropdown {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  /* z-index: 1050; */
+  display: block;
+}
+
+.ant-tabs-dropdown-hidden {
+  display: none;
+}
+
+.ant-tabs-dropdown-menu {
+  max-height: 200px;
+  margin: 0;
+  padding: 4px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: left;
+  list-style-type: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ant-tabs-dropdown-menu-item {
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  margin: 0;
+  padding: 5px 12px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ant-tabs-dropdown-menu-item>span {
+  flex: 1;
+  white-space: nowrap;
+}
+
+.ant-tabs-dropdown-menu-item-remove {
+  flex: none;
+  margin-left: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.ant-tabs-dropdown-menu-item-remove:hover {
+  color: #40a9ff;
+}
+
+.ant-tabs-dropdown-menu-item:hover {
+  background: #f5f5f5;
+}
+
+.ant-tabs-dropdown-menu-item-disabled,
+.ant-tabs-dropdown-menu-item-disabled:hover {
+  color: rgba(0, 0, 0, 0.25);
+  background: transparent;
+  cursor: not-allowed;
+}
+
+.ant-tabs-card>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card>div>.ant-tabs-nav .ant-tabs-tab {
+  margin: 0;
+  padding: 8px 16px;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ant-tabs-card>.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card>div>.ant-tabs-nav .ant-tabs-tab-active {
+  color: #1890ff;
+  background: #fff;
+}
+
+.ant-tabs-card>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-card>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  visibility: hidden;
+}
+
+.ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-card.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-card.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab {
+  margin-left: 2px;
+}
+
+.ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab {
+  border-radius: 2px 2px 0 0;
+}
+
+.ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab-active {
+  border-bottom-color: #fff;
+}
+
+.ant-tabs-card.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-tab {
+  border-radius: 0 0 2px 2px;
+}
+
+.ant-tabs-card.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-tab-active {
+  border-top-color: #fff;
+}
+
+.ant-tabs-card.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-card.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-card.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+.ant-tabs-card.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab {
+  margin-top: 2px;
+}
+
+.ant-tabs-card.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab {
+  border-radius: 2px 0 0 2px;
+}
+
+.ant-tabs-card.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab-active {
+  border-right-color: #fff;
+}
+
+.ant-tabs-card.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab {
+  border-radius: 0 2px 2px 0;
+}
+
+.ant-tabs-card.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab-active {
+  border-left-color: #fff;
+}
+
+.ant-tabs {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  display: flex;
+}
+
+.ant-tabs>.ant-tabs-nav,
+.ant-tabs>div>.ant-tabs-nav {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-wrap,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-wrap {
+  position: relative;
+  display: inline-block;
+  /* display: flex; */
+  flex: auto;
+  align-self: stretch;
+  overflow: hidden;
+  white-space: nowrap;
+  transform: translate(0);
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-wrap::before,
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-wrap::after,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-wrap::after {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  content: '';
+  pointer-events: none;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+  /* width:300px; */
+  position: relative;
+  display: flex;
+  /* flex-direction:column; */
+  transition: transform 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  color: black;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-operations,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-operations {
+  /* display: flex; */
+  display: none;
+  align-self: stretch;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-operations-hidden,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-operations-hidden {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-more,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-more {
+  position: relative;
+  padding: 8px 16px;
+  background: transparent;
+  border: 0;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-more::after,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-more::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  transform: translateY(100%);
+  content: '';
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-add,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-add {
+  min-width: 40px;
+  margin-left: 2px;
+  padding: 0 8px;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px 2px 0 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-add:hover,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-add:hover {
+  color: #40a9ff;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-add:active,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-add:active,
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-add:focus,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-add:focus {
+  color: #096dd9;
+}
+
+.ant-tabs-extra-content {
+  flex: none;
+}
+
+.ant-tabs-centered>.ant-tabs-nav .ant-tabs-nav-wrap:not([class*='ant-tabs-nav-wrap-ping']),
+.ant-tabs-centered>div>.ant-tabs-nav .ant-tabs-nav-wrap:not([class*='ant-tabs-nav-wrap-ping']) {
+  justify-content: center;
+}
+
+.ant-tabs-ink-bar {
+  position: absolute;
+  background: #1890ff;
+  pointer-events: none;
+}
+
+.ant-tabs-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 14px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.ant-tabs-tab-btn:focus,
+.ant-tabs-tab-remove:focus,
+.ant-tabs-tab-btn:active,
+.ant-tabs-tab-remove:active {
+  color: #096dd9;
+}
+
+.ant-tabs-tab-btn {
+  outline: none;
+  transition: all 0.3s;
+  color: black;
+  font-size: 18px;
+}
+
+.ant-tabs-tab-btn:hover {
+  color: #40a9ff;
+}
+
+.ant-tabs-tab-remove {
+  flex: none;
+  margin-right: -4px;
+  margin-left: 8px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ant-tabs-tab-remove:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.ant-tabs-tab:hover {
+  color: #40a9ff;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #1890ff;
+  text-shadow: 0 0 0.25px currentcolor;
+}
+
+.ant-tabs-tab.ant-tabs-tab-disabled {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+.ant-tabs-tab.ant-tabs-tab-disabled .ant-tabs-tab-btn:focus,
+.ant-tabs-tab.ant-tabs-tab-disabled .ant-tabs-tab-remove:focus,
+.ant-tabs-tab.ant-tabs-tab-disabled .ant-tabs-tab-btn:active,
+.ant-tabs-tab.ant-tabs-tab-disabled .ant-tabs-tab-remove:active {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.ant-tabs-tab .ant-tabs-tab-remove .anticon {
+  margin: 0;
+}
+
+.ant-tabs-tab .anticon {
+  margin-right: 12px;
+}
+
+.ant-tabs-tab+.ant-tabs-tab {
+  margin: 0 0 0 32px;
+}
+
+.ant-tabs-content {
+  position: relative;
+  width: 100%;
+}
+
+.ant-tabs-content-holder {
+  flex: auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+.ant-tabs-tabpane {
+  outline: none;
+}
+
+.ant-tabs-tabpane-hidden {
+  display: none;
+}
+
+.ant-tabs-switch-appear,
+.ant-tabs-switch-enter {
+  transition: none;
+}
+
+.ant-tabs-switch-appear-start,
+.ant-tabs-switch-enter-start {
+  opacity: 0;
+}
+
+.ant-tabs-switch-appear-active,
+.ant-tabs-switch-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.ant-tabs-switch-leave {
+  position: absolute;
+  transition: none;
+  inset: 0;
+}
+
+.ant-tabs-switch-leave-start {
+  opacity: 1;
+}
+
+.ant-tabs-switch-leave-active {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.height {
+  height: 500px;
+}
+
+/* Medium devices (Tabs and small laptops) */
+@media only screen and (max-width:1024px) {
+  .projects-main-section {
+    display: none;
+    /* height:175vh; */
+    /* overflow: hidden; */
+    /* border: 3px dotted red; */
+  }
+
+  .projects-main-section-small {
+    display: block;
+  }
+
+  .project-text {
+    color: #90d91e;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-gallery .project-gallery-image-cards img {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tab-nav-list {
+    width: 90%;
+  }
+
+  .project-text {
+    width: 100%;
+  }
+
+  .ant-tabs>.ant-tabs-nav .ant-tabs-nav-list, .ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+    border-radius: 0px;
+  }
+}
+
+@media only screen and (max-width:750px) {
+  .projects-main-section-small {
+    overflow: hidden;
+  }
+
+  .project-text {
+    color: #90d91e;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-gallery .project-gallery-image-cards img {
+    width: 600px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .height {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width:600px) {
+
+  .project-text {
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  .project-image-1 {
+    width: 90%;
+  }
+
+  .project-image-2 {
+    width: 90%;
+  }
+
+  .project-image-3 {
+    width: 90%;
+  }
+}
+
+
+
+@media only screen and (min-width:400px) {
+
+  .ant-tabs>.ant-tabs-nav .ant-tabs-nav-wrap,
+  .ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-wrap {
+    display: flex;
+  }
+  .d-1 {
+    display: block;
+  }
+  .d-2 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:1025px) {
+  .d-1 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .projects-main-section {
+    display: none;
+  }
+
+  .projects-main-section-small {
+    display: flex;
+  }
+
+  .projects-title-header h1 {
+    margin: 0px;
+    font-size: larger;
+  }
+
+  .projects-title-header h1::after {
+    width: 0px;
+  }
+
+  .project-image h2 {
+    text-align: center;
+    /* margin-bottom: 3%; */
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgb(29, 93, 233);
+    margin: 15px 0;
+    border-radius: 30px;
+  }
+
+  .project-image h2::after {
+    content: '';
+    background: rgb(29, 93, 233);
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto 30px;
+  }
+
+  .project-text {
+    color: #90d91e;
+    /* height:870px; */
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    /* padding: 0px 15px; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-details {
+    height: 30px;
+    width: 300px;
+  }
+
+  .project-details button {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 10px 5px;
+    background-color: #90d91e;
+    color: white;
+    border: none;
+  }
+
+  .project-details button:hover {
+    color: #90d91e;
+    background-color: transparent;
+    border: none;
+  }
+
+  .project-text p {
+    color: rgb(46, 100, 9)
+  }
+
+  .project-gallery {
+    width: 300px;
+    margin: 10px 0px 10px 5px;
+    /* object-fit: cover; */
+  }
+
+  .project-gallery .project-gallery-image-cards img {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  .tab-nav-list {
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 10px 100px 100px 100px;
+  }
+
+
+  .ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+  .ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    text-align: left;
+  }
+
+  .center-hrz-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .d-1 {
+    display: none;
+  }
+  .d-2 {
+    display: flex;
+  }
+
+  .ant-tabs-top>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  height: 0;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+  padding: 5px 20px 20px 20px;
+}
+.tab-nav-list {
+  width: 97.5%;
+}
+}

@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.arduino-main {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../../../images/products-images/shop-background2.jpg") center no-repeat
+      fixed;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 5%;
+}
+
+.arduino-main p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #5f656e;
+}
+
+.arduino-main h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #0c50a3;
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+}
+
+.arduino-tabs h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #0c50a3;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  padding: 1% 0;
+}
+
+.arduino-tabs h4{
+  color: #0c50a3;
+}
+
+.arduino-main p span {
+  color: #049434;
+  font-weight: 600;
+}
+
+.ardiun-customer {
+  padding: 0 1%;
+}
+
+.arduino-image-content {
+  width: 90%;
+  margin: auto;
+  padding-top: 15%;
+  padding-bottom: 0.5%;
+  display: flex;
+}
+
+.arduin-content {
+  padding: 5% 3% 0% 3%;
+}
+
+.arduin-image-contaner {
+  width: 400px;
+  display: flex;
+  margin-left: 5%;
+  justify-content: space-between;
+}
+
+.arduin-image-contaner .arduin-images {
+  height: 90px;
+}
+
+.arduin-image-contaner .arduin-images img {
+  width: 95px;
+  height: 90px;
+}
+
+.tab-subheading{
+  font-weight: bold;
+}
+
+.arduino-tabs{
+  width: 90%;
+  margin: 5% auto;
+}
+
+.arduino-tabs li{
+  font-weight: bold;
+  color: #5f656e;
+}
+
+.arduino-product-star{
+  padding: 0.5% 0;
+}
+
+.arduino-product-price{
+  padding: 0;
+}
+
+.arduino-product-image img{
+  height: 350px;
+  width: 400px;
+}
+
+.arduino-related-products{
+  margin-top: 2%;
+  width: 400px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .arduino-image-content {
+    width: 90%;
+    margin: auto;
+    padding-top: 40%;
+    padding-bottom: 2%;
+    display: block;
+  }
+
+  .arduin-image{
+    display: none;
+  }
+
+  .arduin-image-contaner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .arduin-image-contaner .arduin-images img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .arduin-image-contaner .arduin-images {
+    height: 80px;
+  }
+
+  .arduin-image img{
+    width: 100%;
+  }
+
+  .arduino-product-image img{
+    height: 300px;
+    width: 100%;
+  }
+  
+  .arduino-related-products{
+    margin-top: 2%;
+    width: 100%;
+  }
+
+  .arduino-tabs{
+    margin-top: 10%;
+  }
+}
+
+/* Small devices (portrait tablet
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

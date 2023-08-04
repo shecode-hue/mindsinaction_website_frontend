@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.number p{
+    text-align: center;
+}
+
+.student-data-form{
+    padding-top: 10%;
+    margin-bottom:10%
+}
+
+table {
+  /* font-family: "Montserrat", sans-serif; */
+  border-collapse: collapse;
+  width: 95%;
+  margin: 0 auto;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.shop-main p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.shop-products-results {
+  text-align: center;
+  color: #576574;
+  width: 90%;
+  margin: auto;
+}
+
+.shop-products-results span {
+  /* color: #049434; */
+  color: #0c50a3;
+  font-weight: bold;
+}
+
+.shop-main h1 {
+  /* padding-top: 13%; */
+  text-align: center;
+  margin-bottom: 0%;
+  text-transform: uppercase;
+  font-weight: 600;
+  /* color: #0c50a3; */
+  /* font-family: "Abel", sans-serif; */
+  font-size: 30px;
+}
+
+.shop-main {
+  padding-top: 150px;
+  background: linear-gradient(135deg,
+  rgba(55, 95, 128, 0.85) 1%,
+  rgba(81, 112, 170, 0.75) 30%),
+    url('../../images/products-images/shop-background.jpg') center no-repeat fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.shop-title-header {
+  margin: 0px 40px;
+}
+
+.shop-title-header h1 {
+  text-align: center;
+  /* margin-bottom: 3%; */
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  margin: 15px 0;
+  border-radius: 30px;
+  font-size: 35px;
+}
+
+.shop-title-header h1::after {
+  content: '';
+  background: #fff;
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 10px auto 30px;
+}
+
+.shop-title-header p {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.shop-card h4 {
+  text-align: center;
+  /* font-weight: lighter; */
+  color: #2f3640;
+  padding: 5px 0;
+}
+
+.shop-cards {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.shop-card {
+  width: 300px;
+  overflow: hidden;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.3s;
+  margin: 2% auto;
+  animation: ease-in;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  border-bottom: 4px solid #90d91e;
+}
+
+.shop-c {
+  width: 90%;
+  margin: auto;
+}
+
+.shop-image {
+  width: 85%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.shop-image img {
+  width: 100%;
+  height: 240px;
+}
+
+.shop-image img:hover {
+  transform: scale(1.8);
+}
+
+.shop-card .shop-hr span {
+  color: #6fb73f;
+  cursor: pointer;
+  text-align: left;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 20px;
+}
+
+.shop-card .shop-hr .price span {
+  color: #0c50a3;
+}
+
+.shop-card .shop-hr {
+  display: flex;
+  /* background-color:tomato; */
+  justify-content: space-between;
+}
+
+.shop-card .shop-hr .price {
+  font-family: "Otomanopee One", sans-serif;
+  color: #0c50a3;
+  /* background-color: #ffc500; */
+  padding: 7px 7px;
+  /* border-radius: 50% 50% 0 0; */
+  border-radius: 10%;
+  border: 2px solid #0c50a3;
+  transition: 0.3s;
+}
+
+.shop-card .shop-hr .price:hover {
+  transform: scale(1.1);
+}
+
+.shop-card .shop-hr .quantity {
+  color: #2f3640;
+  font-weight: bold;
+  background-color: #ffc500;
+  box-shadow: 2px 5px 3px 2px rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  border-radius: 0 25px 0 5px;
+  /* transform: rotate(-40deg); */
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+.shop-card .shop-hr .quantity:hover {
+  transform: scale(1.1);
+}
+
+.shop-border {
+  width: 100%;
+  height: 5px;
+  background-color: #90d91e;
+  display: none;
+}
+
+.shop-card .shop-content {
+  padding: 7% 4%;
+  color: #0c50a3;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .shop-card {
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+    margin: 4% auto;
+  }
+
+  .shop-main h1 {
+    text-align: center;
+    margin-bottom: 0%;
+    /* padding-top: 35%; */
+    text-transform: uppercase;
+    font-weight: 600;
+    /* color: #0c50a3; */
+    /* font-family: "Abel", sans-serif; */
+    font-size: 25px;
+  }
+
+  .card__container {
+    margin-bottom: 30px;
+    width: 100%;
+    margin: 3% 0;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .shop-card {
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+    margin: 2% auto;
+  }
+
+  .shop-main h1 {
+    text-align: center;
+    margin-bottom: 0%;
+    /* padding-top: 35%; */
+    text-transform: uppercase;
+    font-weight: 600;
+    /* color: #0c50a3; */
+    /* font-family: "Abel", sans-serif; */
+    font-size: 25px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .shop-card {
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+    margin: 2% auto;
+  }
+
+  .shop-main h1 {
+    text-align: center;
+    margin-bottom: 0%;
+    /* padding-top: 20%; */
+    text-transform: uppercase;
+    font-weight: 600;
+    /* color: #0c50a3; */
+    /* font-family: "Abel", sans-serif; */
+    font-size: 25px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .shop-card {
+    width: 280px;
+    display: inline-block;
+    justify-content: center;
+    margin: 2%;
+  }
+
+  .shop-main h1 {
+    text-align: center;
+    margin-bottom: 0%;
+    /* padding-top: 15%; */
+    text-transform: uppercase;
+    font-weight: 600;
+    /* color: #0c50a3; */
+    /* font-family: "Abel", sans-serif; */
+    font-size: 30px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .shop-card {
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+    margin: 2% 2%;
+  }
+
+  .shop-main h1 {
+    text-align: center;
+    margin-bottom: 0%;
+    /* padding-top: 15%; */
+    text-transform: uppercase;
+    font-weight: 600;
+    /* color: #0c50a3; */
+    /* font-family: "Abel", sans-serif; */
+    font-size: 30px;
+  }
+}
