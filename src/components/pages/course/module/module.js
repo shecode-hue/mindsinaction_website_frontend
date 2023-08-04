@@ -711,7 +711,7 @@ export default function Module() {
                           backgroundRepeat: "no-repeat",
                           backgroundPosition: "center",
                           backgroundSize: "cover",
-                          zIndex:"1000",
+                          // zIndex:"1000",
                         }}
                       >
                        {/* <img src={x.moduleImage} alt="" data-aos="fade-right"/> */}
