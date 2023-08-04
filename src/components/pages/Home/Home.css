@@ -1208,7 +1208,13 @@ styling for modelues cards */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 90%;
+  /* width: 90%; */
+}
+
+@media only screen and (max-width: 1400px) {
+  .Modules-home-cards {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1498,7 +1504,7 @@ styling for modelues cards */
   
   .Why-steam-card-image {
     width: 250px;
-    height: 150PX;
+    height: 150px;
     /* filter: grayscale(60%); */
     padding-left: 10px;
   }
@@ -1625,8 +1631,14 @@ lego gallery styling */
   justify-content: center;
   /* border: 3px dotted red; */
   /* border: 3px dotted red; */
-
 }
+
+@media only screen and (max-width: 800px) {
+  .social-media-feed {
+    padding: 150px 50px 0px 50px;
+  }
+}
+
 .social-media-feed-box{
 display: flex;
 justify-content: center;
@@ -1893,6 +1905,24 @@ margin-top: 2rem;
   padding-top: 40px;
   /* padding-bottom: 10px !important; */
   /* border: 3px dotted rgb(0, 17, 255); */
+}
+
+@media only screen and (min-width: 1300px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 350px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -2813,6 +2843,7 @@ margin-top: 2rem;
   /* border: 3px dotted rgb(255, 0, 212); */
 }
 .info-content p {
+  padding: 10px 0px;
   font-size: 18px;
   color: #ffffff;
   text-align: left;

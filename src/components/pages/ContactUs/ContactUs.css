@@ -240,6 +240,7 @@ textarea {
 
 .section {
   padding-top: 150px;
+  padding-bottom: 100px;
   background: linear-gradient(135deg,
       rgba(55, 95, 128, 0.85) 1%,
       rgba(81, 112, 170, 0.75) 30%),

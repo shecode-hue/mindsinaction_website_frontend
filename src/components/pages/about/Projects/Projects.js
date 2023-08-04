@@ -8,6 +8,7 @@ import STEAM_Partnership from "../../../MIA projects/STEAM Partnership Project.z
 import Virtual_Gear_Challange from "../../../MIA projects/Virtual Gear Challange.zip";
 
 export default function Projects() {
+  
   return (
     <div className="projects-main-container">
       <center>

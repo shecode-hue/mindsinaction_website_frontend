@@ -105,7 +105,7 @@ function MechanicalEngineering() {
         
 
         <div className="department-mision-vision-values">
-          <div className="container">
+          <div className="container" style={{height: "100%"}}>
             <div className="icon">
               <div className="ico-container">
                 <BsEye className="ico" />
@@ -121,7 +121,7 @@ function MechanicalEngineering() {
             </div>
           </div>
 
-          <div className="container">
+          <div className="container" style={{height: "100%"}}>
             <div className="icon">
               <div className="ico-container">
                 <AiOutlineAim className="ico" />
@@ -135,7 +135,7 @@ function MechanicalEngineering() {
               </p>
             </div>
           </div>
-          <div className="container">
+          <div className="container" style={{height: "100%"}}>
             <div className="icon">
               <div className="ico-container">
                 <GiDiamondHard className="ico" />

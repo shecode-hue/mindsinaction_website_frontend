@@ -3,282 +3,43 @@ import "./Home.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { NavLink } from "react-router-dom";
-// import goethe from '../../images/goethe.png';
-// import dundee from '../../images/dundee.jpg';
-import "react-slideshow-image/dist/styles.css";
-// import { Fade } from "react-slideshow-image";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "react-slideshow-image/dist/styles.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import Axios from "axios";
-import { GiMaterialsScience } from "react-icons/gi";
-import { AiOutlineRobot } from "react-icons/ai";
-import { VscCircuitBoard } from "react-icons/vsc";
-import { BsCode } from "react-icons/bs";
-import { RiMicroscopeLine, RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-import "react-animated-slider/build/horizontal.css";
-import "./SliderStyling/slider-animations.css";
-import sliderArrow from "../../icons/Home-Sider-right.png";
-import imageSlide from "./data";
+// import "react-animated-slider/build/horizontal.css";
+// import "./SliderStyling/slider-animations.css";
 
-import legoImage1 from "../../images/Home_images/LegoGallery/lego1.jpg";
-import legoImage2 from "../../images/Home_images/LegoGallery/lego2.jpg";
-import legoImage3 from "../../images/Home_images/LegoGallery/lego3.jpg";
-
-import WhySteam1 from "../../images/Home_images/why-steam-images/why-steam (1).png";
-import WhySteam2 from "../../images/Home_images/why-steam-images/why-steam (2).png";
-import WhySteam3 from "../../images/Home_images/why-steam-images/why-steam (3).png";
-import WhySteam4 from "../../images/Home_images/why-steam-images/why-steam (4).png";
-import WhySteam5 from "../../images/Home_images/why-steam-images/why-steam (5).png";
-import WhySteam6 from "../../images/Home_images/why-steam-images/why-steam (6).png";
-import WhySteam7 from "../../images/Home_images/why-steam-images/why-steam (7).png";
-import WhySteam8 from "../../images/Home_images/why-steam-images/why-steam (8).png";
-import Science from "../../images/Home_images/Home-modules-images/Science.svg";
-import Software from "../../images/Home_images/Home-modules-images/Software.svg";
-import Mechatronics from "../../images/Home_images/Home-modules-images/Mechatronics.svg";
-import Electronics from "../../images/Home_images/Home-modules-images/Electronics.svg";
-import Robotics from "../../images/Home_images/Home-modules-images/Robotics.svg";
-import services1 from "../../images/Home_images/Home-services/icon_Mobile App Dev.svg";
-import services2 from "../../images/Home_images/Home-services/icon_Web Dev.svg";
-import services3 from "../../images/Home_images/Home-services/icon_Data Center Solutions.svg";
-import services4 from "../../images/Home_images/Home-services/icon_3D Printing.svg";
-
-import dundee from "../../images/Home_images/partners/logo_Dundee.png";
-import exxon from "../../images/Home_images/partners/logo_Exxon.png";
-import goethe from "../../images/Home_images/partners/logo_Goethe.png";
-import konrad from "../../images/Home_images/partners/logo_Kronrad.png";
-import namSience from "../../images/Home_images/partners/logo_Nam Science.png";
-import NCRST from "../../images/Home_images/partners/logo_NCRST.png";
-import UNESCO from "../../images/Logo_UNESCO.svg";
+// The data file with all of the arrays
+import data from "./data";
 
 import Carousel from "react-elastic-carousel";
 import Item from "./Item";
 
-const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-  <img id="slider-arrow-left" src={sliderArrow} alt="prevArrow" {...props} />
-);
-
-const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-  <img id="slider-arrow-right" src={sliderArrow} alt="nextArrow" {...props} />
-);
-
-//home page top slider config
-
-// config information for the services
-const ServicesInfo = [
-  {
-    image: services1,
-    service_name: "MOBILE APP DEVELOPMENT",
-    description:
-      "We develop mobile applications for both IOS and Android platforms.",
-  },
-  {
-    image: services3,
-    service_name: "WEBSITE DEVELOPMENT",
-    description:
-      "We develop high-performing, user-friendly, fully functional interactive websites.",
-  },
-  {
-    image: services2,
-    service_name: "DATA CENTRE SOLUTIONS",
-    description:
-      "We help data centers become more safe, resilient and efficient.",
-  },
-
-  {
-    image: services4,
-    service_name: "3D PRINTING",
-    description:
-      // 'We analyse business, financial, IT systems and conduct assessments of new information systems to identify risks and improve IT-enabled business processes. ',
-      "We analyse business, financial, IT systems and conduct assessments of new information systems.",
-  },
-];
-// config information for the services
-const ParentsFeedback = [
-  {
-    parent: "Executive Director, MHETI Dr. Alfred van Kent",
-    message:
-      "The Ministry of Higher Education, Training and Innovation(MHETI) hereby declares its full support for Mindsinaction",
-  },
-  {
-    parent: "Dr Natascha Cheikhyoussef",
-    message:
-      "My son Malik Cheikhyoussef is attending the classes and participating with the greatest enthusiasm. The learners learn many skills related to STEM.",
-  },
-  {
-    parent: "Dr. Tanja Karp",
-    message:
-      "Mindsinaction staff and instructors needs to be congratulated for their professionalism and excellence in guiding the teams throughout the Virtual GEAR competition.",
-  },
-];
-
-// course card information
-
-const partners = [
-  {
-    link: "https://www.dundeeprecious.com/English/Operating-Regions/Current-Operations/Tsumeb/Overview/default.aspx",
-    image: dundee,
-  },
-  {
-    link: "https://corporate.exxonmobil.com/",
-    image: exxon,
-  },
-  {
-    link: "https://www.goethe.de/ins/na/en/ver.cfm?event_id=24619907",
-    image: goethe,
-  },
-  {
-    link: "https://www.kas.de/en/",
-    image: konrad,
-  },
-
-  // {
-  //   link: "/",
-  //   image: NAMIBIA_coa,
-  // },
-  {
-    link: "https://ncrst.na/",
-    image: NCRST,
-  },
-  {
-    link: "https://www.namscience.com/",
-    image: namSience,
-  },
-  {
-    link: "https://www.unesco.org/en",
-    image: UNESCO,
-  },
-];
-
-// images for the legoslider
-const legoimages = [
-  // {
-  //   image: lego1,
-  // },
-  // {
-  //   image: lego2,
-  // },
-  // {
-  //   image: lego4,
-  // },
-  {
-    image: legoImage1,
-  },
-  {
-    image: legoImage2,
-  },
-  {
-    image: legoImage3,
-  },
-];
-// parralex info
-const textSlide = [
-  {
-    description:
-      "STEAM education encourages students to think critically, solve problems, and apply analytical skills to real-world situations",
-  },
-  {
-    description:
-      "By incorporating the arts into traditional STEM subjects, STEAM promotes creativity and imagination",
-  },
-  {
-    description:
-      "Students are more likely to pursue further education and seek continuous self-improvement",
-  },
-  {
-    description:
-      "Empowering students to be makers and agile problem solvers, able to imagine and create the future.",
-  },
-];
-// information for why-steam cards
-const WhySteam = [
-  {
-    id: 1,
-    image: WhySteam1,
-    title: "Adaptive Curriculum",
-  },
-  {
-    id: 2,
-    image: WhySteam2,
-    title: "Team Work",
-  },
-  {
-    id: 3,
-    image: WhySteam3,
-    title: "Hands on Learning",
-  },
-  {
-    id: 4,
-    image: WhySteam4,
-    title: "Cutting-Edge Resources",
-  },
-  {
-    id: 5,
-    image: WhySteam5,
-    title: "Prototyping",
-  },
-  {
-    id: 6,
-    image: WhySteam6,
-    title: "Research",
-  },
-  {
-    id: 7,
-    image: WhySteam7,
-    title: "Expert Educators",
-  },
-  {
-    id: 8,
-    image: WhySteam8,
-    title: "Real-World Relevance",
-  },
-];
-//parents feedback slide configuration
-
-const cards = [
-  {
-    icon: AiOutlineRobot,
-    title: "Robotics",
-    description:
-      "Students are introduced to the basics of robotics, programming, engineering, problem identification and collaboration.",
-    image: Robotics,
-    color: "33A85B",
-  },
-  {
-    icon: VscCircuitBoard,
-    title: "Electronics",
-    description:
-      "Students learn how to solder, program electronics parts and circuits, and prototype using microcontrollers.",
-    image: Electronics,
-    color: "F37021",
-  },
-  {
-    icon: RiMicroscopeLine,
-    title: "Mechatronics",
-    description:
-      "Students will learn a design process that includes a combination of mechanical, electrical and computer engineering.",
-    image: Mechatronics,
-    color: "FFCD05",
-  },
-  {
-    icon: GiMaterialsScience,
-    title: "Science",
-    description:
-      "Students perform experiments in biology, chemistry and physical science based on the school curriculum.",
-    image: Science,
-    color: "F05023",
-  },
-  {
-    icon: BsCode,
-    title: "Software",
-    description:
-      "Students are introduced to graphics design through UX/UI, mobile app development and web design.",
-    image: Software,
-    color: "7965AC",
-  },
-];
 
 export default function Home() {
+
+  // This is destructuring the variables and arrays exported from the data object in order to be used on this page
+  const {
+    Science,
+    Software,
+    Mechatronics,
+    Electronics,
+    Robotics, 
+    SlickArrowLeft, 
+    SlickArrowRight, 
+    imageSlide, 
+    ServicesInfo, 
+    ParentsFeedback, 
+    partners, 
+    legoimages, 
+    textSlide, 
+    WhySteam, 
+    cards 
+  } = data;
+
   const [products, setProducts] = useState([]);
   const [isRotated, setIsRotated] = useState(true);
   //fetching products from the database
@@ -338,7 +99,7 @@ export default function Home() {
       }
     }, 5000);
     return () => clearTimeout(timer);
-  }, [currentState]);
+  }, [currentState, imageSlide.length]);
 
   const goToNext = () => {
     if (currentState === imageSlide.length - 1) {
@@ -367,7 +128,7 @@ export default function Home() {
       }
     }, 5000);
     return () => clearTimeout(timer);
-  }, [currentTextIndex]);
+  }, [currentTextIndex, textSlide.length]);
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -515,7 +276,7 @@ export default function Home() {
               }`}
               style={{
                 backgroundImage: `url(${slide.image})`,
-                backgroundPosition: "top",
+                backgroundPosition: "top center",
                 backgroundSize: "cover",
                 height: "100%",
               }}
@@ -558,6 +319,7 @@ export default function Home() {
           <h1>Modules</h1>
 
           {isDivVisible && (
+            
             <div className="Modules-home-cards">
               {cards.map((x, i) => {
                 return (
@@ -584,6 +346,7 @@ export default function Home() {
                         id={x.title}
                         style={{
                           backgroundColor: `#${x.color}`,
+                          color: "white"
                         }}
                         aria-hidden="true"
                       >
