@@ -9,97 +9,97 @@ import web_dev from "../../../images/services-images/ict/webDevelopment.jpg";
 import mobile_dev from "../../../images/services-images/ict/mobile-app.jpeg";
 import web_app from "../../../images/services-images/ict/webApp.png";
 import data_center from "../../../images/services-images/ict/dataCenter.png"
-import archive_img from "../../../images/services-images/ict/projects/archive.png";
-import constitution_img from "../../../images/services-images/ict/projects/constitution-app.png";
-import huster_img from "../../../images/services-images/ict/projects/huster-web.gif";
-import minds_img from "../../../images/services-images/ict/projects/minds-web.png";
-import exploradio_img from "../../../images/services-images/ict/projects/exploradio.png"
-import rightArrow from "../../../icons/Img1.png";
-import leftArrow from "../../../icons/Img2.png";
+// import archive_img from "../../../images/services-images/ict/projects/archive.png";
+// import constitution_img from "../../../images/services-images/ict/projects/constitution-app.png";
+// import huster_img from "../../../images/services-images/ict/projects/huster-web.gif";
+// import minds_img from "../../../images/services-images/ict/projects/minds-web.png";
+// import exploradio_img from "../../../images/services-images/ict/projects/exploradio.png"
+// import rightArrow from "../../../icons/Img1.png";
+// import leftArrow from "../../../icons/Img2.png";
 // import natis_img from "../../../images/services-images/ict/projects/NaTIS.png"
 import { GiBullseye, BsEye, GiDiamondHard } from "react-icons/all";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import "./ICT.css";
 
 //projects array
-const projects = [
-  {
-    img: minds_img,
-    name: "Mindsinaction STEAM website"
-  },
-  {
-    img: huster_img,
-    name: "Huster Machinetool website"
-  },
-  {
-    img: constitution_img,
-    name: "Constitution mobile app"
-  },
-  // {
-  //   img: natis_img,
-  //   name: "Learner's license mobile app"
-  // },
-  {
-    img: archive_img,
-    name: "National Archive mobile app"
-  },
-  {
-    img: exploradio_img,
-    name: "Exploradio Audioguide Namibia"
-  },
-]
+// const projects = [
+//   {
+//     img: minds_img,
+//     name: "Mindsinaction STEAM website"
+//   },
+//   {
+//     img: huster_img,
+//     name: "Huster Machinetool website"
+//   },
+//   {
+//     img: constitution_img,
+//     name: "Constitution mobile app"
+//   },
+//   {
+//     img: natis_img,
+//     name: "Learner's license mobile app"
+//   },
+//   {
+//     img: archive_img,
+//     name: "National Archive mobile app"
+//   },
+//   {
+//     img: exploradio_img,
+//     name: "Exploradio Audioguide Namibia"
+//   },
+// ]
 
-const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-  < img className="button-it" src={leftArrow} alt="prevArrow" {...props} />);
+// const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+//   < img className="button-it" src={leftArrow} alt="prevArrow" {...props} />);
 
-const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-  < img className="button-it" src={rightArrow} alt="nextArrow"  {...props} />);
+// const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+//   < img className="button-it" src={rightArrow} alt="nextArrow"  {...props} />);
 
 //Projects slide configuration
-const projectConfig = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 6000,
-  prevArrow: <SlickArrowLeft />,
-  nextArrow: <SlickArrowRight />,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-      },
-    },
+// const projectConfig = {
+//   dots: false,
+//   infinite: true,
+//   slidesToShow: 4,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 6000,
+//   prevArrow: <SlickArrowLeft />,
+//   nextArrow: <SlickArrowRight />,
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         infinite: true,
+//         dots: false,
+//       },
+//     },
 
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 2,
+//       },
+//     },
 
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+//     {
+//       breakpoint: 600,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 2,
+//       },
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//       },
+//     },
+//   ],
+// };
 
 function ICT() {
   return (
@@ -331,14 +331,14 @@ function ICT() {
             </div>
           </div>
         </div>
-        <div className="ict-projects">
+        <div className="ict-projectsx">
           {/* <div className="heading">
             <h3>Projects</h3>
           </div> */}
-          <div className="ict-title-header">
+          {/* <div className="ict-title-header">
             <h1>Projects</h1>
-          </div>
-          <div className="projects-card-container">
+          </div> */}
+          {/* <div className="projects-card-container">
             <div className="projects-card">
               <Slider {...projectConfig}>
                 {
@@ -355,7 +355,7 @@ function ICT() {
                 }
               </Slider>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

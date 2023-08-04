@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 ;
 
@@ -307,6 +307,13 @@ a {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 400) {
+  .home-main-container .course {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .home-main-container .course,
 .home-main-container .products {
   display: block;
@@ -342,6 +349,14 @@ a {
   margin-right: auto;
   width: 90%;
   margin-top: 55px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .home-main-container .course,
+.home-main-container .products {
+  width: 100%;
+}
 }
 
 
@@ -1032,8 +1047,8 @@ a {
 .home-main-container .partners-home {
   padding-bottom: 65px;
   background-color: rgb(255, 255, 255);
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
 }
 
 /* @media only screen and (max-width: 768px) {
@@ -1109,6 +1124,18 @@ a {
     0 6px 10px 0 rgba(133, 131, 131, 0.2);
 }
 
+@media only screen and (max-width: 400px) {
+  .product-image-card {
+    background-color: white;
+    width: 170px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
+      0 6px 10px 0 rgba(133, 131, 131, 0.2);
+  }
+}
+
 .home-main-container .product-image-card .shop-button-home-inner {
   background-color: white;
   /* padding:3px 12px; */
@@ -1181,6 +1208,13 @@ styling for modelues cards */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 90%;
+}
+
+@media only screen and (max-width: 400px) {
+  .Modules-home-cards {
+    width: 100%;
+  }
 }
 
 .Modules-item {
@@ -1283,6 +1317,19 @@ styling for modelues cards */
   padding-top: 20px;
 }
 
+@media only screen and (max-width: 400px) {
+  .Modules-item-mobile {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .Modules-item-mobile {
+    height: 280px;
+    width: 175px;
+  }
+}
+
 .Modules-item-mobile h3 {
   margin: 0;
   display: block;
@@ -1365,6 +1412,22 @@ styling for modelues cards */
   color: #fff;
 }
 
+@media only screen and (max-width: 400px) {
+  .Modules-item-mobile {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .Modules-item-mobile {
+    height: 280px;
+    width: 175px;
+  }
+  .Modules-item__body-mobile .button-link {
+    margin-top: 245px;
+  }
+}
+
 /* why mindsinaction STEAM center styling */
 .Why-steam {
   /* display: flex;
@@ -1376,7 +1439,7 @@ styling for modelues cards */
 }
 
 .Why-steam h1 {
-  margin: 80px 0px 40px 0px;
+  margin: 80px 10px 40px 10px;
   color: white;
   text-align: center;
   /* border:3px red dotted; */
@@ -1389,11 +1452,30 @@ styling for modelues cards */
 
 .Why-steam-cards {
   display: flex;
-  width: 1200px;
+  width: 90%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
   /* border:3px rgb(93, 0, 255) dotted; */
+}
+
+@media only screen and (max-width: 400px) {
+  .Why-steam-cards {
+    padding: 0px 10px 50px 10px;
+    width: 100%;
+  }
+  .Why-steam-card {
+    width: 170px !important;
+    height: 250px !important;
+  }
+  
+  .Why-steam-card-image {
+    width: 100% !important;
+    height: 150px;
+    /* filter: grayscale(60%); */
+    padding-left: 10px;
+  }
 }
 
 .Why-steam-card {
@@ -1408,20 +1490,22 @@ styling for modelues cards */
   animation: ease-in;
 }
 
-.Why-steam-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.6);
-}
-
-.Why-steam-card-image {
-  width: 250px;
-  height: 150PX;
-  /* filter: grayscale(60%); */
-  padding-left: 10px;
-}
-
-.Why-steam-card:hover .Why-steam-card-image {
-  filter: none;
+@media only screen and (min-width: 400px ) {
+  .Why-steam-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.6);
+  }
+  
+  .Why-steam-card-image {
+    width: 250px;
+    height: 150PX;
+    /* filter: grayscale(60%); */
+    padding-left: 10px;
+  }
+  
+  .Why-steam-card:hover .Why-steam-card-image {
+    filter: none;
+  }
 }
 
 .Why-steam-card-text h3 {
@@ -1480,9 +1564,10 @@ lego gallery styling */
 
 .LegoGallery-images-box {
   /* border:3px dotted red; */
-  width: 1230px;
+  width: 90%;
   height: 270px;
   /* overflow:hidden; */
+  margin-bottom: 60px;
 }
 
 .image-for-lego img {
@@ -1490,9 +1575,47 @@ lego gallery styling */
   display: block;
   /* object-position: 100%; */
   /* margin-top: 13px; */
-  width: 300px;
+  width: 350px;
   /* height: 175px; */
   border-radius: 40px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .image-for-lego img {
+    object-fit: contain;
+    display: block;
+    /* object-position: 100%; */
+    /* margin-top: 13px; */
+    width: 100%;
+    /* height: 175px; */
+    border-radius: 40px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .LegoGallery-images-box {
+    /* border:3px dotted red; */
+    width: 95%;
+    height: 270px;
+    /* overflow:hidden; */
+    /* padding: 0px 70px; */
+  }
+  
+  .image-for-lego img {
+    object-fit: contain;
+    display: block;
+    /* object-position: 100%; */
+    /* margin-top: 13px; */
+    width: 100%;
+    /* height: 175px; */
+    border-radius: 40px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .LegoGallery-images-box {
+    margin-bottom: 0px;
+  }
 }
 
 /* styling for chat-boxes */
@@ -1515,7 +1638,7 @@ align-items: center;
   color: #357bb4;
   width: 100%;
   font-weight: 1200;
-  font-size: 1.6em;
+  /* font-size: 1.6em; */
   /* border: 3px dotted red; */
   text-transform: uppercase;
 }
@@ -1595,7 +1718,7 @@ margin-top: 2rem;
 }
 
 .parallax-div {
-  padding: 0px 50px;
+  padding: 30px 50px;
 }
 
 .parallax-div h2 {
@@ -1623,6 +1746,12 @@ margin-top: 2rem;
 @media only screen and (max-width: 768px) {
   .parralex-div h2 span {
     font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .box {
+    width: 250px;
   }
 }
 
@@ -1667,6 +1796,14 @@ margin-top: 2rem;
   /* opacity: none; */
 }
 
+@media only screen and (max-width: 400px) {
+  .home-main-container .partners-swiper-slide-home .image img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
 .home-main-container .home-title-electronic {
   /* width: 400px; */
   text-align: center;
@@ -1681,7 +1818,6 @@ margin-top: 2rem;
 
 .home-main-container .services-header h1,
 .home-main-container .home-title-partners h1,
-.home-main-container .home-title-electronic h1,
 .home-main-container .home-title-header h1,
 .home-main-container .Modules-home h1 {
   text-align: center;
@@ -1691,7 +1827,18 @@ margin-top: 2rem;
   color: #4F85C5;
   padding: 80px 0px 0px 0px;
   border-radius: 30px;
-  font-size: 30px;
+  /* font-size: 30px; */
+}
+
+.home-main-container .home-title-electronic h1 {
+  padding: 0px;
+  text-align: center;
+  /* margin-bottom: 3%; */
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #4F85C5;
+  border-radius: 30px;
+  /* font-size: 30px; */
 }
 
 /* .home-main-container .services-header h1::after,
@@ -1735,7 +1882,7 @@ margin-top: 2rem;
 .What-is-STEAM-Education-home {
   display: flex;
   width: 80%;
-  /* height: 300px; */
+  height: 400px;
   /* background-color: rgb(71, 134, 241); */
   background-color: #4F85C5;
   /* border: 3px dotted red; */
@@ -1746,6 +1893,78 @@ margin-top: 2rem;
   padding-top: 40px;
   /* padding-bottom: 10px !important; */
   /* border: 3px dotted rgb(0, 17, 255); */
+}
+
+@media only screen and (max-width: 1300px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 450px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 550px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 650px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 700px;
+    /* background-color: rgb(71, 134, 241); */
+    background-color: #4F85C5;
+    /* border: 3px dotted red; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); */
+  }
 }
 
 .What-is-STEAM-Education-home-text {
@@ -1777,6 +1996,7 @@ margin-top: 2rem;
   font-size: 18px;
   color: white;
   padding: 10px 10px;
+  font-family: 'Poppins', sans-serif;
   /* border: 3px dotted rgb(0, 17, 255); */
 }
 
@@ -1871,13 +2091,14 @@ margin-top: 2rem;
   .What-is-STEAM-Education-home-text-mobile p{
     width: 100%;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
     /* left: -60px; */
     /* position: relative; */
     /* border: 3px dotted rgb(255, 0, 123); */
   }
 
   .box-for-image-moving-UpandDown-mobile {
-    width: 300px;
+    /* width: 300px; */
     height: 300px;
     background-color: transparent;
     background: url("../../images/Home_images/home_Floating image.svg") no-repeat center center / 200px;
@@ -1906,6 +2127,8 @@ margin-top: 2rem;
   
   .What-is-STEAM-Education-home-mobile p {
     color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
     /* padding: 10px 10px; */
     /* border: 3px dotted rgb(0, 17, 255); */
   }
@@ -2118,6 +2341,7 @@ margin-top: 2rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 0px 10px;
 }
 
 .home-services-card {
@@ -2133,9 +2357,45 @@ margin-top: 2rem;
   animation: ease-in;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 400px) {
   .home-services-card:hover {
     transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home-services-card:hover {
+    transform: scale(1.1);
+  }
+  .home-services-card {
+    width: 150px;
+    height: 410px;
+  }
+
+  .home-services-cards {
+    width: 100%;
+  }
+  .home-services-card-text-bottom h3 {
+    padding-top: 40px;
+    color: #1F59A8;
+    /* border:3px dotted rgb(38, 0, 255) ; */
+    /* height:40px; */
+    width: 160px !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .home-services-card-text-bottom p {
+    /* border:3px dotted rgb(255, 0, 183) ; */
+    height: 80px;
+    width: 140px !important;
+    padding: 3px;
+    text-align: center;
+    color: #1F59A8;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 10px;
   }
 }
 
@@ -2175,10 +2435,10 @@ margin-top: 2rem;
   font-weight: 10px;
 }
 
-.Why-steam-card {
+/* .Why-steam-card {
   width: 250px;
   height: 220PX;
-  /* border:3px red dotted; */
+  /* border:3px red dotted; *
   background-color: white;
   color: #061fae;
   margin: 30px 20px;
@@ -2190,7 +2450,7 @@ margin-top: 2rem;
 .Why-steam-card:hover {
   transform: scale(1.1);
   box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.6);
-}
+} */
 
 /* new slider */
 
@@ -2354,6 +2614,7 @@ margin-top: 2rem;
   }
   .description .text h1 {
     text-align: center;
+    margin: 0px 10px;
   }
 
   .center-hr {
@@ -2364,15 +2625,20 @@ margin-top: 2rem;
   
   .description .text hr {
     /* text-align: center; */
-    
     width: 50px;
     border: none;
     height: 3px;
     background-color: #90d91e;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   .description .text p {
     text-align: center;
+    font-size: 18px;
+    color: #fff;
+    margin: 0px 10px;
+    font-family: 'Poppins', sans-serif;
   }
 
   .hero-button {
@@ -2409,6 +2675,9 @@ margin-top: 2rem;
   .description .text p {
     font-size: 18px;
     text-align: left;
+    margin: 0px 0px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
   }
   .hero-button {
     background-color: transparent;
@@ -2543,10 +2812,11 @@ margin-top: 2rem;
   transition: opacity 0.3s, max-height 0.3s;
   /* border: 3px dotted rgb(255, 0, 212); */
 }
-.info-content p{
+.info-content p {
   font-size: 18px;
   color: #ffffff;
   text-align: left;
+  font-family: 'Poppins', sans-serif;
 }
 .info-content p ul{
   padding-left: 2.5rem;
@@ -2554,6 +2824,7 @@ margin-top: 2rem;
 }
 .info-content p ul li{
 list-style:disc;
+font-family: 'Poppins', sans-serif;
 }
 .info-button.active + .info-content {
   opacity: 1;

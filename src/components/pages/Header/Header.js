@@ -75,9 +75,9 @@ export default function Header() {
     setIsOpen(!isOpen);
   }
 
-  const DesktopNavigate = () => {
+  // const DesktopNavigate = () => {
     
-  }
+  // }
 
   return (
     <>
