@@ -349,7 +349,7 @@ a {
   margin-right: auto;
   width: 90%;
   margin-top: 55px;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
 }
 
 @media screen and (max-width: 400px) {
@@ -1670,20 +1670,21 @@ align-items: center;
   width: 300px;
   /* margin: 50px auto; */
   margin-bottom: 100px;
-  background: #8f63db;
+  background: #fff;
   /* padding: 10px; */
   padding: 20px 20px 20px 20px;
   text-align: center;
   font-weight: 900;
-  color: #fff;
+  color: #4F85C5;
   font-family: arial;
   position: relative;
   border-radius: 20px;
   /* border: 3px dotted red; */
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 10px 15px 5px, rgba(0, 0, 0, 0.05) 5px 10px 15px 5px;
 }
-.boxes {
+/* .boxes {
 margin-top: 2rem;
-}
+} */
 .home-hr {
   margin: 15px;
 }
@@ -1692,19 +1693,19 @@ margin-top: 2rem;
   background-color: #ffcc00;
   color: #fff;
 }
-.sb:before {
+/* .sb:before {
   content: "";
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid #8f63db;
+  border-left: 10px solid #fff;
   border-right: 10px solid transparent;
-  border-top: 10px solid #8f63db;
+  border-top: 10px solid #fff;
   border-bottom: 10px solid transparent;
   left: 19px;
   bottom: -19px;
-  /* border: 3px dotted red; */
-}
+  /* border: 3px dotted red; *
+} */
 
 /* styling for parralex effect div */
 .parallax-div {
@@ -2662,6 +2663,10 @@ margin-top: 2rem;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  .hero-hr {
+    margin: 0 0 0 10px;
+  }
   
   .description .text p {
     text-align: center;
@@ -2679,7 +2684,7 @@ margin-top: 2rem;
     border-image: linear-gradient(to right, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%) 1;;
     border-radius: 40px;
     cursor: pointer;
-    margin: 80px 0px 0px 0px;
+    margin: 80px 0px 0px 10px;
   }
 
 }
@@ -2793,8 +2798,8 @@ margin-top: 2rem;
 
 .info-button {
   width: 75%;
-  background-color: #4F85C5;
-  color: #fff;
+  background-color: #fff;
+  color: #94C93D;
   padding: 12px 24px;
   font-size: 25px;
   font-weight: 800;
@@ -2810,7 +2815,7 @@ margin-top: 2rem;
 
 .info-button.active {
   width: 75%;
-  background-color: #4F85C5;
+  background-color: #fff;
   /* border: 3px dotted rgb(255, 0, 255); */
 }
 
@@ -2829,7 +2834,7 @@ margin-top: 2rem;
 /* Extended information styles */
 .info-content {
   width: 72%;
-  background-color: #4F85C5;
+  background-color: #fff;
   border-radius: 20px;
   padding: 24px;
   padding-bottom: 20px;
@@ -2845,7 +2850,7 @@ margin-top: 2rem;
 .info-content p {
   padding: 10px 0px;
   font-size: 18px;
-  color: #ffffff;
+  color: #4F85C5;
   text-align: left;
   font-family: 'Poppins', sans-serif;
 }
@@ -2864,3 +2869,21 @@ font-family: 'Poppins', sans-serif;
   /* border: 3px dotted rgb(255, 217, 0); */
 }
 
+
+/* Custom carousel styling */
+
+.iSugbn:hover:enabled, .iSugbn:focus:enabled {
+  background-color: #94C93D !important;
+}
+
+/* active carousel bullets */
+.ibcJcX {
+  background-color: #94C93D !important;
+  box-shadow: 0 0 1px 2px #94C93D !important;
+}
+
+/* inactive carousel bullets */
+.ewGQOX {
+  background-color: rgba(128, 128, 128, 0.23) !important;
+  box-shadow: none !important;
+}
