@@ -1626,7 +1626,7 @@ lego gallery styling */
 
 /* styling for chat-boxes */
 .social-media-feed {
-  padding: 0px 50px;
+  padding: 50px 50px;
   text-align: center;
   justify-content: center;
   /* border: 3px dotted red; */
@@ -1636,6 +1636,12 @@ lego gallery styling */
 @media only screen and (max-width: 800px) {
   .social-media-feed {
     padding: 150px 50px 0px 50px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .social-media-feed {
+    padding: 50px 50px 0px 50px;
   }
 }
 
@@ -1681,6 +1687,11 @@ align-items: center;
   border-radius: 20px;
   /* border: 3px dotted red; */
   box-shadow: rgba(0, 0, 0, 0.1) 5px 10px 15px 5px, rgba(0, 0, 0, 0.05) 5px 10px 15px 5px;
+}
+
+.box p {
+  color: #4F85C5;
+  font-family: 'Poppins', sans-serif;
 }
 /* .boxes {
 margin-top: 2rem;
@@ -1820,7 +1831,7 @@ margin-top: 2rem;
 .home-main-container .home-title-electronic {
   /* width: 400px; */
   text-align: center;
-  margin: 0 auto;
+  margin: 0px auto 0px auto;
 }
 
 .home-main-container .home-title-partners {
@@ -1852,6 +1863,7 @@ margin-top: 2rem;
   color: #4F85C5;
   border-radius: 30px;
   /* font-size: 30px; */
+  margin-top: 100px;
 }
 
 /* .home-main-container .services-header h1::after,
@@ -1895,7 +1907,9 @@ margin-top: 2rem;
 .What-is-STEAM-Education-home {
   display: flex;
   width: 80%;
-  height: 400px;
+  height: auto;
+  /* max-height: min-content; */
+  /* height: 400px; */
   /* background-color: rgb(71, 134, 241); */
   background-color: #4F85C5;
   /* border: 3px dotted red; */
@@ -1908,21 +1922,21 @@ margin-top: 2rem;
   /* border: 3px dotted rgb(0, 17, 255); */
 }
 
-@media only screen and (min-width: 1300px) {
+/* @media only screen and (min-width: 1300px) {
   .What-is-STEAM-Education-home {
     display: flex;
     width: 80%;
     height: 350px;
-    /* background-color: rgb(71, 134, 241); */
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
 }
 
@@ -1931,16 +1945,16 @@ margin-top: 2rem;
     display: flex;
     width: 80%;
     height: 450px;
-    /* background-color: rgb(71, 134, 241); */
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
 }
 
@@ -1949,16 +1963,16 @@ margin-top: 2rem;
     display: flex;
     width: 80%;
     height: 550px;
-    /* background-color: rgb(71, 134, 241); */
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
 }
 
@@ -1967,16 +1981,16 @@ margin-top: 2rem;
     display: flex;
     width: 80%;
     height: 650px;
-    /* background-color: rgb(71, 134, 241); */
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
 }
 
@@ -1985,18 +1999,18 @@ margin-top: 2rem;
     display: flex;
     width: 80%;
     height: 700px;
-    /* background-color: rgb(71, 134, 241); */
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
-}
+} */
 
 .What-is-STEAM-Education-home-text {
   width: 90%;
@@ -2356,7 +2370,8 @@ margin-top: 2rem;
 .services-home-div {
   /* border:3px dotted rgb(0, 217, 255) ; */
   height: 100%;
-  margin: 100px 0px;
+  /* margin: 100px 0px; */
+  padding-top: 100px;
 }
 
 .home-services-cards {

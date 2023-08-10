@@ -258,7 +258,7 @@ export default function Home() {
   };
 
   return (
-    <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
+    <div className="home-main-container" style={{ padding: "0px 0px 0px 0px", overflowY: "hidden" }}>
       <div
         style={{
           height: "100vh",
@@ -1034,7 +1034,7 @@ export default function Home() {
           className="social-media-feed"
           data-aos="fade-right"
         >
-          <h1>TESTIMONIALS</h1>
+          <h1 style={{marginTop: "0px"}}>TESTIMONIALS</h1>
           <div className="center-hrz" style={{ marginTop: "60px" }}>
             {/* Products section */}
             <div className="sliderx-container">
@@ -1045,10 +1045,10 @@ export default function Home() {
                       <span style={{color: "#94C93D", fontSize: "50px"}}>
                         <FaQuoteLeft />
                       </span>
-                      <div>{x.message}</div>
+                      <p>{x.message}</p>
                       {/* <hr className="new1" /> */}
                       <hr style={{margin: "10px 0px", padding: "0px"}}/>
-                      <div className="boxes"> -{x.parent}-</div>
+                      <p style={{fontWeight: "bold"}}>-{x.parent}-</p>
                     </div>
                   </div>
                 );

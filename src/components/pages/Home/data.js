@@ -128,7 +128,7 @@ const ServicesInfo = [
     service_name: "3D PRINTING",
     description:
       // 'We analyse business, financial, IT systems and conduct assessments of new information systems to identify risks and improve IT-enabled business processes. ',
-      "We analyse business, financial, IT systems and conduct assessments of new information systems.",
+      "We offer professional 3d printing that is accurate, consistent and tailored to your products and ideas.",
   },
 ];
 // config information for the services
@@ -252,7 +252,7 @@ const WhySteam = [
   {
     id: 4,
     image: WhySteam4,
-    title: "Cutting-Edge Resources",
+    title: "Innovative Resources",
   },
   {
     id: 5,
@@ -272,7 +272,7 @@ const WhySteam = [
   {
     id: 8,
     image: WhySteam8,
-    title: "Real-World Relevance",
+    title: "Practical Relevance",
   },
 ];
 //parents feedback slide configuration
