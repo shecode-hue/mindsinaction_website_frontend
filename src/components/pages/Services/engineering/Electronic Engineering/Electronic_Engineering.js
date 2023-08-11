@@ -1,16 +1,16 @@
 import React from "react";
-import { Tree, TreeNode } from "react-organizational-chart";
+// import { Tree, TreeNode } from "react-organizational-chart";
 import laptop_repair from "../../../../images/services-images/engineering/Electronic Engineering/laptop_repair.jpg";
 import pcb_design from "../../../../images/services-images/engineering/Electronic Engineering/pcb_design.jpeg";
 import smartHome from "../../../../images/services-images/engineering/Electronic Engineering/smartHome.png"
 import voltageReg from "../../../../images/services-images/engineering/Electronic Engineering/voltageReg.jpg"
-import male from "../../../../images/services-images/engineering/Electronic Engineering/male_avatar.png";
-import { AiOutlineAim, BsEye, GiDiamondHard } from "react-icons/all";
+// import male from "../../../../images/services-images/engineering/Electronic Engineering/male_avatar.png";
+// import { AiOutlineAim, BsEye, GiDiamondHard } from "react-icons/all";
 import "./Electronic_Engineering.css";
 import Security from "../../../../images/services-images/engineering/Electrical-Engineering/Security.jpg";
-import Tumelo from "../../../../images/coach-images/Tumelo.jpg";
-import shepherd from "../../../../images/coach-images/Sheperd.jpg";
-import Tito from "../../../../images/coach-images/Tito.jpg";
+// import Tumelo from "../../../../images/coach-images/Tumelo.jpg";
+// import shepherd from "../../../../images/coach-images/Sheperd.jpg";
+// import Tito from "../../../../images/coach-images/Tito.jpg";
 
 function Electronic_Engineering() {
   return (
@@ -18,25 +18,25 @@ function Electronic_Engineering() {
       <div
         className="Electronic_Engineering-main"
       >
-        <div className="electronic-engineering-main-heading">
-          <h1>Welcome to our Electronics Engineering Department</h1>
+        {/* <div className="electronic-engineering-main-heading">
+          <h1>Welcome to our Electronics Engineering Department</h1> */}
           {/* <p>
             Electronics engineering is an a branch of engineering that deals with the design, fabrication,
             and operation of circuits, electronic devices, and systems.
           </p> */}
-        </div>
+        {/* </div> */}
 
-        <div className="electronic-engineering-title-header">
+        {/* <div className="electronic-engineering-title-header">
           <h1>DEPARTMENT STRUCTURE</h1>
-        </div>
+        </div> */}
 
-        <center>
-          <div className="department-main">
+        {/* <center>
+          <div className="department-main"> */}
             {/* <div className="heading">
           <h3>Department Structure</h3>
         </div> */}
 
-            <Tree
+            {/* <Tree
               // lineColor={"#a4b0be"}
               lineColor={"#fff"}
               label={
@@ -147,7 +147,7 @@ function Electronic_Engineering() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
 
         <div className="Electronic_Engineering-services">

@@ -1,10 +1,10 @@
 import React from "react";
-import { Tree, TreeNode } from "react-organizational-chart";
-import David from "../../../images/services-images/ict/profile/David2.jpg";
-import terry from "../../../images/services-images/ict/profile/terry.jpg";
-import andreas from "../../../images/services-images/ict/profile/andreas.jpg";
-import tito from "../../../images/services-images/ict/profile/tito.jpg";
-import Jesse from "../../../images/services-images/ict/profile/Jesse.jpg";
+// import { Tree, TreeNode } from "react-organizational-chart";
+// import David from "../../../images/services-images/ict/profile/David2.jpg";
+// import terry from "../../../images/services-images/ict/profile/terry.jpg";
+// import andreas from "../../../images/services-images/ict/profile/andreas.jpg";
+// import tito from "../../../images/services-images/ict/profile/tito.jpg";
+// import Jesse from "../../../images/services-images/ict/profile/Jesse.jpg";
 import web_dev from "../../../images/services-images/ict/webDevelopment.jpg";
 import mobile_dev from "../../../images/services-images/ict/mobile-app.jpeg";
 import web_app from "../../../images/services-images/ict/webApp.png";
@@ -17,7 +17,7 @@ import data_center from "../../../images/services-images/ict/dataCenter.png"
 // import rightArrow from "../../../icons/Img1.png";
 // import leftArrow from "../../../icons/Img2.png";
 // import natis_img from "../../../images/services-images/ict/projects/NaTIS.png"
-import { GiBullseye, BsEye, GiDiamondHard } from "react-icons/all";
+// import { GiBullseye, BsEye, GiDiamondHard } from "react-icons/all";
 // import Slider from "react-slick";
 import "./ICT.css";
 
@@ -107,7 +107,7 @@ function ICT() {
       <div
         className="ict-main"
       >
-        <div className="ict-main-heading">
+        {/* <div className="ict-main-heading">
           <h1>Welcome to our ICT Department</h1>
         </div>
 
@@ -115,12 +115,12 @@ function ICT() {
           <h1>Department Structure</h1>
         </div>
         <center>
-          <div className="department-main">
+          <div className="department-main"> */}
             {/* <div className="heading">
             <h3>Department Structure</h3>
           </div> */}
 
-            <Tree
+            {/* <Tree
               // lineColor={"#a4b0be"}
               lineColor={"#fff"}
               label={
@@ -164,7 +164,7 @@ function ICT() {
                   </div>
                 }
               />
-            </TreeNode> */}
+            </TreeNode> *
                     <TreeNode
                       label={
                         <div className="dep-card">
@@ -222,9 +222,9 @@ function ICT() {
               </TreeNode>
             </Tree>
           </div>
-        </center>
+        </center> */}
 
-        <div className="department-mision-vision-values">
+        {/* <div className="department-mision-vision-values">
           <div className="container" style={{height: "100%"}}>
             <div className="icon">
               <div className="ico-container">
@@ -267,7 +267,7 @@ function ICT() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="ict-services">
           {/* <div className="heading">
             <h3>Our Services</h3>

@@ -858,15 +858,6 @@ export default function Home() {
             <div className="info-content">
               {/* Place your extended information here */}
               <p>
-                STEAM education offers a comprehensive and dynamic approach to
-                learning that equips students with the skills and mindset needed
-                to thrive in an increasingly technology-driven and
-                interconnected world. It empowers learners to become critical
-                thinkers, problem solvers, and creative innovators, shaping them
-                into well-rounded individuals prepared for the challenges and
-                opportunities of the future.
-              </p>
-              <p>
                 The benefits of STEAM education are numerous and have a
                 significant impact on society as a whole. Some of the key
                 advantages include:
