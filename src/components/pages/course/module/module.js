@@ -175,6 +175,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 1500,
       moduleEquipment: "Dash Robot & Tablet",
+      moduleColor: "#4EC6E1",
     },
     {
       moduleImage: scratchProgramming,
@@ -203,6 +204,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 1500,
       moduleEquipment: "Lego Robotics Ev3 Mindstorms education Kit & Laptop",
+      moduleColor: "#4EC6E1",
     },
     {
       moduleImage: steamEducationImage,
@@ -231,6 +233,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 1500,
       moduleEquipment: "Spike Prime & Laptop",
+      moduleColor: "#4EC6E1",
     },
   ];
 
@@ -261,6 +264,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 1500,
       moduleEquipment: "Laptop",
+      moduleColor: "#F9A32C",
     },
     {
       moduleImage: breadBoardImage,
@@ -293,6 +297,7 @@ export default function Module() {
       moduleEquipment: "Arduino Kit & Laptop",
       modulePrerequisiteHeading: "Prerequisite:",
       modulePrerequisite: "Module 1 – Introduction to Robotics and programming",
+      moduleColor: "#F9A32C",
     },
     {
       moduleImage: VeroBoardImage,
@@ -318,6 +323,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 1500,
       moduleEquipment: "Found at Mindsinaction",
+      moduleColor: "#F9A32C",
     },
     {
       moduleImage: VeroBoardImage,
@@ -345,6 +351,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 2000,
       moduleEquipment: "Laptops & Printed Circuit Boards",
+      moduleColor: "#F9A32C",
     },
   ];
 
@@ -375,6 +382,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 2000,
       moduleEquipment: "MecLab® Mechatronics Training System & Laptop",
+      moduleColor: "#32B069",
     },
     {
       moduleImage: tinkerCadImage,
@@ -405,6 +413,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 2000,
       moduleEquipment: "3D printer & Laptop",
+      moduleColor: "#32B069",
     },
     {
       moduleImage: cnc,
@@ -435,6 +444,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 2000,
       moduleEquipment: "Found at Mindsinaction",
+      moduleColor: "#32B069",
     },
   ];
 
@@ -468,6 +478,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 2000,
       moduleEquipment: "Laptop",
+      moduleColor: "#8fd81e",
     },
     {
       moduleImage: dev,
@@ -498,6 +509,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 2000,
       moduleEquipment: "Laptop",
+      moduleColor: "#8fd81e",
     },
     {
       moduleImage: mobileAppDevelopment,
@@ -528,6 +540,7 @@ export default function Module() {
       moduleTime: "14H00 – 16H30",
       moduleFee: 2000,
       moduleEquipment: "Laptop",
+      moduleColor: "#8fd81e",
     },
   ];
 
@@ -562,6 +575,7 @@ export default function Module() {
       moduleTime: "14H00 - 16H30",
       moduleFee: 1500,
       moduleEquipment: "Lab instruments",
+      moduleColor: "#716CAF",
     },
     {
       moduleImage: Physical_1_Image,
@@ -594,6 +608,7 @@ export default function Module() {
       moduleTime: "14H00 - 16H30",
       moduleFee: 1500,
       moduleEquipment: "Lab instruments",
+      moduleColor: "#716CAF",
     },
     {
       moduleImage: BiologyImage,
@@ -623,6 +638,7 @@ export default function Module() {
       moduleTime: "14H00 - 16H30",
       moduleFee: 1500,
       moduleEquipment: "Lab instruments",
+      moduleColor: "#716CAF",
     },
   ];
 
@@ -662,14 +678,28 @@ export default function Module() {
                 id="the-modules-select"
                 value={page}
                 onChange={handleOnChange}
+                style={{
+                  backgroundColor:
+                    moduleCluster[pageID()].find(
+                      (x) => x.forId === toggleTabState
+                    )?.moduleColor || "#8fd81e",
+                }}
               >
                 {moduleClusterLinks.map((x, i) => {
                   return (
-                    <option value={x.clusterValue}>{x.clusterName}</option>
+                    <option value={x.clusterValue} style={{ color: x.moduleColor }}>{x.clusterName}</option>
                   );
                 })}
               </select>
-              <span className="select-arrow"></span>
+              <span
+                className="select-arrow"
+                style={{
+                  backgroundColor:
+                    moduleCluster[pageID()].find(
+                      (x) => x.forId === toggleTabState
+                    )?.moduleColor || "#8fd81e",
+                }}
+              ></span>
             </div>
             {/* names of individul modules */}
             <ul className="label-container">
@@ -706,7 +736,7 @@ export default function Module() {
                         style={{
                           height: "350px !important",
                           // border: "3px dotted red",
-                          borderRadius:"50px 0px 0px 50px",
+                          // borderRadius:"50px 0px 0px 50px",
                           backgroundImage: `url(${x.moduleImage})`,
                           backgroundRepeat: "no-repeat",
                           backgroundPosition: "center",
@@ -714,13 +744,20 @@ export default function Module() {
                           // zIndex:"1000",
                         }}
                       >
-                       {/* <img src={x.moduleImage} alt="" data-aos="fade-right"/> */}
+                        {/* <img src={x.moduleImage} alt="" data-aos="fade-right"/> */}
                       </div>
                       <div className="Modules-Intro-Card-right">
                         <div className="module-title">
-                          <h1>{x.moduleName}</h1>
+                          <h1 style={{ color: x.moduleColor }}>
+                            {x.moduleName}
+                          </h1>
                         </div>
-                        <div className="udertitle_div">
+                        <div
+                          className="udertitle_div"
+                          style={{
+                            backgroundColor: x.moduleColor,
+                          }}
+                        >
                           <div className="undertitle_div_left">
                             <div className="module-icon">
                               <BiUserCircle
@@ -783,13 +820,16 @@ export default function Module() {
                           <p>{x.moduleDescription}</p>
                         </div>
                         <div className="intro-bottom">
-                          <div className="module-3">
+                          <div className="module-3 ">
                             <div className="module-icon">
                               {/* <BiTimeFive /> */}
                             </div>
                             <p>
                               <strong
-                                style={{ fontSize: "18px", color: "#000000" }}
+                                style={{
+                                  fontSize: "18px",
+                                  color: x.moduleColor,
+                                }}
                               >
                                 Time
                               </strong>
@@ -804,7 +844,10 @@ export default function Module() {
                             </div>
                             <p>
                               <strong
-                                style={{ fontSize: "18px", color: "#000000" }}
+                                style={{
+                                  fontSize: "18px",
+                                  color: x.moduleColor,
+                                }}
                               >
                                 Module Fee
                               </strong>
@@ -818,13 +861,17 @@ export default function Module() {
                             </div>
                             <p>
                               <strong
-                                style={{ fontSize: "18px", color: "#000000" }}
+                                style={{
+                                  fontSize: "18px",
+                                  color: x.moduleColor,
+                                }}
                               >
                                 Equipment
                               </strong>
                               {x.moduleEquipment}
                             </p>
                           </div>
+                          <div class="vl"></div>
                         </div>
                       </div>
                     </div>
@@ -852,7 +899,7 @@ export default function Module() {
                         </div>
                       </div>
 
-                      <h2 data-aos="fade-up" style={{ paddingTop: "30px" }}>
+                      <h2 className="module-highlights-and-competencies" data-aos="fade-up" style={{ paddingTop: "30px" }}>
                         Highlights and Competencies
                       </h2>
                       <div className="module-bot">
@@ -889,7 +936,13 @@ export default function Module() {
                       </div>
                       <div className="Bottom_register_button">
                         <NavLink exact to="/register">
-                          <button>Register Now</button>
+                          <button
+                            style={{
+                              backgroundColor: x.moduleColor,
+                            }}
+                          >
+                            Register Now
+                          </button>
                         </NavLink>
                       </div>
                     </div>
