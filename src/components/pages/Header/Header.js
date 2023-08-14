@@ -12,15 +12,16 @@ export default function Header() {
 
 
 
-
   const elementRef = useRef();
   const elementRef2 = useRef();
+  const elementRef3 = useRef();
 
   const dropdown = (event) => {
     event.preventDefault();
     if (elementRef.current) {
       const element1 = elementRef.current;
       const element2 = elementRef2.current;
+      const element3 = elementRef3.current;
       // const className = initialClass.trim();
 
       // Check if the class exists on the element
@@ -35,12 +36,15 @@ export default function Header() {
       }
       element2.classList.remove("show");
       element2.classList.add("dontShow");
+      element3.classList.remove("show");
+      element3.classList.add("dontShow");
     }
   };
 
   const dropdown2 = (event) => {
     event.preventDefault();
     if (elementRef2.current) {
+      const element3 = elementRef3.current
       const element2 = elementRef2.current;
       const element1 = elementRef.current;
 
@@ -58,6 +62,34 @@ export default function Header() {
       }
       element1.classList.remove("show");
       element1.classList.add("dontShow");
+      element3.classList.remove("show");
+      element3.classList.add("dontShow");
+    }
+  };
+
+  const dropdown3 = (event) => {
+    event.preventDefault();
+    if (elementRef3.current) {
+      const element3 = elementRef3.current;
+      const element2 = elementRef2.current;
+      const element1 = elementRef.current;
+
+      // const className = initialClass.trim();
+
+      // Check if the class exists on the element
+      if (element3.classList.contains("dontShow")) {
+        // If the class exists, remove it
+        element3.classList.remove("dontShow");
+        element3.classList.add("show");
+      } else {
+        // If the class doesn't exist, add it
+        element3.classList.remove("show");
+        element3.classList.add("dontShow");
+      }
+      element1.classList.remove("show");
+      element1.classList.add("dontShow");
+      element2.classList.remove("show");
+      element2.classList.add("dontShow");
     }
   };
 
@@ -69,10 +101,18 @@ export default function Header() {
     elementRef.current.classList.add("dontShow");
     elementRef2.current.classList.remove("show");
     elementRef2.current.classList.add("dontShow");
+    elementRef3.current.classList.remove("show");
+    elementRef3.current.classList.add("dontShow");
   };
 
   const mobileNavigate = () => {
     setIsOpen(!isOpen);
+    elementRef.current.classList.remove("show");
+    elementRef.current.classList.add("dontShow");
+    elementRef2.current.classList.remove("show");
+    elementRef2.current.classList.add("dontShow");
+    elementRef3.current.classList.remove("show");
+    elementRef3.current.classList.add("dontShow");
   }
 
   return (
@@ -109,9 +149,49 @@ export default function Header() {
                 </li></NavLink>
               </ul>
             </li>
-
             <li>
-              <NavLink exact to="/modules" activeClassName="active">Modules</NavLink>
+              <NavLink
+                to={{ pathname: "/module", state: { modData: "robotics" } }}
+                activeClassName="active"
+              >
+                Modules <IoIosArrowDown style={{ fontSize: "12px" }} />
+              </NavLink>
+              <ul
+                ref={elementRef3}
+                className="dropdown"
+              >
+                <NavLink
+                  to={{ pathname: "/module", state: { modData: "robotics" } }}
+                >
+                  <li>Robotics</li>
+                </NavLink>
+                <NavLink
+                  to={{
+                    pathname: "/module",
+                    state: { modData: "electronics" },
+                  }}
+                >
+                  <li>Electronics</li>
+                </NavLink>
+                <NavLink
+                  to={{
+                    pathname: "/module",
+                    state: { modData: "mechatronics" },
+                  }}
+                >
+                  <li>Mechatronics</li>
+                </NavLink>
+                <NavLink
+                  to={{ pathname: "/module", state: { modData: "software" } }}
+                >
+                  <li>Software</li>
+                </NavLink>
+                <NavLink
+                  to={{ pathname: "/module", state: { modData: "science" } }}
+                >
+                  <li className="last-navlink">Science</li>
+                </NavLink>
+              </ul>
             </li>
             <li>
               <NavLink exact to="/services" activeClassName="active">Services <IoIosArrowDown style={{fontSize: "12px"}}/></NavLink>
@@ -174,7 +254,7 @@ export default function Header() {
             </li>
             <li>
               <NavLink onClick={dropdown} exact to="/profile" activeClassName="active">
-                Who We Are <IoIosArrowDown />
+                Who We Are <IoIosArrowDown style={{ fontSize: "12px" }} />
               </NavLink>
               <ul ref={elementRef} onClick={mobileNavigate} className='dropdown-who-we-are dontShow'>
                 <NavLink to="/profile"> <li>
@@ -195,13 +275,54 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <NavLink onClick={mobileNavigate} exact to="/modules" activeClassName="active">
-                Modules
+              <NavLink
+                onClick={dropdown3}
+                to={{ pathname: "/module", state: { modData: "robotics" } }}
+                activeClassName="active"
+              >
+                Modules <IoIosArrowDown style={{ fontSize: "12px" }} />
               </NavLink>
+              <ul
+                ref={elementRef3}
+                onClick={mobileNavigate}
+                className="dropdown-modules dontShow"
+              >
+                <NavLink
+                  to={{ pathname: "/module", state: { modData: "robotics" } }}
+                >
+                  <li>Robotics</li>
+                </NavLink>
+                <NavLink
+                  to={{
+                    pathname: "/module",
+                    state: { modData: "electronics" },
+                  }}
+                >
+                  <li>Electronics</li>
+                </NavLink>
+                <NavLink
+                  to={{
+                    pathname: "/module",
+                    state: { modData: "mechatronics" },
+                  }}
+                >
+                  <li>Mechatronics</li>
+                </NavLink>
+                <NavLink
+                  to={{ pathname: "/module", state: { modData: "software" } }}
+                >
+                  <li>Software</li>
+                </NavLink>
+                <NavLink
+                  to={{ pathname: "/module", state: { modData: "science" } }}
+                >
+                  <li className="last-navlink">Science</li>
+                </NavLink>
+              </ul>
             </li>
             <li>
               <NavLink onClick={dropdown2} exact to="/services" activeClassName="active">
-                Services <IoIosArrowDown />
+                Services <IoIosArrowDown style={{ fontSize: "12px" }} />
               </NavLink>
               <ul ref={elementRef2} onClick={mobileNavigate} className='dropdown-services dontShow'>
                 <NavLink to="/ict"><li>
