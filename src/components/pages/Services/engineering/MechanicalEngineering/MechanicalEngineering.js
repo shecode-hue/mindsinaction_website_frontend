@@ -1,12 +1,12 @@
 import React from "react";
-import { Tree, TreeNode } from "react-organizational-chart";
-import dev_women from "../../../../images/services-images/mechanical_eng/profile/dev-profile-women.png";
-import dev_men from "../../../../images/services-images/mechanical_eng/profile/dev-profile.png";
+// import { Tree, TreeNode } from "react-organizational-chart";
+// import dev_women from "../../../../images/services-images/mechanical_eng/profile/dev-profile-women.png";
+// import dev_men from "../../../../images/services-images/mechanical_eng/profile/dev-profile.png";
 import x3D_printing from "../../../../images/services-images/mechanical_eng/x3D_printing.jpg";
 import x1laser_cutting from "../../../../images/services-images/mechanical_eng/x1laser_cutting.jpg";
 import x2numeric_control from "../../../../images/services-images/mechanical_eng/x2numeric_control.jpg";
 import x4fabrication from "../../../../images/services-images/mechanical_eng/x4fabrication.png";
-import { AiOutlineAim, BsEye, GiDiamondHard } from "react-icons/all";
+// import { AiOutlineAim, BsEye, GiDiamondHard } from "react-icons/all";
 import "./MechanicalEngineering.css";
 
 function MechanicalEngineering() {
@@ -15,9 +15,9 @@ function MechanicalEngineering() {
       <div
         className="mechanical_engineering-main"
       >
-        <div className="mechanical-engineering-main-heading">
+        {/* <div className="mechanical-engineering-main-heading">
           <h1>Welcome to our Mechanical Engineering Division</h1>
-        </div>
+        </div> */}
         {/* <h1>Welcome to our Mechanical Engineering Division</h1> */}
         {/* <div className="center-hrz">
           <p className="position-description">
@@ -25,87 +25,87 @@ function MechanicalEngineering() {
           </p>
         </div> */}
 
-        <div className="mechanical-title-header">
+        {/* <div className="mechanical-title-header">
             <h1>Department Structure</h1>
-          </div>
+          </div> */}
 
-<center>
-<div className="department-main">
-          {/* <div className="heading">
+        {/* <center>
+          <div className="department-main">
+            {/* <div className="heading">
           <h3>Department Structure</h3>
-        </div> */}
-          
-          <Tree
-            // lineColor={"#a4b0be"}
-            lineColor={"#fff"}
-            label={
-              <div className="dep-card">
-                <img src={dev_women} alt="dev_women" />
-                <p>Director</p>
-                <h5>Petenen Nankela</h5>
-                <h6>Design and Fabrication</h6>
-              </div>
-            }
-            className="tree-root"
-          >
-            <TreeNode
-              label={
-                <div className="dep-card">
-                  <img src={dev_men} alt="dev_men" />
-                  <p>Design</p>
-                  <h5>Mbakumba Tjihonge "Chris"</h5>
-                </div>
-              }
-            >
-              <TreeNode
-                label={
-                  <div className="pos">
-                    <p>Engineer</p>
-                  </div>
-                }
-              />
-            </TreeNode>
-            <TreeNode
+        </div> *
+
+            <Tree
+              // lineColor={"#a4b0be"}
+              lineColor={"#fff"}
               label={
                 <div className="dep-card">
                   <img src={dev_women} alt="dev_women" />
-                  <p>Fabrication</p>
-                  <h5>Uaatjo Muhuure</h5>
+                  <p>Director</p>
+                  <h5>Petenen Nankela</h5>
+                  <h6>Design and Fabrication</h6>
                 </div>
               }
+              className="tree-root"
             >
               <TreeNode
                 label={
-                  <div className="pos">
-                    <p>Engineer</p>
+                  <div className="dep-card">
+                    <img src={dev_men} alt="dev_men" />
+                    <p>Design</p>
+                    <h5>Mbakumba Tjihonge "Chris"</h5>
                   </div>
                 }
-              />
-            </TreeNode>
-            <TreeNode
-              label={
-                <div className="dep-card">
-                  <img src={dev_women} alt="dev_women" />
-                  <p>Assembling</p>
-                  <h5>Bold Creations</h5>
-                </div>
-              }
-            >
+              >
+                <TreeNode
+                  label={
+                    <div className="pos">
+                      <p>Engineer</p>
+                    </div>
+                  }
+                />
+              </TreeNode>
               <TreeNode
                 label={
-                  <div className="pos">
-                    <p>Manufacturer</p>
+                  <div className="dep-card">
+                    <img src={dev_women} alt="dev_women" />
+                    <p>Fabrication</p>
+                    <h5>Uaatjo Muhuure</h5>
                   </div>
                 }
-              />
-            </TreeNode>
-          </Tree>
-        </div>
-</center>
-        
+              >
+                <TreeNode
+                  label={
+                    <div className="pos">
+                      <p>Engineer</p>
+                    </div>
+                  }
+                />
+              </TreeNode>
+              <TreeNode
+                label={
+                  <div className="dep-card">
+                    <img src={dev_women} alt="dev_women" />
+                    <p>Assembling</p>
+                    <h5>Bold Creations</h5>
+                  </div>
+                }
+              >
+                <TreeNode
+                  label={
+                    <div className="pos">
+                      <p>Manufacturer</p>
+                    </div>
+                  }
+                />
+              </TreeNode>
+            </Tree>
+          </div>
+        </center>
+
 
         <div className="department-mision-vision-values">
-          <div className="container">
+          <div className="container" style={{ height: "100%" }}>
             <div className="icon">
               <div className="ico-container">
                 <BsEye className="ico" />
@@ -121,7 +121,7 @@ function MechanicalEngineering() {
             </div>
           </div>
 
-          <div className="container">
+          <div className="container" style={{ height: "100%" }}>
             <div className="icon">
               <div className="ico-container">
                 <AiOutlineAim className="ico" />
@@ -135,7 +135,7 @@ function MechanicalEngineering() {
               </p>
             </div>
           </div>
-          <div className="container">
+          <div className="container" style={{ height: "100%" }}>
             <div className="icon">
               <div className="ico-container">
                 <GiDiamondHard className="ico" />
@@ -149,7 +149,7 @@ function MechanicalEngineering() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="mechanical_engineering-services">
           {/* <div className="heading">

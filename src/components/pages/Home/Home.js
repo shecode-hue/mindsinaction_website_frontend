@@ -27,17 +27,17 @@ export default function Home() {
     Software,
     Mechatronics,
     Electronics,
-    Robotics, 
-    SlickArrowLeft, 
-    SlickArrowRight, 
-    imageSlide, 
-    ServicesInfo, 
-    ParentsFeedback, 
-    partners, 
-    legoimages, 
-    textSlide, 
-    WhySteam, 
-    cards 
+    Robotics,
+    SlickArrowLeft,
+    SlickArrowRight,
+    imageSlide,
+    ServicesInfo,
+    ParentsFeedback,
+    partners,
+    legoimages,
+    textSlide,
+    WhySteam,
+    cards
   } = data;
 
   const [products, setProducts] = useState([]);
@@ -258,7 +258,7 @@ export default function Home() {
   };
 
   return (
-    <div className="home-main-container" style={{ padding: "0px 0px 0px 0px" }}>
+    <div className="home-main-container" style={{ padding: "0px 0px 0px 0px", overflowY: "hidden" }}>
       <div
         style={{
           height: "100vh",
@@ -271,9 +271,8 @@ export default function Home() {
           {imageSlide.map((slide, index) => (
             <div
               key={index}
-              className={`image-slide ${
-                index === currentState ? "active" : ""
-              }`}
+              className={`image-slide ${index === currentState ? "active" : ""
+                }`}
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundPosition: "top center",
@@ -286,7 +285,7 @@ export default function Home() {
                 <div className="text">
                   <h1>{slide.title}</h1>
                   <div className="center-hr">
-                    <hr />
+                    <hr className="hero-hr" />
                   </div>
                   <p>{slide.description}</p>
                   <NavLink exact to="/modules">
@@ -315,11 +314,13 @@ export default function Home() {
       </div>
 
       <div className="Background-div-top">
-        <div className="Modules-home" data-aos="fade-right">
+        <div className="Modules-home" 
+        // data-aos="fade-right"
+        >
           <h1>Modules</h1>
 
           {isDivVisible && (
-            
+
             <div className="Modules-home-cards">
               {cards.map((x, i) => {
                 return (
@@ -346,6 +347,7 @@ export default function Home() {
                         id={x.title}
                         style={{
                           backgroundColor: `#${x.color}`,
+                          color: "white"
                         }}
                         aria-hidden="true"
                       >
@@ -367,391 +369,391 @@ export default function Home() {
           {/* <Slider {...courseConfig}> */}
           {!isDivVisible && (
             <div className="center-hrz">
-            <div
-              className="Modules-home-cards"
-              style={{ marginBottom: "90px" }}
-            >
-              <Carousel
-                breakPoints={breakPoints}
-                enableAutoPlay={true}
-                autoPlaySpeed={6000}
-                style={{ margin: "0px 10px 50px 10px" }}
+              <div
+                className="Modules-home-cards"
+                style={{ marginBottom: "90px" }}
               >
-                {/* {cards.map((x, i) => { */}
-                {/* return ( */}
-                <Item>
-                  <div
-                    // key={i}
-                    className="Modules-item-mobile"
-                    onClick={showOverlay1}
-                    style={{
-                      backgroundColor: "#33A85B",
-                      cursor: "pointer",
-                    }}
-                  >
-                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                <Carousel
+                  breakPoints={breakPoints}
+                  enableAutoPlay={true}
+                  autoPlaySpeed={6000}
+                  style={{ margin: "0px 10px 50px 10px" }}
+                >
+                  {/* {cards.map((x, i) => { */}
+                  {/* return ( */}
+                  <Item>
+                    <div
+                      // key={i}
+                      className="Modules-item-mobile"
+                      onClick={showOverlay1}
+                      style={{
+                        backgroundColor: "#33A85B",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
                         </NavLink> */}
-                    <img src={Robotics} alt="Robotics" />
-                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                    <p
-                      style={{
-                        color: "white",
-                        position: "absolute",
-                        bottom: "0",
-                        top: "85%",
-                        left: "50%",
-                        transform: "translate(-50%)",
-                        fontSize: "20px",
-                      }}
-                    >
-                      Robotics
-                    </p>
-                    <div
-                      ref={overlay1}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#33A85B",
-                      }}
-                    >
-                      <h3
-                        id="Robotics"
+                      <img src={Robotics} alt="Robotics" />
+                      {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                      <p
                         style={{
-                          backgroundColor: "#33A85B",
+                          color: "white",
+                          position: "absolute",
+                          bottom: "0",
+                          top: "85%",
+                          left: "50%",
+                          transform: "translate(-50%)",
                           fontSize: "20px",
                         }}
-                        aria-hidden="true"
-                      ></h3>
-                    </div>
-                    <div
-                      ref={overlay1}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#33A85B",
-                      }}
-                    >
-                      <h3
-                        id="Robotics"
-                        style={{
-                          backgroundColor: "#33A85B",
-                          fontSize: "20px",
-                        }}
-                        aria-hidden="true"
                       >
                         Robotics
-                      </h3>
-                      <div className="Modules-item__body-mobile">
-                        <p>
-                          Students are introduced to the basics of robotics,
-                          programming, engineering, problem identification and
-                          collaboration.
-                        </p>
-                        <NavLink exact to="/modules" className="button-link">
-                          <button>Find out more</button>
-                        </NavLink>
+                      </p>
+                      <div
+                        ref={overlay1}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#33A85B",
+                        }}
+                      >
+                        <h3
+                          id="Robotics"
+                          style={{
+                            backgroundColor: "#33A85B",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        ></h3>
+                      </div>
+                      <div
+                        ref={overlay1}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#33A85B",
+                        }}
+                      >
+                        <h3
+                          id="Robotics"
+                          style={{
+                            backgroundColor: "#33A85B",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        >
+                          Robotics
+                        </h3>
+                        <div className="Modules-item__body-mobile">
+                          <p>
+                            Students are introduced to the basics of robotics,
+                            programming, engineering, problem identification and
+                            collaboration.
+                          </p>
+                          <NavLink exact to="/modules" className="button-link">
+                            <button>Find out more</button>
+                          </NavLink>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Item>
-                <Item>
-                  <div
-                    // key={i}
-                    className="Modules-item-mobile"
-                    onClick={showOverlay2}
-                    style={{
-                      backgroundColor: "#F37021",
-                      cursor: "pointer",
-                    }}
-                  >
-                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                  </Item>
+                  <Item>
+                    <div
+                      // key={i}
+                      className="Modules-item-mobile"
+                      onClick={showOverlay2}
+                      style={{
+                        backgroundColor: "#F37021",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
                         </NavLink> */}
-                    <img src={Electronics} alt="Electronics" />
-                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                    <p
-                      style={{
-                        color: "white",
-                        position: "absolute",
-                        bottom: "0",
-                        top: "85%",
-                        left: "50%",
-                        transform: "translate(-50%)",
-                        fontSize: "20px",
-                      }}
-                    >
-                      Electronics
-                    </p>
-                    <div
-                      ref={overlay2}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#F37021",
-                      }}
-                    >
-                      <h3
-                        id="Electronics"
+                      <img src={Electronics} alt="Electronics" />
+                      {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                      <p
                         style={{
-                          backgroundColor: "#F37021",
+                          color: "white",
+                          position: "absolute",
+                          bottom: "0",
+                          top: "85%",
+                          left: "50%",
+                          transform: "translate(-50%)",
                           fontSize: "20px",
                         }}
-                        aria-hidden="true"
-                      ></h3>
-                    </div>
-                    <div
-                      ref={overlay2}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#F37021",
-                      }}
-                    >
-                      <h3
-                        id="Electronics"
-                        style={{
-                          backgroundColor: "#F37021",
-                          fontSize: "20px",
-                        }}
-                        aria-hidden="true"
                       >
                         Electronics
-                      </h3>
-                      <div className="Modules-item__body-mobile">
-                        <p>
-                          Students learn how to solder, program electronics
-                          parts and circuits, and prototype using
-                          microcontrollers.
-                        </p>
-                        <NavLink exact to="/modules" className="button-link">
-                          <button>Find out more</button>
-                        </NavLink>
+                      </p>
+                      <div
+                        ref={overlay2}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#F37021",
+                        }}
+                      >
+                        <h3
+                          id="Electronics"
+                          style={{
+                            backgroundColor: "#F37021",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        ></h3>
+                      </div>
+                      <div
+                        ref={overlay2}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#F37021",
+                        }}
+                      >
+                        <h3
+                          id="Electronics"
+                          style={{
+                            backgroundColor: "#F37021",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        >
+                          Electronics
+                        </h3>
+                        <div className="Modules-item__body-mobile">
+                          <p>
+                            Students learn how to solder, program electronics
+                            parts and circuits, and prototype using
+                            microcontrollers.
+                          </p>
+                          <NavLink exact to="/modules" className="button-link">
+                            <button>Find out more</button>
+                          </NavLink>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Item>
-                <Item>
-                  <div
-                    // key={i}
-                    className="Modules-item-mobile"
-                    onClick={showOverlay3}
-                    style={{
-                      backgroundColor: "#FFCD05",
-                      cursor: "pointer",
-                    }}
-                  >
-                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                  </Item>
+                  <Item>
+                    <div
+                      // key={i}
+                      className="Modules-item-mobile"
+                      onClick={showOverlay3}
+                      style={{
+                        backgroundColor: "#FFCD05",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
                         </NavLink> */}
-                    <img src={Mechatronics} alt="Mechatronics" />
-                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                    <p
-                      style={{
-                        color: "white",
-                        position: "absolute",
-                        bottom: "0",
-                        top: "85%",
-                        left: "50%",
-                        transform: "translate(-50%)",
-                        fontSize: "20px",
-                      }}
-                    >
-                      Mechatronics
-                    </p>
-                    <div
-                      ref={overlay3}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#FFCD05",
-                      }}
-                    >
-                      <h3
-                        id="Mechatronics"
+                      <img src={Mechatronics} alt="Mechatronics" />
+                      {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                      <p
                         style={{
-                          backgroundColor: "#FFCD05",
+                          color: "white",
+                          position: "absolute",
+                          bottom: "0",
+                          top: "85%",
+                          left: "50%",
+                          transform: "translate(-50%)",
                           fontSize: "20px",
                         }}
-                        aria-hidden="true"
-                      ></h3>
-                    </div>
-                    <div
-                      ref={overlay3}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#FFCD05",
-                      }}
-                    >
-                      <h3
-                        id="Mechatronics"
-                        style={{
-                          backgroundColor: "#FFCD05",
-                          fontSize: "20px",
-                        }}
-                        aria-hidden="true"
                       >
                         Mechatronics
-                      </h3>
-                      <div className="Modules-item__body-mobile">
-                        <p>
-                          Students will learn a design process that includes a
-                          combination of mechanical, electrical and computer
-                          engineering.
-                        </p>
-                        <NavLink exact to="/modules" className="button-link">
-                          <button>Find out more</button>
-                        </NavLink>
+                      </p>
+                      <div
+                        ref={overlay3}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#FFCD05",
+                        }}
+                      >
+                        <h3
+                          id="Mechatronics"
+                          style={{
+                            backgroundColor: "#FFCD05",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        ></h3>
+                      </div>
+                      <div
+                        ref={overlay3}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#FFCD05",
+                        }}
+                      >
+                        <h3
+                          id="Mechatronics"
+                          style={{
+                            backgroundColor: "#FFCD05",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        >
+                          Mechatronics
+                        </h3>
+                        <div className="Modules-item__body-mobile">
+                          <p>
+                            Students will learn a design process that includes a
+                            combination of mechanical, electrical and computer
+                            engineering.
+                          </p>
+                          <NavLink exact to="/modules" className="button-link">
+                            <button>Find out more</button>
+                          </NavLink>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Item>
-                <Item>
-                  <div
-                    // key={i}
-                    className="Modules-item-mobile"
-                    onClick={showOverlay4}
-                    style={{
-                      backgroundColor: "#F05023",
-                      cursor: "pointer",
-                    }}
-                  >
-                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                  </Item>
+                  <Item>
+                    <div
+                      // key={i}
+                      className="Modules-item-mobile"
+                      onClick={showOverlay4}
+                      style={{
+                        backgroundColor: "#F05023",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
                         </NavLink> */}
-                    <img src={Science} alt="Science" />
-                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                    <p
-                      style={{
-                        color: "white",
-                        position: "absolute",
-                        bottom: "0",
-                        top: "85%",
-                        left: "50%",
-                        transform: "translate(-50%)",
-                        fontSize: "20px",
-                      }}
-                    >
-                      Science
-                    </p>
-                    <div
-                      ref={overlay4}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#F05023",
-                      }}
-                    >
-                      <h3
-                        id="Science"
+                      <img src={Science} alt="Science" />
+                      {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                      <p
                         style={{
-                          backgroundColor: "#F05023",
+                          color: "white",
+                          position: "absolute",
+                          bottom: "0",
+                          top: "85%",
+                          left: "50%",
+                          transform: "translate(-50%)",
                           fontSize: "20px",
                         }}
-                        aria-hidden="true"
-                      ></h3>
-                    </div>
-                    <div
-                      ref={overlay4}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#F05023",
-                      }}
-                    >
-                      <h3
-                        id="Science"
-                        style={{
-                          backgroundColor: "#F05023",
-                          fontSize: "20px",
-                        }}
-                        aria-hidden="true"
                       >
                         Science
-                      </h3>
-                      <div className="Modules-item__body-mobile">
-                        <p>
-                          Students perform experiments in biology, chemistry and
-                          physical science based on the school curriculum.
-                        </p>
-                        <NavLink exact to="/modules" className="button-link">
-                          <button>Find out more</button>
-                        </NavLink>
+                      </p>
+                      <div
+                        ref={overlay4}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#F05023",
+                        }}
+                      >
+                        <h3
+                          id="Science"
+                          style={{
+                            backgroundColor: "#F05023",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        ></h3>
+                      </div>
+                      <div
+                        ref={overlay4}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#F05023",
+                        }}
+                      >
+                        <h3
+                          id="Science"
+                          style={{
+                            backgroundColor: "#F05023",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        >
+                          Science
+                        </h3>
+                        <div className="Modules-item__body-mobile">
+                          <p>
+                            Students perform experiments in biology, chemistry and
+                            physical science based on the school curriculum.
+                          </p>
+                          <NavLink exact to="/modules" className="button-link">
+                            <button>Find out more</button>
+                          </NavLink>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Item>
-                <Item>
-                  <div
-                    // key={i}
-                    className="Modules-item-mobile"
-                    onClick={showOverlay5}
-                    style={{
-                      backgroundColor: "#7965AC",
-                      cursor: "pointer",
-                    }}
-                  >
-                    {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
+                  </Item>
+                  <Item>
+                    <div
+                      // key={i}
+                      className="Modules-item-mobile"
+                      onClick={showOverlay5}
+                      style={{
+                        backgroundColor: "#7965AC",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {/* <NavLink exact to="/modules" aria-labelledby={x.title}>
                           {" "}
                         </NavLink> */}
-                    <img src={Software} alt="Software" />
-                    {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
-                    <p
-                      style={{
-                        color: "white",
-                        position: "absolute",
-                        bottom: "0",
-                        top: "85%",
-                        left: "50%",
-                        transform: "translate(-50%)",
-                        fontSize: "20px",
-                      }}
-                    >
-                      Software
-                    </p>
-                    <div
-                      ref={overlay5}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#7965AC",
-                      }}
-                    >
-                      <h3
-                        id="Software"
+                      <img src={Software} alt="Software" />
+                      {/* <x.icon className="modules-icon" size='9rem' color="white" /> */}
+                      <p
                         style={{
-                          backgroundColor: "#7965AC",
+                          color: "white",
+                          position: "absolute",
+                          bottom: "0",
+                          top: "85%",
+                          left: "50%",
+                          transform: "translate(-50%)",
                           fontSize: "20px",
                         }}
-                        aria-hidden="true"
-                      ></h3>
-                    </div>
-                    <div
-                      ref={overlay5}
-                      className="dontShow"
-                      style={{
-                        backgroundColor: "#7965AC",
-                      }}
-                    >
-                      <h3
-                        id="Software"
-                        style={{
-                          backgroundColor: "#7965AC",
-                          fontSize: "20px",
-                        }}
-                        aria-hidden="true"
                       >
                         Software
-                      </h3>
-                      <div className="Modules-item__body-mobile">
-                        <p>
-                          Students are introduced to the basics of robotics,
-                          programming, engineering, problem identification and
-                          collaboration.
-                        </p>
-                        <NavLink exact to="/modules" className="button-link">
-                          <button>Find out more</button>
-                        </NavLink>
+                      </p>
+                      <div
+                        ref={overlay5}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#7965AC",
+                        }}
+                      >
+                        <h3
+                          id="Software"
+                          style={{
+                            backgroundColor: "#7965AC",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        ></h3>
+                      </div>
+                      <div
+                        ref={overlay5}
+                        className="dontShow"
+                        style={{
+                          backgroundColor: "#7965AC",
+                        }}
+                      >
+                        <h3
+                          id="Software"
+                          style={{
+                            backgroundColor: "#7965AC",
+                            fontSize: "20px",
+                          }}
+                          aria-hidden="true"
+                        >
+                          Software
+                        </h3>
+                        <div className="Modules-item__body-mobile">
+                          <p>
+                            Students are introduced to the basics of robotics,
+                            programming, engineering, problem identification and
+                            collaboration.
+                          </p>
+                          <NavLink exact to="/modules" className="button-link">
+                            <button>Find out more</button>
+                          </NavLink>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Item>
-                {/* ); */}
-                {/* })} */}
-              </Carousel>
-            </div>
+                  </Item>
+                  {/* ); */}
+                  {/* })} */}
+                </Carousel>
+              </div>
             </div>
           )}
           {/* </Slider> */}
@@ -760,7 +762,7 @@ export default function Home() {
         <div
           className="display-home1"
           style={{ paddingLeft: "50px", paddingRight: "50px" }}
-          data-aos="fade-left"
+          // data-aos="fade-left"
         >
           <div className="What-is-STEAM-Education-home">
             <div class="box-for-image-moving-UpandDown"></div>
@@ -804,7 +806,7 @@ export default function Home() {
         {/* small screen */}
         <div
           className="What-is-STEAM-Education-home-mobile display-home2"
-          data-aos="fade-left"
+          // data-aos="fade-left"
         >
           <center>
             <div class="box-for-image-moving-UpandDown-mobile"></div>
@@ -844,7 +846,9 @@ export default function Home() {
             Trigger
           </button>
         </div>
-        <div className="button-container" data-aos="fade-left">
+        <div className="button-container"
+        //  data-aos="fade-left"
+        >
           <button
             className={`info-button ${showInfo ? "active" : ""}`}
             onClick={handleClick}
@@ -857,15 +861,6 @@ export default function Home() {
           {showInfo && (
             <div className="info-content">
               {/* Place your extended information here */}
-              <p>
-                STEAM education offers a comprehensive and dynamic approach to
-                learning that equips students with the skills and mindset needed
-                to thrive in an increasingly technology-driven and
-                interconnected world. It empowers learners to become critical
-                thinkers, problem solvers, and creative innovators, shaping them
-                into well-rounded individuals prepared for the challenges and
-                opportunities of the future.
-              </p>
               <p>
                 The benefits of STEAM education are numerous and have a
                 significant impact on society as a whole. Some of the key
@@ -943,7 +938,9 @@ export default function Home() {
             </div>
           )}
         </div>
-        <div className="Why-steam" data-aos="fade-right">
+        <div className="Why-steam" 
+        // data-aos="fade-right"
+        >
           <h1>Why Mindsinaction STEAM Center?</h1>
           <div className="Why-steam-cards-outer">
             {isDivVisible && (
@@ -1002,7 +999,7 @@ export default function Home() {
         <div
           className="LegoGallery"
           style={{ paddingBottom: "80px" }}
-          data-aos="fade-left"
+          // data-aos="fade-left"
         >
           <h3 className="LegoGallery-text">
             With the hands-on approach to STEAM, we cultivate a generation of
@@ -1032,9 +1029,9 @@ export default function Home() {
 
         <div
           className="social-media-feed"
-          data-aos="fade-right"
+          // data-aos="fade-right"
         >
-          <h1>TESTIMONIALS</h1>
+          <h1 style={{marginTop: "0px"}}>TESTIMONIALS</h1>
           <div className="center-hrz" style={{ marginTop: "60px" }}>
             {/* Products section */}
             <div className="sliderx-container">
@@ -1042,9 +1039,13 @@ export default function Home() {
                 return (
                   <div key={i} className="chat-boxes">
                     <div className="box sb">
-                      <div>{x.message}</div>
+                      <span style={{color: "#94C93D", fontSize: "50px"}}>
+                        <FaQuoteLeft />
+                      </span>
+                      <p>{x.message}</p>
                       {/* <hr className="new1" /> */}
-                      <div className="boxes"> -{x.parent}-</div>
+                      <hr style={{margin: "10px 0px", padding: "0px"}}/>
+                      <p style={{fontWeight: "bold"}}>-{x.parent}-</p>
                     </div>
                   </div>
                 );
@@ -1064,7 +1065,9 @@ export default function Home() {
         </h2>
       </div>
       <div className="Background-div-bottom">
-        <div className="services-home-div" data-aos="fade-up">
+        <div className="services-home-div" 
+        // data-aos="fade-up"
+        >
           <div className="home-title-electronic">
             <h1>Other Services</h1>
           </div>
@@ -1136,7 +1139,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="electronic-home" data-aos="fade-up">
+        <div className="electronic-home" 
+        // data-aos="fade-up"
+        >
           <div style={{ marginTop: "" }} className="home-title-electronic">
             <h1>Electronic Shop</h1>
           </div>
@@ -1188,7 +1193,9 @@ export default function Home() {
       </div>
 
       <div className="partners-home" style={{ marginTop: "" }}>
-        <div data-aos="fade-up">
+        <div 
+        // data-aos="fade-up"
+        >
           <div style={{ marginTop: "" }} className="home-title-partners">
             <h1>Our Partners</h1>
           </div>

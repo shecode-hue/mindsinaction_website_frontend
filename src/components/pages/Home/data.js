@@ -36,6 +36,7 @@ import konrad from "../../images/Home_images/partners/logo_Kronrad.png";
 import namSience from "../../images/Home_images/partners/logo_Nam Science.png";
 import NCRST from "../../images/Home_images/partners/logo_NCRST.png";
 import UNESCO from "../../images/Logo_UNESCO.svg";
+import NamibiaBlue from "../../images/Home_images/partners/Namibia_Blue.png";
 
 import Science from "../../images/Home_images/Home-modules-images/Science.svg";
 import Software from "../../images/Home_images/Home-modules-images/Software.svg";
@@ -127,7 +128,7 @@ const ServicesInfo = [
     service_name: "3D PRINTING",
     description:
       // 'We analyse business, financial, IT systems and conduct assessments of new information systems to identify risks and improve IT-enabled business processes. ',
-      "We analyse business, financial, IT systems and conduct assessments of new information systems.",
+      "We offer professional 3d printing that is accurate, consistent and tailored to your products and ideas.",
   },
 ];
 // config information for the services
@@ -184,6 +185,10 @@ const partners = [
   {
     link: "https://www.unesco.org/en",
     image: UNESCO,
+  },
+  {
+    link: "https://flyinglabs.org/namibia/",
+    image: NamibiaBlue,
   },
 ];
 
@@ -247,7 +252,7 @@ const WhySteam = [
   {
     id: 4,
     image: WhySteam4,
-    title: "Cutting-Edge Resources",
+    title: "Innovative Resources",
   },
   {
     id: 5,
@@ -267,7 +272,7 @@ const WhySteam = [
   {
     id: 8,
     image: WhySteam8,
-    title: "Real-World Relevance",
+    title: "Practical Relevance",
   },
 ];
 //parents feedback slide configuration

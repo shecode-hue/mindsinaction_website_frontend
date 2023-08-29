@@ -135,9 +135,9 @@ li {
   color: white;
 }
 
-.modules-select option:hover {
-  /* background-color: rgb(49, 141, 12); */
-}
+/* .modules-select option:hover {
+  background-color: rgb(49, 141, 12);
+} */
 
 .select-arrow {
   border-radius: 0 0 0 0;
@@ -484,9 +484,9 @@ li {
 .module-mid {
   display: flex;
 }
-.module-bot {
-  /* border: 3px dotted red ; */
-}
+/* .module-bot {
+  border: 3px dotted red ;
+} */
 
 .module-mid {
   padding: 0 3em 1.5em 3em;

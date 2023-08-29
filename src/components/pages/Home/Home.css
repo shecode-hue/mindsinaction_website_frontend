@@ -349,7 +349,7 @@ a {
   margin-right: auto;
   width: 90%;
   margin-top: 55px;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
 }
 
 @media screen and (max-width: 400px) {
@@ -362,12 +362,12 @@ a {
 
 .home-main-container .course-image-cards img,
 .home-main-container .product-image-card img {
-  width: 100%;
-  margin: 0 auto;
+  display: block;
+  width: 90%;
   height: 150px;
-  margin-top: 15px;
   cursor: pointer;
   /* object-fit: cover; */
+  margin: 10px auto;
 }
 
 .home-main-container a {
@@ -1120,8 +1120,8 @@ a {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-radius: 30px;
-  box-shadow: 0 4px 4px 0 rgba(133, 131, 131, 0.2),
-    0 6px 10px 0 rgba(133, 131, 131, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(6, 81, 142, 0.05),
+    0 6px 10px 0 rgba(6, 81, 142, 0.05);
 }
 
 @media only screen and (max-width: 400px) {
@@ -1486,20 +1486,20 @@ styling for modelues cards */
 
 .Why-steam-card {
   width: 250px;
-  height: 220PX;
+  height: 230px;
   /* border:3px red dotted; */
   background-color: white;
   color: #061fae;
   margin: 30px 20px;
   border-radius: 30px;
-  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0.1rem 0.1rem 1rem rgba(6, 81, 142, 0.05);
   animation: ease-in;
 }
 
 @media only screen and (min-width: 400px ) {
   .Why-steam-card:hover {
     transform: scale(1.1);
-    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.6);
+    /* box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.6); */
   }
   
   .Why-steam-card-image {
@@ -1546,7 +1546,7 @@ lego gallery styling */
 }
 
 .LegoGallery {
-  width: 98%;
+  width: 100%;
   height: 400px;
   /* border:3px dotted red; */
   display: flex;
@@ -1626,13 +1626,25 @@ lego gallery styling */
 
 /* styling for chat-boxes */
 .social-media-feed {
-  padding: 0px 50px;
+  padding: 50px 50px;
   text-align: center;
   justify-content: center;
   /* border: 3px dotted red; */
   /* border: 3px dotted red; */
-
 }
+
+@media only screen and (max-width: 800px) {
+  .social-media-feed {
+    padding: 150px 50px 0px 50px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .social-media-feed {
+    padding: 50px 50px 0px 50px;
+  }
+}
+
 .social-media-feed-box{
 display: flex;
 justify-content: center;
@@ -1664,20 +1676,26 @@ align-items: center;
   width: 300px;
   /* margin: 50px auto; */
   margin-bottom: 100px;
-  background: #8f63db;
+  background: #fff;
   /* padding: 10px; */
   padding: 20px 20px 20px 20px;
   text-align: center;
   font-weight: 900;
-  color: #fff;
+  color: #4F85C5;
   font-family: arial;
   position: relative;
   border-radius: 20px;
   /* border: 3px dotted red; */
+  box-shadow: rgba(6, 81, 142, 0.05) 5px 10px 15px 5px, rgba(6, 81, 142, 0.05) 5px 10px 15px 5px;
 }
-.boxes {
+
+.box p {
+  color: #4F85C5;
+  font-family: 'Poppins', sans-serif;
+}
+/* .boxes {
 margin-top: 2rem;
-}
+} */
 .home-hr {
   margin: 15px;
 }
@@ -1686,19 +1704,19 @@ margin-top: 2rem;
   background-color: #ffcc00;
   color: #fff;
 }
-.sb:before {
+/* .sb:before {
   content: "";
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid #8f63db;
+  border-left: 10px solid #fff;
   border-right: 10px solid transparent;
-  border-top: 10px solid #8f63db;
+  border-top: 10px solid #fff;
   border-bottom: 10px solid transparent;
   left: 19px;
   bottom: -19px;
-  /* border: 3px dotted red; */
-}
+  /* border: 3px dotted red; *
+} */
 
 /* styling for parralex effect div */
 .parallax-div {
@@ -1813,7 +1831,7 @@ margin-top: 2rem;
 .home-main-container .home-title-electronic {
   /* width: 400px; */
   text-align: center;
-  margin: 0 auto;
+  margin: 0px auto 0px auto;
 }
 
 .home-main-container .home-title-partners {
@@ -1845,6 +1863,7 @@ margin-top: 2rem;
   color: #4F85C5;
   border-radius: 30px;
   /* font-size: 30px; */
+  margin-top: 100px;
 }
 
 /* .home-main-container .services-header h1::after,
@@ -1888,7 +1907,9 @@ margin-top: 2rem;
 .What-is-STEAM-Education-home {
   display: flex;
   width: 80%;
-  height: 400px;
+  height: auto;
+  /* max-height: min-content; */
+  /* height: 400px; */
   /* background-color: rgb(71, 134, 241); */
   background-color: #4F85C5;
   /* border: 3px dotted red; */
@@ -1901,21 +1922,39 @@ margin-top: 2rem;
   /* border: 3px dotted rgb(0, 17, 255); */
 }
 
-@media only screen and (max-width: 1300px) {
+/* @media only screen and (min-width: 1300px) {
   .What-is-STEAM-Education-home {
     display: flex;
     width: 80%;
-    height: 450px;
-    /* background-color: rgb(71, 134, 241); */
+    height: 350px;
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .What-is-STEAM-Education-home {
+    display: flex;
+    width: 80%;
+    height: 450px;
+    /* background-color: rgb(71, 134, 241); *
+    background-color: #4F85C5;
+    /* border: 3px dotted red; *
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 40px;
+    /* padding-bottom: 10px !important; */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
 }
 
@@ -1924,16 +1963,16 @@ margin-top: 2rem;
     display: flex;
     width: 80%;
     height: 550px;
-    /* background-color: rgb(71, 134, 241); */
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
 }
 
@@ -1942,16 +1981,16 @@ margin-top: 2rem;
     display: flex;
     width: 80%;
     height: 650px;
-    /* background-color: rgb(71, 134, 241); */
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
 }
 
@@ -1960,18 +1999,18 @@ margin-top: 2rem;
     display: flex;
     width: 80%;
     height: 700px;
-    /* background-color: rgb(71, 134, 241); */
+    /* background-color: rgb(71, 134, 241); *
     background-color: #4F85C5;
-    /* border: 3px dotted red; */
+    /* border: 3px dotted red; *
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     position: relative;
     padding-top: 40px;
     /* padding-bottom: 10px !important; */
-    /* border: 3px dotted rgb(0, 17, 255); */
+    /* border: 3px dotted rgb(0, 17, 255); *
   }
-}
+} */
 
 .What-is-STEAM-Education-home-text {
   width: 90%;
@@ -2331,7 +2370,8 @@ margin-top: 2rem;
 .services-home-div {
   /* border:3px dotted rgb(0, 217, 255) ; */
   height: 100%;
-  margin: 100px 0px;
+  /* margin: 100px 0px; */
+  /* padding-top: 100px; */
 }
 
 .home-services-cards {
@@ -2358,8 +2398,8 @@ margin-top: 2rem;
   padding: 30px 10px 0px 10px;
   margin: 30px 0px;
   border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.1) 5px 10px 15px 5px,
-    rgba(0, 0, 0, 0.05) 5px 10px 15px 5px;
+  box-shadow: rgba(6, 81, 142, 0.05) 5px 10px 15px 5px,
+  rgba(6, 81, 142, 0.05) 5px 10px 15px 5px;
   animation: ease-in;
 }
 
@@ -2638,6 +2678,10 @@ margin-top: 2rem;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  .hero-hr {
+    margin: 0 0 0 10px;
+  }
   
   .description .text p {
     text-align: center;
@@ -2655,7 +2699,7 @@ margin-top: 2rem;
     border-image: linear-gradient(to right, rgba(14, 61, 226, 1) 0%, rgba(39, 213, 38, 0.9136904761904762) 100%) 1;;
     border-radius: 40px;
     cursor: pointer;
-    margin: 80px 0px 0px 0px;
+    margin: 80px 0px 0px 10px;
   }
 
 }
@@ -2769,8 +2813,8 @@ margin-top: 2rem;
 
 .info-button {
   width: 75%;
-  background-color: #4F85C5;
-  color: #fff;
+  background-color: #fff;
+  color: #94C93D;
   padding: 12px 24px;
   font-size: 25px;
   font-weight: 800;
@@ -2786,7 +2830,7 @@ margin-top: 2rem;
 
 .info-button.active {
   width: 75%;
-  background-color: #4F85C5;
+  background-color: #fff;
   /* border: 3px dotted rgb(255, 0, 255); */
 }
 
@@ -2805,7 +2849,7 @@ margin-top: 2rem;
 /* Extended information styles */
 .info-content {
   width: 72%;
-  background-color: #4F85C5;
+  background-color: #fff;
   border-radius: 20px;
   padding: 24px;
   padding-bottom: 20px;
@@ -2819,8 +2863,9 @@ margin-top: 2rem;
   /* border: 3px dotted rgb(255, 0, 212); */
 }
 .info-content p {
+  padding: 10px 0px;
   font-size: 18px;
-  color: #ffffff;
+  color: #4F85C5;
   text-align: left;
   font-family: 'Poppins', sans-serif;
 }
@@ -2839,3 +2884,47 @@ font-family: 'Poppins', sans-serif;
   /* border: 3px dotted rgb(255, 217, 0); */
 }
 
+
+/* Custom carousel styling */
+
+.iSugbn:hover:enabled, .iSugbn:focus:enabled {
+  background-color: #94C93D !important;
+}
+
+/* active carousel bullets */
+.ibcJcX {
+  background-color: #94C93D !important;
+  box-shadow: 0 0 1px 2px #94C93D !important;
+}
+
+/* inactive carousel bullets */
+.ewGQOX {
+  background-color: rgba(128, 128, 128, 0.23) !important;
+  box-shadow: none !important;
+}
+
+/* Left carousel arrow */
+
+.iSugbn {
+  box-shadow: none !important;
+  /* width: 10px !important; */
+  /* height: 30px !important; */
+  border-radius: 50% !important;
+   /* min-width: 15px !important;
+  line-height: 10px !important; */
+  background-color: #94C93D !important;
+  color: #fff !important;
+}
+
+/* Right carousel arrow */
+
+.hBLlME {
+  box-shadow: none !important;
+  /* width: 10px !important; */
+  /* height: 30px !important; */
+  border-radius: 50% !important;
+   /* min-width: 15px !important;
+  line-height: 10px !important; */
+  background-color: #94C93D !important;
+  color: #fff !important;
+}

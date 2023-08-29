@@ -9,6 +9,9 @@ import Electronics from './components/pages/course/electronics/Electronics';
 import Energy from './components/pages/course/energy/Energy';
 import Environment from './components/pages/course/environment/Environment';
 import Science from './components/pages/course/science/Science';
+// import MechanicalEngineering from './components/pages/Services/engineering/MechanicalEngineering/MechanicalEngineering';
+// import Electrical_Engineering from './components/pages/Services/engineering/electrical-engineering/Electrical_Engineering';
+// import ElectronicEngineering from './components/pages/Services/engineering/Electronic Engineering/Electronic_Engineering';
 import Registration from './components/pages/Registration/Registration';
 import RoboticsProgramming from './components/pages/course/courses/RoboticsProgramming/RoboticsProgramming';
 import MobileAppDevelopment from './components/pages/course/courses/MobileAppDevelopment/MobileAppDevelopment';
@@ -68,7 +71,7 @@ function App() {
         <div className="loader">
           <CircleToBlockLoading
             size="small"
-            speed={4}
+             gitspeed={4}
             color="#0c50a3"
             loading={loading} //3 secs
           />
@@ -278,3 +281,5 @@ function App() {
 }
 
 export default App;
+
+

@@ -1,13 +1,13 @@
 import React from "react";
-import { Tree, TreeNode } from "react-organizational-chart";
+// import { Tree, TreeNode } from "react-organizational-chart";
 import General_El from "../../../../images/services-images/engineering/Electrical-Engineering/General_El.jpg";
 import Renewable from "../../../../images/services-images/engineering/Electrical-Engineering/Renewable.jpeg";
-import male from "../../../../images/services-images/engineering/Electrical-Engineering/male.jpg";
-import { AiOutlineAim, BsEye, GiDiamondHard } from "react-icons/all";
+// import male from "../../../../images/services-images/engineering/Electrical-Engineering/male.jpg";
+// import { AiOutlineAim, BsEye, GiDiamondHard } from "react-icons/all";
 import "./Electrical_Engineering.css";
-import Speaker from "../../../../images/coach-images/SP.jpg";
-import Tina from "../../../../images/coach-images/tina.jpg";
-import Victor from "../../../../images/coach-images/Victor.jpg";
+// import Speaker from "../../../../images/coach-images/SP.jpg";
+// import Tina from "../../../../images/coach-images/tina.jpg";
+// import Victor from "../../../../images/coach-images/Victor.jpg";
 
 //projects array
 function Electrical_Engineering() {
@@ -16,10 +16,10 @@ function Electrical_Engineering() {
       <div
         className="Electrical_Engineering-main"
       >
-        <div className="Electrical_Engineering-main-header">
+        {/* <div className="Electrical_Engineering-main-header">
           <div className="electrical-engineering-main-heading">
             <h1>Welcome to our Electrical Engineering Department</h1>
-          </div>
+          </div> */}
           {/* <h1>Welcome to our Electrical Engineering Department</h1> */}
           {/* <p>
             Electrical engineering is a field of engineering that generally deals
@@ -27,16 +27,16 @@ function Electrical_Engineering() {
             electromagnetism and here at Minds In Action we strive on providing
             quality solutions to your electrical problems.
           </p> */}
-        </div>
+        {/* </div> */}
 
-        <div className="electrical-engineering-title-header">
+        {/* <div className="electrical-engineering-title-header">
           <h1>DEPARTMENT STRUCTURE</h1>
         </div>
         <center>
           <div className="department-main">
             {/* <div className="heading">
             <h3>Department Structure</h3>
-          </div> */}
+          </div> *
 
             <Tree
               // lineColor={"#a4b0be"}
@@ -105,7 +105,7 @@ function Electrical_Engineering() {
         </center>
 
         <div className="department-mision-vision-values">
-          <div className="container">
+          <div className="container" style={{height: "100%"}}>
             <div className="icon">
               <div className="ico-container">
                 <BsEye className="ico" />
@@ -121,7 +121,7 @@ function Electrical_Engineering() {
             </div>
           </div>
 
-          <div className="container">
+          <div className="container" style={{height: "100%"}}>
             <div className="icon">
               <div className="ico-container">
                 <AiOutlineAim className="ico" />
@@ -135,7 +135,7 @@ function Electrical_Engineering() {
               </p>
             </div>
           </div>
-          <div className="container">
+          <div className="container" style={{height: "100%"}}>
             <div className="icon">
               <div className="ico-container">
                 <GiDiamondHard className="ico" />
@@ -149,7 +149,7 @@ function Electrical_Engineering() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
 
         <div className="Electrical_Engineering-services">
