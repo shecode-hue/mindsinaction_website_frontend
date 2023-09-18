@@ -731,7 +731,7 @@ export default function Module() {
                     }
                   >
                     <div className="Modules-Intro-Card">
-                      <div
+                      {/* <div
                         className="module-image"
                         style={{
                           height: "350px !important",
@@ -744,10 +744,55 @@ export default function Module() {
                           // zIndex:"1000",
                         }}
                       >
-                        {/* <img src={x.moduleImage} alt="" data-aos="fade-right"/> */}
-                      </div>
+                        {/* <img src={x.moduleImage} alt="" data-aos="fade-right"/> *
+                      </div> */}
+                      <img
+                        className="module-image"
+                        style={{
+                          height: "350px !important",
+                          // border: "3px dotted red",
+                          // borderRadius:"50px 0px 0px 50px",
+                          // backgroundImage: `url(${x.moduleImage})`,
+                          // backgroundRepeat: "no-repeat",
+                          // backgroundPosition: "center",
+                          // backgroundSize: "cover",
+                          // zIndex:"1000",
+                        }}
+
+                        src={x.moduleImage} alt="" />
                       <div className="Modules-Intro-Card-right">
-                        <div className="module-title">
+                        {/* <div
+                        className="module-image"
+                        style={{
+                          height: "350px !important",
+                          // border: "3px dotted red",
+                          // borderRadius:"50px 0px 0px 50px",
+                          backgroundImage: `url(${x.moduleImage})`,
+                          backgroundRepeat: "no-repeat",
+                          backgroundPosition: "center",
+                          backgroundSize: "cover",
+                          // zIndex:"1000",
+                        }}
+                      >
+                        {/* <img src={x.moduleImage} alt="" data-aos="fade-right"/> *
+                      </div> */}
+                        {/* <img
+
+                          style={{
+                            height: "350px !important",
+                            border: "3px dotted red",
+                            borderRadius:"50px 0px 0px 50px",
+                            backgroundImage: `url(${x.moduleImage})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                            backgroundSize: "cover",
+                            zIndex:"1000",
+                          }}
+
+                          src={x.moduleImage} alt=""/> */}
+                        <div className="center-hrz-modules-desc" style={{margin: "0px auto"}}>
+                            <div>
+                              <div className="module-title">
                           <h1 style={{ color: x.moduleColor }}>
                             {x.moduleName}
                           </h1>
@@ -873,6 +918,9 @@ export default function Module() {
                           </div>
                           <div class="vl"></div>
                         </div>
+                            </div>
+                        </div>
+
                       </div>
                     </div>
 
