@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './FreeDemo.css';
 
 function FreeDemo() {
   return (
     <div>
-        <h1>There's no Free demo</h1>
+    <center>
+    <iframe className='form' src="https://docs.google.com/forms/d/1PjxUCmjC_SsTyVCVqvQwwQw1YzpjscMkN-pT3sXakrs/viewform?embedded=true" width="" height="520" frameborder="0" marginheight="0" marginwidth="0">
+        </iframe>
+    </center>
     </div>
   )
 }

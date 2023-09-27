@@ -54,6 +54,7 @@ const ElectronicEngineering = lazy(() => import('./components/pages/Services/eng
 const Shop = lazy(() => import('./components/pages/shop/Shop'));
 // const ContactUs = lazy(() => import('./components/pages/ContactUs/ContactUs'));
 const Footer = lazy(() => import('./components/pages/Footer/Footer'));
+const FreeDemo = lazy(() => import('./components/pages/FreeDemo/FreeDemo'));
 
 // import ClipLoader from "react-spinners/ClipLoader";
 function App() {
@@ -269,6 +270,8 @@ function App() {
               <deadPage />
             </Route> */}
               <ScrollTop />
+              <ScrollTop />
+              <Route exact path="/free-demo" component={FreeDemo} />
 
               <Footer />
             </switch>
